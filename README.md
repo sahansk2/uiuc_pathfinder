@@ -1,6 +1,10 @@
-# scrape_crosslists.py Error Log
+## scrape_crosslists.py 
 
-Basically a TODO.
+Run scraper with `python3 ./scrape_crosslists.py`.
+
+### Error Log
+
+Basically we need to check these courses/departments ourselves for crosslisted courses (where it says "See CC ###.", specifically)
 
 ```
 Couldn't get information about department ARTJ! Skipping...
