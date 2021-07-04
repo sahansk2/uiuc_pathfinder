@@ -39,3 +39,12 @@ Because there are duplicates, run this:
 sort ./restrictions.csv | uniq > restrictions2.csv
 ```
 
+## Extracting GPAs from util/uiuc_classes_bot_data/2021-sp.csv
+
+Download [q](https://harelba.github.io/q/).
+
+Then, run
+
+```sh
+q -H -d , "SELECT Subject,Number, GPA from ./util/uiuc_classes_bot_data/2021-sp.csv GROUP BY Subject,Number, GPA" > out.csv
+```
