@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 dept_re = re.compile(r'([A-Z]{4}|[A-Z]{3}|[A-Z]{2})')
 course_re = re.compile(r'(\d{3})')
 
-def get_dept_url(dept):
+def get_dept_url(dept, mode):
     if not dept_re.match(dept):
         raise TypeError("Invalid format for department")
     
@@ -15,11 +15,11 @@ def get_dept_url(dept):
         'https',
         'courses.illinois.edu',
         path,
-        urlencode(dict(mode="cascade")),
+        urlencode(dict(mode=mode)),
         ''
     ))
 
-def get_dept_xml_tree(url) -> BeautifulSoup:
+def get_xml_tree(url) -> BeautifulSoup:
     print(f"Fetching XML from {url}")
     r = requests.get(url)
     print("Got XML!")

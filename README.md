@@ -18,7 +18,7 @@ Got TypeError! Check course: STAT 587
 Couldn't get information about department ZULU! Skipping...
 ```
 
-# scrape_restrictions.py tips
+## scrape_restrictions.py tips
 
 You need `nltk` for this.
 

@@ -1,4 +1,4 @@
-from util.web import get_dept_url, get_dept_xml_tree
+from util.web import get_dept_url, get_xml_tree
 from util.export import OutputCSV
 from util.sentence import split_into_sentences
 
@@ -13,7 +13,7 @@ with OutputCSV('restrictions.csv',
     out.write_header()
     for dept in codeFile:
         dept = dept.strip()
-        soup = get_dept_xml_tree(get_dept_url(dept))
+        soup = get_xml_tree(get_dept_url(dept,mode="cascade"))
         # I think half of these tags has the same/inherited data
         # but I don't really want to figure out what the relation is
         # It's easier to pipe through sort and uniq.
