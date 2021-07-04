@@ -17,3 +17,25 @@ Couldn't get information about department RSOC! Skipping...
 Got TypeError! Check course: STAT 587
 Couldn't get information about department ZULU! Skipping...
 ```
+
+# scrape_restrictions.py tips
+
+You need `nltk` for this.
+
+In the Python interactive console, run 
+
+```py
+import nltk
+nltk.download()
+```
+
+And download the "popular" package. This is so that you can split the restrictions up into individual sentences.
+
+Run the scraper with `python3 ./scrape_restrictions.py`. 
+
+Because there are duplicates, run this: 
+
+```sh
+sort ./restrictions.csv | uniq > restrictions2.csv
+```
+
