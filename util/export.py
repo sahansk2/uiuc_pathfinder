@@ -15,7 +15,7 @@ class OutputCSV():
         self.writer = None
 
     def __enter__(self):
-        self.file = open(self.filename, 'a+')
+        self.file = open(self.filename, 'w')
         self.writer = csv.writer(self.file)
         return self
 
