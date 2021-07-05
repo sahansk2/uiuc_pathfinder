@@ -1,5 +1,6 @@
 from collections import OrderedDict
 import csv
+import sys
 
 # Usage:
 # with OutputCSV('data.csv', ['crn', 'restriction']) as out:
@@ -7,12 +8,13 @@ import csv
 #   out.insert(crn=13240, restriction="wheeeee")
 
 class OutputCSV():
-    def __init__(self, filename, fields):
+    def __init__(self, filename, fields, verbose=False):
         # fields is a list of fields
         self.file = None
         self.filename = filename
         self.fmt = OrderedDict.fromkeys(fields)
         self.writer = None
+        self.verbose = verbose
 
     def __enter__(self):
         self.file = open(self.filename, 'w')
@@ -30,4 +32,6 @@ class OutputCSV():
         if self.fmt.keys() != kwargs.keys():
             raise TypeError("Bad entries!")
         self.fmt.update(kwargs.items())
+        if self.verbose:
+            print(self.fmt.values(), file=sys.stderr)
         self.writer.writerow(self.fmt.values())
