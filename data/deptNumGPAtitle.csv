@@ -1,0 +1,3541 @@
+courseDept,courseNum,GPA,title
+AAS,100,3.58,Intro Asian American Studies
+AAS,105,3.69,Introduction to Arab American Studies
+AAS,120,3.21,Intro to Asian Am Pop Culture
+AAS,200,3.71,U.S. Race and Empire
+AAS,211,3.47,Asian Americans and the Arts
+AAS,215,3.37,US Citizenship Comparatively
+AAS,246,3.71,Asian American Youth in Film
+AAS,258,3.78,Muslims in America
+AAS,287,3.86,Food and Asian Americans
+AAS,315,3.37,"War, Memory, and Cinema"
+AAS,365,3.32,Asian American Media and Film
+AAS,370,3.03,"Immigration, Law, and Rights"
+ABE,100,3.66,Intro Agric & Biological Engrg
+ABE,141,3.47,ABE Principles: Biological
+ABE,199,3.97,Undergraduate Open Seminar
+ABE,223,3.48,ABE Principles: Machine Syst
+ABE,224,3.65,ABE Principles: Soil & Water
+ABE,225,3.24,ABE Principles: Bioenvironment
+ABE,226,3.34,ABE Principles: Bioprocessing
+ABE,341,3.09,Transport Processes in ABE
+ABE,361,3.37,Off-Road Machine Design
+ABE,425,3.71,Engrg Measurement Systems
+ABE,430,3.61,Project Management
+ABE,436,3.33,Renewable Energy Systems
+ABE,446,3.7,Biological Nanoengineering
+ABE,456,3.82,Land & Water Resources Engrg
+ABE,457,3.87,NPS Pollution Processes
+ABE,466,3.33,Engineering Off-Road Vehicles
+ABE,469,3.61,Industry-Linked Design Project
+ABE,483,3.58,Engineering Properties of Food Materials
+ABE,488,3.54,Bioprocessing Biomass for Fuel
+ABE,498,3.81,Special Topics
+ABE,501,3.83,Graduate Research I
+ABE,598,3.67,Special Topics
+ACCY,200,3.17,Fundamentals of Accounting
+ACCY,201,3.19,Accounting and Accountancy I
+ACCY,202,3.25,Accounting and Accountancy II
+ACCY,301,3.34,Atg Measurement & Disclosure
+ACCY,302,3.34,Decision Making for Atg
+ACCY,303,3.34,Accounting Institutions and Regulation
+ACCY,304,3.37,Accounting Control Systems
+ACCY,312,3.28,Principles of Taxation
+ACCY,398,3.94,Practical Problems in Atg
+ACCY,405,3.39,Assurance and Attestation
+ACCY,410,3.33,Advanced Financial Reporting
+ACCY,415,3.28,Auditing Stds and Practice
+ACCY,451,3.36,Advanced Income Tax Problems
+ACCY,500,3.64,"Accounting Measurement, Reporting, and Control"
+ACCY,501,3.54,Accounting Analysis I
+ACCY,502,3.53,Accounting Analysis II
+ACCY,503,3.58,Managerial Accounting
+ACCY,504,3.54,Auditing
+ACCY,505,3.64,Federal Taxation
+ACCY,506,3.45,Advanced Topics in Accounting
+ACCY,507,3.75,Taxation of Business Entities
+ACCY,510,3.48,Financial Reporting Standards
+ACCY,511,3.52,External Risk Measurement and Reporting
+ACCY,512,3.76,Data Analytics for Management Accounting
+ACCY,515,3.45,Auditing & Assurance Standards
+ACCY,517,3.54,Financial Statement Analysis
+ACCY,518,3.97,Financial Statement Fraud
+ACCY,550,3.61,Multistate Taxation
+ACCY,551,3.37,Corporate Income Taxation
+ACCY,552,3.4,Partnership Income Taxation
+ACCY,553,3.55,Selected Topics in Fed Tax
+ACCY,554,3.54,International Taxation
+ACCY,555,3.51,Income Tax Accounting
+ACCY,556,3.57,Tax Research
+ACCY,557,3.6,Accounting Periods and Methods
+ACCY,558,3.79,Taxation of Closely-Held Bus.
+ACCY,559,3.65,Tax Policy
+ACCY,560,3.81,Information in Value Creation
+ACCY,561,3.48,Taxes and Business Strategy
+ACCY,562,3.37,Tax Procedures
+ACCY,563,3.56,Consolidated Returns
+ACCY,564,3.58,Reorganizations
+ACCY,569,3.55,Data Driven Decisions in Accounting
+ACCY,570,3.83,Data Analytics Foundations for Accountancy
+ACCY,571,3.57,Statistical Analyses for Accountancy
+ACCY,575,3.82,Data Analytics Applications in Accountancy
+ACCY,576,3.94,Data Preparation for Accounting
+ACCY,577,4.0,Machine Learning for Accounting
+ACCY,593,3.71,Special Research Problems
+ACE,100,2.89,Introduction to Applied Microeconomics
+ACE,161,3.6,Microcomputer Applications
+ACE,199,3.75,Undergraduate Open Seminar
+ACE,210,3.27,Environmental Economics
+ACE,222,3.26,Agricultural Marketing
+ACE,231,3.45,Food and Agribusiness Mgt
+ACE,232,3.13,Farm Management
+ACE,240,3.42,Personal Financial Planning
+ACE,251,3.24,The World Food Economy
+ACE,254,3.1,Economic Systems in Africa
+ACE,255,3.68,Economics of Food and Environmental Justice
+ACE,261,3.0,Applied Statistical Methods
+ACE,264,2.96,Applied Statistical Methods & Data Analytics 2
+ACE,270,2.96,Consumer Economics
+ACE,300,3.41,Intermediate Applied Microeconomics
+ACE,306,3.34,Food Law
+ACE,310,3.33,Natural Resource Economics
+ACE,335,3.66,Food Marketing and Behavior
+ACE,341,3.7,Issues&Careers in Applied Econ
+ACE,345,3.55,Finan Decision Indiv Sm Bus
+ACE,346,3.42,Tax Policy and Finan Planning
+ACE,360,3.44,Spreadsheet Models and Applications
+ACE,398,3.75,Seminar
+ACE,403,3.25,Agricultural Law
+ACE,406,2.88,Environmental Law
+ACE,411,3.37,Environment and Development
+ACE,427,3.18,Commodity Price Analysis
+ACE,428,3.22,Commodity Futures and Options
+ACE,430,3.07,Food Marketing
+ACE,431,3.34,Agri-food Strategic Management
+ACE,432,3.66,Farm Management
+ACE,435,3.35,Global Agribusiness Management
+ACE,440,3.21,Finan Plan for Professionals
+ACE,444,3.29,Financial Services & Investing Planning
+ACE,445,3.28,Intermediate Financial and Estate Planning
+ACE,446,3.06,Modeling App's Finan Plan
+ACE,447,3.62,Case Stud Agr Accy & Fin Plan
+ACE,448,3.23,Rural Real Estate Appraisal
+ACE,449,3.18,Retirement & Benefit Planning
+ACE,451,3.1,Agriculture in Intl Dev
+ACE,454,2.93,Econ Dev of Tropical Africa
+ACE,455,3.36,International Trade in Food and Agriculture
+ACE,456,3.41,Agr and Food Policies
+ACE,471,3.4,Consumer Economic Policy
+ACE,474,2.95,Economics of Consumption
+ACE,476,3.12,Behavioral Economics and Financial Decision Making
+ACE,499,3.3,Seminar
+ACE,562,3.74,Applied Regression Models I
+ACE,563,3.73,Math Program App Econ I
+ACE,564,3.73,Applied Regression Models II
+ACE,592,3.49,Special Topics
+ACES,101,3.82,Contemporary Issues in ACES
+ACES,102,3.8,Intro Sustainable Food Systems
+ACES,179,3.1,History of Ag in IL Since 1860
+ACES,199,3.51,Undergraduate Open Seminar
+ADV,150,3.56,Introduction to Advertising
+ADV,199,3.9,Undergraduate Seminar
+ADV,270,3.75,Principles of Sales
+ADV,281,2.95,Advertising Research Methods
+ADV,283,3.79,Advertising and Brand Strategy
+ADV,284,3.62,Consumer Insight
+ADV,290,3.84,Special Topics in Advertising
+ADV,305,3.69,"Digital Advertising Content, Technologies and Concepts"
+ADV,310,3.21,Intro to Public Relations
+ADV,311,3.46,Classic Campaigns
+ADV,312,2.9,Advertising History
+ADV,320,3.6,Sales Management
+ADV,350,3.65,Writing for Public Relations
+ADV,370,3.55,Sales and the Consumer
+ADV,390,3.05,Content Creation
+ADV,393,3.69,Advertising and Society
+ADV,400,3.68,Special Problems
+ADV,409,3.76,Media Entrepreneurship
+ADV,410,3.65,Public Relations Strategies
+ADV,460,3.49,Innovation in Advertising
+ADV,475,3.07,Multicultural Advertising
+ADV,476,3.57,Global Advertising
+ADV,478,3.33,Psychology of Advertising
+ADV,481,3.03,Advertising Research Methods
+ADV,483,3.36,Audience Analysis
+ADV,490,3.69,Advanced Special Topics in Advertising
+ADV,491,3.46,Advertising Management Plan
+ADV,492,3.8,Tech and Advertising Campaigns
+ADV,494,3.57,Persuasion Consumer Response
+ADV,498,3.83,The Sandage Project
+ADV,550,3.51,Foundations of Advertising
+ADV,580,3.77,Advertising Theory
+ADV,581,3.43,Quanti Research Methods in Adv
+ADV,582,3.82,Qualitative Rsrch in Advert
+ADV,587,3.67,Graduate Seminar I
+ADV,588,3.61,Graduate Seminar II
+AE,100,3.75,Intro to Aerospace Engineering
+AE,199,3.63,Undergraduate Open Seminar
+AE,202,3.4,Aerospace Flight Mechanics
+AE,302,3.46,Aerospace Flight Mechanics II
+AE,311,3.0,Incompressible Flow
+AE,312,2.98,Compressible Flow
+AE,321,2.7,Mechs of Aerospace Structures
+AE,323,2.94,Applied Aerospace Structures
+AE,352,3.17,Aerospace Dynamical Systems
+AE,353,3.31,Aerospace Control Systems
+AE,370,3.21,Aerospace Numerical Methods
+AE,402,3.24,Orbital Mechanics
+AE,403,3.49,Spacecraft Attitude Control
+AE,410,3.52,Computational Aerodynamics
+AE,412,3.43,Viscous Flow & Heat Transfer
+AE,416,3.14,Applied Aerodynamics
+AE,419,3.19,Aircraft Flight Mechanics
+AE,433,3.26,Aerospace Propulsion
+AE,434,3.19,Rocket Propulsion
+AE,435,3.25,Electric Propulsion
+AE,442,3.35,Aerospace Systems Design I
+AE,443,3.59,Aerospace Systems Design II
+AE,451,3.57,Aeroelasticity
+AE,454,3.56,Systems Dynamics & Control
+AE,460,3.69,Aerodynamics & Propulsion Lab
+AE,461,3.69,Structures & Control Lab
+AE,483,3.65,Autonomous Systems Lab
+AE,498,3.67,Special Topics
+AE,504,3.76,Optimal Aerospace Systems
+AE,526,3.55,Composites Manufacturing
+AFRO,100,3.44,Intro to African American St
+AFRO,101,3.12,"Black America, 1619-Present"
+AFRO,103,3.17,Black Women in the Diaspora
+AFRO,105,3.32,Black Literature in America
+AFRO,132,3.52,African American Music
+AFRO,199,3.64,Undergraduate Open Seminar
+AFRO,224,3.78,Humanist Persp of Afro-Am Exp
+AFRO,226,3.67,Black Women Contemp US Society
+AFRO,227,3.46,Studies in Black Television
+AFRO,228,3.78,Hip Hop Music: History and Culture
+AFRO,231,3.76,Lang Diff Dis: American Persp
+AFRO,243,3.49,Pan Africanism
+AFRO,261,3.48,Intro to the African Diaspora
+AFRO,298,3.85,Spec Topics African-Am Studies
+AFRO,342,2.59,Black Men and Masculinities
+AFRO,372,3.28,Class Politics & Blk Community
+AFRO,378,3.62,Race and Revolutions
+AFRO,381,3.79,Black Women and Film
+AFRO,383,3.45,Hist of Blk Women's Activism
+AFRO,410,3.86,Hate Crimes
+AFRO,411,3.35,African American Psychology
+AFST,210,3.38,Introduction to Modern African Literature
+AFST,222,3.66,Introduction to Modern Africa
+AGCM,220,3.54,Communicating Agriculture
+AGCM,230,3.53,Agricultural and Environmental Photography
+AGCM,270,3.54,Ag Sales and Persuasive Communication
+AGCM,315,3.75,Emerging Media
+AGCM,320,3.39,Public Information Campaigns
+AGCM,330,3.56,Environmental Communications
+AGCM,430,3.46,Comm in Env Social Movements
+AGED,100,3.69,Intro to Ag & Leadership Ed
+AGED,220,3.17,Prog Del in Ag & Leadership Ed
+AGED,360,3.64,Advanced Leadership Studies
+AGED,421,3.54,Teaching Strategies in AGED
+AGED,430,3.84,Youth Development Programs
+AGED,499,3.75,Seminar
+AGED,550,3.56,Advanced Program Delivery
+AGED,551,3.68,Advanced Program Evaluation
+AHS,125,3.94,Freshmen Scholars Seminar
+AHS,199,3.8,Undergraduate Open Seminar
+AHS,365,3.95,Civic Engagement in Wellness
+AHS,399,3.87,Advanced Open Seminar
+AHS,494,3.77,Special Topics
+AIS,101,3.51,Intro to Amer Indian Studies
+AIS,140,3.55,Native Religious Traditions
+AIS,265,3.57,Intro to American Indian Lit
+AIS,275,3.62,Am Indian and Indigenous Film
+AIS,285,3.57,Indigenous Thinkers
+ANSC,100,3.35,Intro to Animal Sciences
+ANSC,101,3.58,Contemporary Animal Issues
+ANSC,103,3.96,Working With Farm Animals
+ANSC,110,3.69,Life With Animals and Biotech
+ANSC,199,3.88,Undergraduate Open Seminar
+ANSC,201,3.73,Principles of Dairy Production
+ANSC,205,3.7,World Animal Resources
+ANSC,206,3.78,Horse Management
+ANSC,207,3.49,The Science of Pets and How to Care for Them
+ANSC,210,3.37,Grilling and BBQ Science
+ANSC,221,2.92,"Cells, Metabolism and Genetics"
+ANSC,222,2.62,Anatomy and Physiology
+ANSC,223,2.92,Animal Nutrition
+ANSC,224,2.86,Animal Reproduction and Growth
+ANSC,250,3.65,Companion Animals in Society
+ANSC,251,2.86,Epidemics and Infectious Diseases
+ANSC,256,3.06,Horse's Role in Human History
+ANSC,294,3.97,Intern On Campus Practical Exp
+ANSC,298,3.88,Undergraduate Seminar
+ANSC,299,3.83,Animal Mgt Field Studies
+ANSC,305,3.72,Human Animal Interactions
+ANSC,306,3.74,Equine Science
+ANSC,307,2.97,Companion Animal Management
+ANSC,309,3.64,Meat Production and Marketing
+ANSC,322,3.19,Livestock Feeds and Feeding
+ANSC,331,3.11,Biology of Reproduction
+ANSC,350,3.6,Cellular Metabolism in Animals
+ANSC,363,3.76,Behavior of Domestic Animals
+ANSC,370,3.32,Companion Animal Policy
+ANSC,398,3.91,UG Experiential Learning
+ANSC,400,3.85,Dairy Herd Management
+ANSC,401,3.72,Beef Production
+ANSC,402,3.79,Sheep and Goat Production
+ANSC,403,3.64,Pork Production
+ANSC,404,3.87,Poultry Science
+ANSC,406,3.43,Zoo Animal Conservation Sci
+ANSC,407,3.18,Animal Shelter Management
+ANSC,409,3.63,Meat Science
+ANSC,420,3.07,Ruminant Nutrition
+ANSC,421,3.67,Minerals and Vitamins
+ANSC,422,3.27,Companion Animal Nutrition
+ANSC,424,3.47,Pet Food & Feed Manufacturing
+ANSC,431,3.33,Advanced Reproductive Biology
+ANSC,437,3.19,Adv Reproductive Management
+ANSC,438,3.82,Lactation Biology
+ANSC,444,3.69,Applied Animal Genetics
+ANSC,445,3.85,Statistical Methods
+ANSC,446,3.46,Population Genetics
+ANSC,450,3.21,Comparative Immunobiology
+ANSC,452,3.64,Animal Growth and Development
+ANSC,467,3.76,Applied Animal Ecology
+ANSC,498,3.86,Integrating Animal Sciences
+ANSC,499,3.6,Seminar
+ANSC,520,3.46,Protein and Energy Nutrition
+ANSC,542,3.85,Applied Bioinformatics
+ANSC,561,3.78,Animal Stress Physiology
+ANTH,101,3.2,Introduction to Anthropology
+ANTH,102,3.02,Human Origins and Culture
+ANTH,103,3.34,Anthro in a Changing World
+ANTH,104,3.51,Talking Culture
+ANTH,105,3.0,World Archaeology
+ANTH,106,3.59,Hist Arch Americas
+ANTH,143,3.56,Biology of Human Behavior
+ANTH,157,3.22,The Archaeology of Illinois
+ANTH,160,3.2,Race and Contemporary Social Issues
+ANTH,165,3.62,Lang & Culture Native North Am
+ANTH,175,3.37,Archaeology and Pop Culture
+ANTH,180,3.33,The Archaeology of Death
+ANTH,182,3.44,Latin American Cultures
+ANTH,199,3.33,Undergraduate Open Seminar
+ANTH,209,3.76,"Food, Culture, and Society"
+ANTH,220,3.29,Introduction to Archaeology
+ANTH,225,3.47,Women in Prehistory
+ANTH,230,3.36,Sociocultural Anthropology
+ANTH,240,3.42,Biological Anthropology
+ANTH,241,3.48,Human Biological Variation
+ANTH,246,3.64,Forensic Science
+ANTH,249,3.48,Evolution and Human Disease
+ANTH,259,3.72,Latina/o Anthropology
+ANTH,262,3.06,Women's Lives
+ANTH,266,3.23,African Film and Society
+ANTH,268,3.23,Images of the Other
+ANTH,270,3.21,Language in Culture
+ANTH,277,3.34,"Ancient Cities, Sacred Land"
+ANTH,278,3.74,Climate Change & Civilization
+ANTH,288,3.16,American Indians of Illinois
+ANTH,343,3.69,Behavior and Biology of Women
+ANTH,363,3.21,Anth of Dance/Movement
+ANTH,368,3.35,'America' in the World
+ANTH,372,3.93,Topics in Lang & Culture
+ANTH,374,3.59,Anth of Science and Technology
+ANTH,375,3.54,The Culture of Nature
+ANTH,379,3.16,Medical Anthropology
+ANTH,393,3.04,The World of Jewish Sepharad
+ANTH,399,3.61,Special Topics
+ANTH,411,3.72,Research Methods in Socio-Cultural Anthropology
+ANTH,414,3.32,Writing Ethnography
+ANTH,437,3.29,Primate Behav Endocrinology
+ANTH,441,3.68,Human Genetics
+ANTH,449,3.73,North American Archeology
+ANTH,459,3.61,The Ancient Maya
+ANTH,460,3.73,Heritage Management
+ANTH,462,3.58,Museum Theory and Practice
+ANTH,466,3.76,"Class, Culture and Society"
+ANTH,498,3.52,Senior Capstone Seminar
+ARAB,150,3.62,Lang&Culture of Arab World
+ARAB,201,3.46,Elementary Standard Arabic I
+ARAB,202,3.51,Elementary Standard Arabic II
+ARAB,403,3.55,Intermediate Stand Arabic I
+ARAB,404,3.66,Intermediate Stand Arabic II
+ARAB,405,3.62,Advanced Standard Arabic I
+ARCH,101,3.57,Introduction to Architecture
+ARCH,171,3.39,Concepts and Theories of Architectural Design
+ARCH,172,3.5,Drawing and Modeling
+ARCH,199,3.68,Undergraduate Open Seminar
+ARCH,210,3.22,Introduction to the History of World Architecture
+ARCH,231,3.4,Anatomy of Buildings
+ARCH,232,3.37,Structural Fundamentals
+ARCH,273,3.03,Strategies of Architectural Design
+ARCH,274,2.97,Representation
+ARCH,314,3.94,History of World Landscapes
+ARCH,321,3.39,"Environment, Architecture, and Global Health"
+ARCH,341,2.98,Environment Tech HVAC
+ARCH,342,3.09,Environment Tech Ltg & Acoust
+ARCH,351,3.25,Statics & Dynamics
+ARCH,352,3.28,Mech of Mat & Design Appl
+ARCH,403,3.29,Special Topics in Architectural History
+ARCH,407,3.33,Rome: City of Visible History
+ARCH,409,3.39,Special Topics in Spanish Arch
+ARCH,410,3.13,Ancient Egyptian & Greek Arch
+ARCH,411,3.28,Ancient Roman Architecture
+ARCH,412,3.04,Medieval Architecture
+ARCH,413,3.4,Renaissance Architecture
+ARCH,414,3.5,Baroque & Rococo Arch
+ARCH,415,3.13,Modernity’s Mirror: Nineteenth-Century Architecture 1750-1900
+ARCH,416,3.35,"The Architecture of the United States, c.1650 to Present"
+ARCH,417,3.26,Modern and Contemporary Global Architecture
+ARCH,423,3.8,Soc/Beh Factors for Design
+ARCH,433,3.32,Design of Steel and Reinforced Concrete Structures
+ARCH,435,3.1,Structural Systems and Construction Methods
+ARCH,451,3.4,Theory & Design Steel & Timber
+ARCH,452,3.46,Theory of Reinforced Concrete
+ARCH,468,3.55,Overseas Architectural Studies
+ARCH,475,3.34,Arch Design & Development
+ARCH,476,3.44,Arch Design & Exploration
+ARCH,490,3.58,Special Topics in Contemporary Architecture
+ARCH,501,3.49,Architectural Practice
+ARCH,502,3.4,Structural Planning
+ARCH,517,3.58,"Modern Architectural History, 1850-Present"
+ARCH,536,3.29,Planning and Design of Structural Systems
+ARCH,537,3.43,Environmental Control Systems II
+ARCH,551,3.42,Structural Analysis
+ARCH,553,3.3,Adv Reinforced Concrete Design
+ARCH,554,3.78,Adv Steel Design
+ARCH,556,3.63,Advanced Structural Planning
+ARCH,563,3.65,Soc/Beh Research Designed Env
+ARCH,577,3.18,Theories of Architecture
+ARCH,593,3.5,Special Problems in Detail and Fabrication
+ARCH,595,3.61,Spec Prob Struct Theory & Des
+ART,100,3.46,Understanding Visual Culture
+ART,102,3.7,Drawing for Non-Majors
+ART,103,3.87,Painting for Non-Majors
+ART,104,3.94,Sculpture for Non-Majors
+ART,105,3.79,Visual Design for Non-Majors
+ART,140,3.67,Introduction to Art
+ART,202,3.9,Art in the Elementary Grades
+ART,205,3.49,Experience & Meaning in Design
+ART,299,3.67,Special Topics in Art
+ART,310,3.73,Design Thinking
+ARTD,101,3.59,Introduction to Industrial Design
+ARTD,201,3.37,Industrial Design I
+ARTD,202,3.42,Industrial Design II
+ARTD,209,3.39,Chado (The Way of Tea)
+ARTD,215,3.49,Introduction to Typography for Non-Majors
+ARTD,216,3.4,Introduction to Image Making
+ARTD,217,3.51,Graphic Design for Non-Majors
+ARTD,218,3.65,Interaction Design Foundation
+ARTD,222,3.54,Typographic Practice
+ARTD,225,3.22,Design Drawing
+ARTD,228,3.19,Computer Applications
+ARTD,230,3.84,Design Thinking/Need-Finding
+ARTD,251,3.59,Graphic Design Toolbox
+ARTD,270,3.71,Design Methods
+ARTD,299,3.66,Spec Topics in Design Courses
+ARTD,301,3.05,Industrial Design III
+ARTD,302,3.16,Industrial Design IV
+ARTD,318,3.42,Interaction Design
+ARTD,326,3.4,Sustainability & Manufacturing
+ARTD,328,3.64,Human-Centered Product Design
+ARTD,333,3.57,Type & Image
+ARTD,351,3.71,Graphic Design Inquiry
+ARTD,371,3.69,Graphic Design Practicum
+ARTD,401,3.38,Industrial Design V
+ARTD,402,3.42,Industrial Design VI
+ARTD,418,3.35,Advanced Interaction Design
+ARTD,420,3.88,Disability Design
+ARTD,426,3.54,Product Innovation
+ARTD,444,3.76,Typographic Systems
+ARTD,445,3.39,Seminar in Design
+ARTD,448,3.51,Professional Design Practice
+ARTD,471,3.76,Graphic Design Capstone
+ARTD,499,3.41,Special Topics in Design
+ARTE,101,3.54,"Art, Design, and Society"
+ARTE,201,3.72,Foundations of Art Education
+ARTE,202,3.85,Facilitating the Art Experience
+ARTE,475,3.92,Art Exhibition Practices
+ARTF,101,3.44,Contemporary Issues in Art
+ARTF,102,3.72,Observational Drawing
+ARTF,103,3.83,Design I
+ARTF,104,3.52,Expressive Drawing
+ARTH,110,3.41,Introduction to the History of Art and Visual Culture
+ARTH,111,3.3,Ancient to Medieval Art
+ARTH,112,3.29,Renaissance to Modern Art
+ARTH,113,3.32,Introduction to African Art
+ARTH,211,3.15,Design History Survey
+ARTH,215,3.0,Greek Art
+ARTH,222,3.21,Medieval Art
+ARTH,231,3.37,Northern Renaissance Art
+ARTH,235,3.25,"Art, Power and Culture in 17th-Century Europe"
+ARTH,240,3.25,Art of the Nineteenth Century
+ARTH,241,3.47,"Modern Art, 1880-1940"
+ARTH,242,3.51,Art Since 1940
+ARTH,250,3.35,American Art
+ARTH,257,3.06,History of Photography
+ARTH,260,3.13,Graffiti and Murals
+ARTH,299,3.39,Spec Topics in Art History
+ARTH,310,3.35,African Art and Society I
+ARTH,312,3.56,Central African Art
+ARTH,313,3.37,Modern and Contemp African Art
+ARTH,344,3.03,Spanish Modern Art
+ARTH,350,3.07,American Art 1750-1900
+ARTH,351,3.35,Early American Modernism
+ARTH,360,3.14,Women and the Visual Arts
+ARTH,395,3.31,Junior Seminar in Art History
+ARTH,402,3.27,Ways of Seeing in Edo Japan
+ARTH,403,3.25,Word and Image in Chinese Art
+ARTH,413,3.51,Sacred African Diaspora Arts
+ARTH,433,3.19,Fifteenth-Century Italian Art
+ARTH,435,3.63,Italian Baroque Art
+ARTH,436,3.14,17th-Century Dutch & Flemish Art
+ARTH,445,3.78,European Art Between the Wars
+ARTH,495,3.39,Senior Seminar in Art History
+ARTS,250,3.56,Life Drawing
+ARTS,251,3.61,Beginning Painting
+ARTS,280,3.46,Beginning Sculpture
+ARTS,299,3.92,Spec Topics in Studio Art
+ARTS,350,3.38,Intermediate Studio I
+ARTS,351,3.51,Intermediate Studio II
+ARTS,450,3.38,Advanced Studio I
+ARTS,451,3.61,Advanced Studio II
+ARTS,499,3.71,Special Topics in Studio Art
+ASRM,199,3.71,Undergraduate Open Seminar
+ASRM,210,3.11,Theory of Interest
+ASRM,406,3.37,Linear Algebra with Financial Applications
+ASRM,409,3.59,Stochastic Processes for Finance and Insurance
+ASRM,410,3.25,Investments and Financial Markets
+ASRM,461,3.46,Loss Models
+ASRM,469,2.82,Casualty Actuarial Mathematics
+ASRM,471,3.3,Life Contingencies I
+ASRM,472,3.23,Life Contingencies II
+ASRM,510,3.62,Financial Mathematics
+ASRM,552,3.46,Predictive Analytics
+ASTR,100,3.24,Introduction to Astronomy
+ASTR,121,3.04,Solar System and Worlds Beyond
+ASTR,122,3.25,Stars and Galaxies
+ASTR,150,3.46,Killer Skies: Astro-Disasters
+ASTR,210,3.13,Introduction to Astrophysics
+ASTR,310,3.07,Computing in Astronomy
+ASTR,330,3.62,Extraterrestrial Life
+ASTR,350,3.39,"The Big Bang, Black Holes, and the End of the Universe"
+ASTR,404,3.13,Stellar Astrophysics
+ASTR,405,3.12,Planetary Systems
+ASTR,406,3.17,Galaxies and the Universe
+ASTR,414,3.19,Astronomical Techniques
+ASTR,496,3.69,Seminar in Astronomy
+ASTR,507,3.82,Physical Cosmology
+ATMS,100,3.38,Introduction to Meteorology
+ATMS,120,3.72,Severe and Hazardous Weather
+ATMS,140,3.36,Climate and Global Change
+ATMS,201,3.77,General Physical Meteorology
+ATMS,301,3.2,Atmospheric Thermodynamics
+ATMS,302,2.83,Atmospheric Dynamics I
+ATMS,303,2.97,Synoptic-Dynamic Wea Analysis
+ATMS,304,3.04,Radiative Transfer-Remote Sens
+ATMS,305,3.36,Computing and Data Analysis
+ATMS,307,2.92,Climate Processes
+ATMS,313,3.14,Synoptic Weather Forecasting
+ATMS,314,2.92,Mesoscale Dynamics
+ATMS,315,3.96,Meteorological Instrumentation
+ATMS,322,3.45,Soc Impacts Weather & Climate
+ATMS,323,3.43,Air Pollution to Global Change
+ATMS,391,3.48,Topics in Atmospheric Sciences
+ATMS,401,3.42,Applied Meteorology
+ATMS,404,3.46,Risk Analysis in Earth Science
+ATMS,410,3.08,Radar Remote Sensing
+ATMS,420,3.65,Atmospheric Chemistry
+ATMS,421,3.61,Earth Systems Modeling
+ATMS,447,3.21,Climate Change Assessment
+ATMS,491,3.45,Adv Topics in Atmospheric Sci
+ATMS,492,3.83,Capstone Undergraduate Research
+ATMS,502,3.7,Numerical Fluid Dynamics
+BADM,199,3.91,Undergraduate Open Seminar
+BADM,210,3.48,Business Analytics I
+BADM,211,3.66,Business Analytics II
+BADM,261,3.97,Technology & Mgmt Seminar
+BADM,275,3.52,Fundamentals of Operations Management
+BADM,300,3.3,The Legal Environment of Bus
+BADM,310,3.47,Mgmt and Organizational Beh
+BADM,311,3.55,Leading Individuals and Teams
+BADM,312,3.47,Designing and Managing Orgs
+BADM,313,3.48,Strategic Human Resource Management
+BADM,314,3.46,Leading Negotiations
+BADM,320,3.71,Principles of Marketing
+BADM,321,3.63,Principles of Retailing
+BADM,322,3.58,Marketing Research
+BADM,323,3.6,Marketing Communications
+BADM,324,3.74,Purchasing and Supply Mgmnt
+BADM,325,3.69,Consumer Behavior
+BADM,326,3.6,Pricing Strategy
+BADM,327,3.73,Marketing to Business and Govt
+BADM,329,3.69,New Product Development
+BADM,330,3.9,Brand Management
+BADM,335,3.56,Supply Chain Management Basics
+BADM,336,3.57,Modeling the Supply Chain
+BADM,337,3.83,Practicum in Supply Chain Mgt
+BADM,340,3.69,Ethical Dilemmas of Business
+BADM,350,3.54,IT for Networked Organizations
+BADM,351,3.8,E-Business Management
+BADM,352,3.46,Database Design and Management
+BADM,353,3.6,Info Sys Analysis and Design
+BADM,356,3.73,Data Science and Analytics
+BADM,359,3.87,Business Problem Formulation and Solution
+BADM,365,3.83,New Product Marketing
+BADM,366,3.9,Product Design and Development
+BADM,367,3.71,Mgmt of Innov and Technology
+BADM,374,3.43,Management Decision Models
+BADM,375,3.31,Operations Management
+BADM,377,3.35,Project Management
+BADM,378,3.13,Logistics Management
+BADM,379,3.32,Business Process Improvement
+BADM,380,3.64,International Business
+BADM,381,3.75,Multinational Management
+BADM,382,3.69,International Marketing
+BADM,394,3.98,Senior Research I
+BADM,395,3.62,Senior Research II
+BADM,403,3.56,Corporate & Commercial Law
+BADM,420,3.81,Advanced Marketing Management
+BADM,445,3.74,Small Business Consulting
+BADM,446,3.67,Entrepreneurship: New Venture Creation
+BADM,449,3.64,Business Policy and Strategy
+BADM,453,3.81,Business Intelligence
+BADM,460,3.64,Business Process Modeling
+BADM,461,3.98,"Tech, Eng, & Mgt Final Project"
+BADM,501,3.71,Introduction to Business
+BADM,508,3.61,Leadership and Teams
+BADM,509,3.7,Managing Organizations
+BADM,514,3.65,Managing Innovation
+BADM,520,3.77,Marketing Management
+BADM,521,3.69,Marketing Strategy
+BADM,524,3.77,Pricing Strategy and Tactics
+BADM,525,3.58,New Product Development
+BADM,528,3.6,Promotional Strategy
+BADM,529,3.75,Marketing Research
+BADM,532,3.93,Sustainable Product Design & Enterprise Plan Development - I: Bottom-Up Immersion & Design
+BADM,540,3.93,Frontiers in Technology
+BADM,543,3.56,Technology Strategy
+BADM,544,3.53,Strategic Management
+BADM,550,3.73,Technology Practicum
+BADM,551,3.75,Managing Intellectual Property
+BADM,552,3.8,Legal Aspects of Mgt Decisions
+BADM,553,3.55,Ethical Dilemmas in Business
+BADM,554,3.24,Enterprise Database Management
+BADM,555,3.7,Info Sys Development and Mgt
+BADM,556,3.89,Electronic Commerce
+BADM,557,3.78,Dec Support and Knowledge Mgt
+BADM,559,3.76,Enterprise IT Governance
+BADM,562,3.85,Social Media Strategy
+BADM,564,3.52,Business Process Improvement
+BADM,566,3.44,Supply Chain Management
+BADM,567,3.55,Process Management
+BADM,572,3.59,Stat for Mgt Decision Making
+BADM,573,3.52,Decision Analytics
+BADM,574,3.55,Simulation and Risk Analysis
+BADM,576,3.77,Data Science and Analytics
+BADM,577,3.71,Predictive Data Analytics
+BADM,582,3.75,Multinational Management
+BADM,583,3.74,Current Topics in Intl Bus
+BADM,584,3.69,Global Marketing
+BADM,586,3.9,Intl Comparative Management
+BADM,588,3.89,Business Practice Immersion
+BADM,589,3.5,Project Management
+BADM,590,3.82,Seminar in Business Admin
+BADM,593,3.51,Research in Special Fields
+BADM,595,3.68,Business Fundamentals
+BCOG,301,3.49,Intelligence and the Brain
+BCS,115,3.63,South Slavic Cultures
+BIOC,446,3.45,Physical Biochemistry
+BIOC,455,3.19,Technqs Biochem & Biotech
+BIOC,460,3.42,Biochemistry Senior Seminar
+BIOE,100,3.97,Bioengineering Freshman Seminar
+BIOE,120,3.83,Introduction to Bioengineering
+BIOE,199,3.81,Undergraduate Open Seminar
+BIOE,201,3.69,Conservation Principles Bioeng
+BIOE,202,3.4,Cell & Tissue Engineering Lab
+BIOE,205,3.17,Signals & Systems in Bioengrg
+BIOE,206,3.2,Cellular Bioengineering
+BIOE,210,3.46,Linear Algebra for Biomedical Data Science
+BIOE,220,3.57,Bioenergetics
+BIOE,298,3.4,Special Topics
+BIOE,302,3.44,Modeling Human Physiology
+BIOE,303,3.78,Quantitative Physiology Lab
+BIOE,310,3.62,Comp Tools Bio Data
+BIOE,360,3.57,Transport & Flow in Bioengrg
+BIOE,398,3.86,Special Topics
+BIOE,414,3.36,Biomedical Instrumentation
+BIOE,415,3.74,Biomedical Instrumentation Lab
+BIOE,420,3.69,Intro Bio Control Systems
+BIOE,430,3.73,Intro Synthetic Biology
+BIOE,435,3.84,Senior Design I
+BIOE,436,3.95,Senior Design II
+BIOE,476,3.6,Tissue Engineering
+BIOE,479,3.96,Cancer Nanotechnology
+BIOE,498,3.82,Special Topics
+BIOE,502,3.83,Bioengineering Professionalism
+BIOE,504,3.7,Analytical Methods in Bioeng
+BIOE,505,3.64,Computational Bioengineering
+BIOE,507,3.91,Advanced Bioinstrumentation
+BIOE,573,3.36,Managing Business Operations
+BIOE,574,3.81,Innovation and Introduction to Financial Decision Making
+BIOE,575,3.78,Capstone Project
+BIOE,598,3.77,Special Topics
+BIOP,401,3.65,Introduction to Biophysics
+BTW,250,3.58,Principles Bus Comm
+BTW,261,3.64,Principles Tech Comm
+BTW,263,3.61,Writing in the Disciplines
+BTW,271,3.63,Persuasive Writing
+BUS,101,3.83,Professional Responsibility and Business
+BUS,199,3.87,Undergraduate Open Seminar
+BUS,201,3.86,Business Dynamics
+BUS,301,3.84,Business in Action
+BUS,302,3.9,Principles of Professional Responsibility
+CEE,195,3.72,About Civil Engineering
+CEE,201,3.16,Systems Engrg & Economics
+CEE,202,3.16,Engineering Risk & Uncertainty
+CEE,300,3.0,Behavior of Materials
+CEE,310,3.09,Transportation Engineering
+CEE,320,3.49,Construction Engineering
+CEE,330,3.45,Environmental Engineering
+CEE,340,3.4,Energy and Global Environment
+CEE,350,3.41,Water Resources Engineering
+CEE,360,3.07,Structural Engineering
+CEE,380,2.88,Geotechnical Engineering
+CEE,398,3.64,Special Topics
+CEE,401,3.44,Concrete Materials
+CEE,406,3.14,Pavement Design I
+CEE,407,3.38,Airport Design
+CEE,408,3.2,Railroad Transportation Engrg
+CEE,409,3.49,Railroad Track Engineering
+CEE,410,3.26,Railway Signaling & Control
+CEE,411,3.3,RR Project Design & Constr
+CEE,412,3.82,High-Speed Rail Engineering
+CEE,415,3.04,Geometric Design of Roads
+CEE,416,3.19,Traffic Capacity Analysis
+CEE,418,3.32,Public Transportation Systems
+CEE,420,3.48,Construction Productivity
+CEE,421,3.5,Construction Planning
+CEE,422,3.4,Construction Cost Analysis
+CEE,424,3.46,Sustainable Const Methods
+CEE,430,3.56,Ecological Quality Engineering
+CEE,432,3.64,Stream Ecology
+CEE,433,3.47,Water Technology and Policy
+CEE,434,3.62,Environmental Systems I
+CEE,437,3.36,Water Quality Engineering
+CEE,438,3.58,Science & Environmental Policy
+CEE,440,3.34,Fate Cleanup Environ Pollutant
+CEE,442,3.63,"Environmental Engineering Principles, Physical"
+CEE,443,3.34,"Env Eng Principles, Chemical"
+CEE,444,3.41,"Env Eng Principles, Biological"
+CEE,446,3.22,Air Quality Engineering
+CEE,447,3.18,Atmospheric Chemistry
+CEE,449,3.36,Environmental Engineering Lab
+CEE,450,3.67,Surface Hydrology
+CEE,452,3.58,Hydraulic Analysis and Design
+CEE,453,3.32,Urban Hydrology and Hydraulics
+CEE,457,3.29,Groundwater
+CEE,458,3.8,Water Resources Field Methods
+CEE,460,3.32,Steel Structures I
+CEE,461,3.19,Reinforced Concrete I
+CEE,462,3.43,Steel Structures II
+CEE,463,3.47,Reinforced Concrete II
+CEE,465,3.32,Design of Structural Systems
+CEE,467,3.08,Masonry Structures
+CEE,468,3.57,Prestressed Concrete
+CEE,469,3.55,Wood Structures
+CEE,470,3.24,Structural Analysis
+CEE,471,3.17,Structural Mechanics
+CEE,472,3.49,Structural Dynamics I
+CEE,480,2.9,Foundation Engineering
+CEE,483,3.07,Soil Mechanics and Behavior
+CEE,484,3.25,Applied Soil Mechanics
+CEE,491,3.32,Decision and Risk Analysis
+CEE,493,3.89,Sustainable Design Eng Tech
+CEE,498,3.76,Special Topics
+CEE,506,3.36,Pavement Design II
+CEE,507,3.76,Repair of Civil Infrastructure
+CEE,508,3.49,Pavement Evaluation and Rehab
+CEE,509,3.45,Transportation Soils
+CEE,512,3.53,Logistics Systems Analysis
+CEE,515,3.36,Traffic Flow Theory
+CEE,517,3.39,Traffic Signal Systems
+CEE,524,3.73,Construction Law
+CEE,525,3.73,Construction Case Studies
+CEE,526,3.79,Construction Optimization
+CEE,527,3.74,Constr Conflict Resolution
+CEE,528,3.69,Construction Data Modeling
+CEE,537,3.46,Water Quality Control Proc I
+CEE,538,3.63,Water Quality Control Proc II
+CEE,540,3.74,Remediation Design
+CEE,557,3.79,Groundwater Modeling
+CEE,559,3.81,Sediment Transport
+CEE,560,3.5,Steel Structures III
+CEE,561,3.8,Reinforced Concrete III
+CEE,570,3.3,Finite Element Methods
+CEE,572,3.73,Earthquake Engineering
+CEE,575,3.63,Fracture and Fatigue
+CEE,576,3.77,Nonlinear Finite Elements
+CEE,580,3.36,Excavation and Support Systems
+CEE,585,4.0,Deep Foundations
+CEE,586,3.44,Rock Mechanics and Behavior
+CEE,590,3.45,Geotechnical Field Measurement
+CEE,592,3.83,Sustainable Urban Systems
+CEE,598,3.7,Special Topics
+CHBE,101,3.35,Hidden World of Engineering
+CHBE,221,2.66,Principles of CHE
+CHBE,321,2.98,Thermodynamics
+CHBE,421,2.77,Momentum and Heat Transfer
+CHBE,422,2.87,Mass Transfer Operations
+CHBE,424,2.88,Chemical Reaction Engineering
+CHBE,430,3.19,Unit Operations Laboratory
+CHBE,431,3.09,Process Design
+CHBE,440,3.1,Process Control and Dynamics
+CHBE,452,3.67,Chemical Kinetics & Catalysis
+CHBE,453,3.85,Electrochemical Engineering
+CHBE,455,3.05,Polymers Synthesis and Industrial Applications
+CHBE,456,3.16,Polymer Science & Engineering
+CHBE,457,2.95,Microelectronics Processing
+CHBE,471,3.12,Biochemical Engineering
+CHBE,472,3.05,Techniques in Biomolecular Eng
+CHBE,473,2.96,Biomolecular Engineering
+CHBE,474,3.3,Metabolic Engineering
+CHBE,475,3.38,Tissue Engineering
+CHBE,476,3.67,Biotransport
+CHBE,478,3.01,Bioenergy Technology
+CHBE,494,3.42,Special Topics
+CHBE,521,3.56,Applied Mathematics in CHBE
+CHBE,522,3.61,Fluid Dynamics
+CHBE,523,3.48,Heat and Mass Transfer
+CHBE,525,3.57,Statistical Thermodynamics for Chemical Engineers
+CHBE,551,3.5,Chemical Kinetics & Catalysis
+CHBE,571,3.82,Bioinformatics
+CHBE,594,3.67,Special Topics
+CHEM,101,2.74,Introductory Chemistry
+CHEM,102,2.52,General Chemistry I
+CHEM,103,3.59,General Chemistry Lab I
+CHEM,104,2.65,General Chemistry II
+CHEM,105,3.59,General Chemistry Lab II
+CHEM,108,3.74,"Chemistry, Everyday Phenomena"
+CHEM,199,3.92,Undergraduate Open Seminar
+CHEM,202,2.72,Accelerated Chemistry I
+CHEM,203,3.09,Accelerated Chemistry Lab I
+CHEM,204,2.74,Accelerated Chemistry II
+CHEM,205,3.02,Accelerated Chemistry Lab II
+CHEM,222,3.5,Quantitative Analysis Lecture
+CHEM,223,3.14,Quantitative Analysis Lab
+CHEM,232,2.68,Elementary Organic Chemistry I
+CHEM,233,3.28,Elementary Organic Chem Lab I
+CHEM,236,2.87,Fundamental Organic Chem I
+CHEM,237,2.89,Structure and Synthesis
+CHEM,312,2.9,Inorganic Chemistry
+CHEM,315,3.07,Instrumental Chem Systems Lab
+CHEM,317,3.26,Inorganic Chemistry Lab
+CHEM,332,2.83,Elementary Organic Chem II
+CHEM,360,3.41,Chemistry of the Environment
+CHEM,420,2.99,Instrumental Characterization
+CHEM,436,2.86,Fundamental Organic Chem II
+CHEM,437,3.38,Organic Chemistry Lab
+CHEM,440,3.2,Physical Chemistry Principles
+CHEM,442,3.28,Physical Chemistry I
+CHEM,444,3.05,Physical Chemistry II
+CHEM,445,3.69,Physical Principles Lab I
+CHEM,460,3.25,Green Chemistry
+CHEM,474,3.11,Drug Discovery & Development
+CHEM,483,3.46,Solid State Structural Anlys
+CHEM,492,3.77,Special Topics in Chemistry
+CHEM,512,3.58,Advanced Inorganic Chemistry
+CHEM,524,3.71,Electrochemical Methods
+CHEM,530,3.5,Structure and Spectroscopy
+CHEM,532,3.47,Physical Organic Chemistry
+CHEM,534,3.34,Advanced Organic Synthesis
+CHEM,540,3.51,Quantum Mechanics
+CHEM,544,3.55,Statistical Thermodynamics
+CHEM,570,3.49,Concepts in Chemical Biology
+CHEM,572,3.71,Enzyme Reaction Mechanisms
+CHEM,576,3.81,Computational Chemical Biology
+CHEM,584,3.58,Introduction to Materials Chem
+CHEM,588,3.71,Physical Methods Mat Chem
+CHEM,590,3.48,Special Topics in Chemistry
+CHIN,203,3.4,Intermediate Chinese I
+CHIN,242,2.75,Chinese Reading and Writing
+CHLH,100,3.51,Contemporary Health
+CHLH,101,3.4,Introduction to Public Health
+CHLH,110,3.37,Intro to the Health Sciences
+CHLH,125,3.83,Orientation KIN & Comm Health
+CHLH,199,3.69,Undergraduate Open Seminar
+CHLH,200,3.5,Mental Health
+CHLH,201,3.51,Public Health Research Methods
+CHLH,206,3.41,Human Sexuality
+CHLH,210,3.59,Community Health Organizations
+CHLH,243,3.66,Drug Use and Abuse
+CHLH,244,3.0,Health Statistics
+CHLH,250,3.57,Health Care Systems
+CHLH,260,3.63,Introduction to Medical Ethics
+CHLH,274,3.3,Introduction to Epidemiology
+CHLH,304,3.65,Foundations of Health Behavior
+CHLH,314,3.76,Introduction to Aging
+CHLH,380,3.92,Orientation to Internship
+CHLH,404,3.75,Gerontology
+CHLH,407,3.89,"Disability, Culture & Society"
+CHLH,409,3.59,Women's Health
+CHLH,410,3.55,Public Health Practice
+CHLH,415,3.57,International Health
+CHLH,421,3.59,Health Data Analysis
+CHLH,455,3.62,Health Services Financing
+CHLH,456,3.65,Organization of Health Care
+CHLH,457,3.67,Health Planning
+CHLH,458,3.56,Health Administration
+CHLH,469,3.67,Environmental Health
+CHLH,474,3.53,Principles of Epidemiology
+CHLH,494,3.78,Special Topics
+CHLH,510,3.87,Public Health Dev
+CHLH,540,3.5,Health Behavior: Theory
+CHLH,550,3.94,Health Policy: United States
+CHLH,572,3.57,Principles of Epidemiology
+CHLH,573,3.56,Biostatistics in Public Health
+CHLH,577,3.92,Health Program Evaluation
+CHLH,594,3.76,Special Topics
+CHP,199,3.87,Special Topics
+CI,210,3.86,Introduction to Digital Learning Environments
+CI,401,3.76,Introductory Teaching in a Diverse Society
+CI,402,3.8,Teaching Diverse Middle Grade Students
+CI,403,3.8,Teaching a Diverse High School Student Population
+CI,404,3.79,Teaching and Assessing Secondary School Students
+CI,405,3.76,Introduction to Teaching Elementary Age Children
+CI,406,3.78,Theory Practice in Elementary School Teaching I
+CI,407,3.79,Theory Practice in Elementary School Teaching II
+CI,410,3.71,"Middle School Instruction, Philosophy and Structures"
+CI,415,3.78,"Language Varieties, Cultures and Learning"
+CI,420,3.47,Foundations of Early Childhood Education
+CI,421,3.41,Principles and Practices in Early Childhood Education
+CI,422,3.8,"Families, Communities, Schools"
+CI,424,3.87,Child Development & Technology
+CI,430,3.77,Teaching Children Mathematics
+CI,431,3.72,Teaching Elementary Mathematics
+CI,432,3.87,Investigative Approach to Elementary Mathematics Instruction
+CI,433,3.78,Foundations of Bilingual Education
+CI,435,3.97,Computer-Assisted Instruction
+CI,437,3.86,Educational Game Design
+CI,444,3.94,Social Studies in Early Childhood Education
+CI,446,3.77,Culture in the Classroom
+CI,448,3.85,Teaching Elementary Social Studies
+CI,450,3.71,Teaching Elementary Science I
+CI,451,3.88,Teaching Elementary Science II
+CI,452,3.84,Social Studies as Action and Inquiry
+CI,465,3.46,Language Literacy in Early Childhood Education I
+CI,466,3.92,Language Literacy in Early Childhood Education II
+CI,467,3.68,Principles in Teaching Literature to Children and Youth
+CI,468,3.79,Children's Literature for Early Childhood Education
+CI,471,3.64,Principles and Practices to Foster Independence in Reading
+CI,472,3.96,Teaching Reading in Grades 4-12
+CI,473,3.95,Disciplinary Literacy
+CI,475,3.78,Teaching Elementary Reading and Language Arts I
+CI,476,3.8,Teaching Elementary and Middle Grade Language Arts
+CI,477,3.85,Bilingual/ESL Methods & Materials
+CI,499,3.76,Issues and Development in Education
+CI,507,3.28,Problems & Trends in Special Fields
+CI,509,3.76,Curriculum Research
+CI,517,3.83,Bilingual and English as a Second Language Assessment
+CI,522,3.86,Arts in Early Childhood and Elementary: Curriculum in Context
+CI,541,3.61,Learning in Science
+CI,550,3.79,Methods of Educational Inquiry
+CLCV,100,3.02,Vocabulary Building from Greek and Latin Roots
+CLCV,102,3.47,Medical Terms-GRK & LAT Roots
+CLCV,111,3.12,Mythology of Greece and Rome
+CLCV,114,3.28,Introduction to Greek Culture
+CLCV,115,3.5,Mythology of Greece and Rome
+CLCV,116,3.37,The Roman Achievement
+CLCV,120,3.66,The Classical Tradition
+CLCV,131,3.39,"Classical Archaeology, Greece"
+CLCV,132,3.16,"Class Archaeology, Rome-Italy"
+CLCV,160,3.41,Ancient Greek & Roman Religion
+CLCV,206,3.84,Classical Allusions in Cinema
+CLCV,220,3.36,Origins of Western Literature
+CLCV,221,3.28,Odysseus and Other Heroes
+CLCV,222,3.61,Introduction to Greek and Roman Theater
+CLCV,224,3.9,American Race and Ethnicity in the Classical Tradition
+CLCV,225,3.8,"Greco-Roman Demo, Econ, Cult"
+CLCV,231,3.55,Development of Ancient Cities
+CLCV,232,3.55,Ancient Greek Sanctuaries
+CLCV,240,3.41,Gender & Sexuality in Greco-Roman Antiquity
+CLCV,323,3.4,The Comic Imagination
+CLCV,443,3.17,The Archaeology of Greece
+CLCV,444,3.15,The Archaeology of Italy
+CMN,101,3.37,Public Speaking
+CMN,102,3.15,Introduction to Communication
+CMN,111,3.58,Oral & Written Comm I
+CMN,112,3.66,Oral & Written Comm II
+CMN,199,3.85,Undergraduate Open Seminar
+CMN,210,3.19,Public Comm in Everyday Life
+CMN,211,3.48,Business and Professional Communication
+CMN,212,3.29,Intro to Organizational Comm
+CMN,213,3.69,Small Group Communication
+CMN,215,3.5,Interviewing: The Art and Science of Effective Questioning
+CMN,220,3.43,Communicating Public Policy
+CMN,230,3.23,Intro to Interpersonal Comm
+CMN,231,3.48,Communication and Conflict
+CMN,232,3.48,Intro to Intercultural Comm
+CMN,250,3.43,Social Movement Communication
+CMN,260,3.23,Intro to Health Communication
+CMN,275,3.1,"Media, Money and Power"
+CMN,277,2.88,Introduction to Mediated Communication
+CMN,280,3.33,Comm Technology & Society
+CMN,304,3.91,Communication Internship
+CMN,310,2.98,The Rhetorical Tradition
+CMN,312,3.3,Communicating for Innovation
+CMN,320,3.72,Comm Controversy Public Policy
+CMN,321,2.67,Strategies of Persuasion
+CMN,323,3.56,Argumentation
+CMN,326,3.11,Mass Media and the Audience
+CMN,336,3.2,Family Communication
+CMN,338,3.08,Relationships and Technologies
+CMN,340,3.46,Visual Politics
+CMN,345,2.85,Visual Media Effects
+CMN,361,3.38,Storytelling as Oral Communication
+CMN,368,3.22,Sexual Communication
+CMN,370,3.67,Political Economy of Communication
+CMN,375,3.14,Popular Media and Culture
+CMN,377,3.22,Propaganda and Modern Society
+CMN,396,3.15,Special Topics in Comm
+CMN,410,3.5,Workplace Comm Technology
+CMN,411,3.44,Organizational Comm Assessment
+CMN,412,3.28,Adv Organizational Comm
+CMN,413,3.74,Adv Small Group Communication
+CMN,415,3.54,Classical Rhetorics
+CMN,416,3.22,Early Modern Rhetorics
+CMN,421,3.14,Persuasion Theory & Research
+CMN,423,3.46,Rhetorical Criticism
+CMN,424,3.28,Campaigning to Win
+CMN,427,2.69,Children and the Media
+CMN,429,2.98,Race and the Mass Media
+CMN,432,3.86,Gender Communication
+CMN,435,3.53,Adv Interpersonal Comm
+CMN,437,3.17,Comm in Personal Relationships
+CMN,450,3.35,Topics in Public Communication
+CMN,462,3.25,Interpersonal Health Comm
+CMN,463,3.38,Organizational Health Comm
+CMN,464,3.39,Health Communication Campaigns
+CMN,465,3.6,Social Marketing
+CMN,476,3.51,Commercialism and the Public
+CMN,496,3.29,Adv Topics in Communication
+CMN,502,3.94,Health Comm Research Methods I
+CMN,503,3.73,Health Comm Research MethodsII
+CMN,504,3.92,Health & Family Communication
+CMN,506,3.94,Health Informatics
+CMN,529,4.0,Seminar Communication Theory
+CMN,595,3.8,Special Problems
+CPSC,112,3.16,Introduction to Crop Sciences
+CPSC,113,3.45,"Environment, Agric, & Society"
+CPSC,116,3.82,The Global Food Production Web
+CPSC,117,3.85,Agriculture and Science of Coffee
+CPSC,131,3.68,Agriculture in Mythology
+CPSC,213,3.33,Evolution in Action
+CPSC,215,3.04,The Prairie and Bioenergy
+CPSC,241,2.88,Intro to Applied Statistics
+CPSC,261,3.27,Biotechnology in Agriculture
+CPSC,265,3.9,Genetic Engineering Lab
+CPSC,270,3.13,Applied Entomology
+CPSC,336,3.38,Tomorrow's Environment
+CPSC,352,3.17,Plant Genetics
+CPSC,412,3.56,Principles of Crop Production
+CPSC,414,3.74,Forage Crops & Pasture Ecology
+CPSC,415,3.79,Bioenergy Crops
+CPSC,418,3.71,Crop Growth and Management
+CPSC,419,3.95,Midwest Agricultural Practices
+CPSC,426,3.49,Weed Mgt in Agronomic Crops
+CPSC,431,3.35,Plants and Global Change
+CPSC,437,3.71,Principles of Agroecology
+CPSC,440,3.28,Applied Statistical Methods I
+CPSC,441,3.61,Introduction to R Programming
+CPSC,452,3.79,Advanced Plant Genetics
+CPSC,453,3.55,Principles of Plant Breeding
+CPSC,454,3.92,Plant Breeding Methods
+CPSC,466,3.71,Genomics for Plant Improvement
+CPSC,484,3.52,Plant Physiology
+CPSC,498,3.92,Crop Sci Professional Develpmt
+CPSC,499,3.95,Advanced Special Topics
+CPSC,518,3.79,Crop Growth and Development
+CPSC,541,3.55,Regression Analysis
+CPSC,542,3.44,Applied Statistical Methods II
+CPSC,543,3.84,Appl. Multivariate Statistics
+CPSC,563,3.91,Chromosomes
+CPSC,565,3.83,Perl & UNIX for Bioinformatics
+CPSC,588,3.65,Plant Biochemistry
+CPSC,593,3.81,Adv Studies in Crop Sciences
+CS,100,3.76,Freshman Orientation
+CS,101,3.38,Intro Computing: Engrg & Sci
+CS,105,3.33,Intro Computing: Non-Tech
+CS,125,3.44,Intro to Computer Science
+CS,126,3.59,Software Design Studio
+CS,173,3.03,Discrete Structures
+CS,196,3.77,Freshman Honors
+CS,199,3.81,Undergraduate Open Seminar in Computer Science
+CS,210,3.65,Ethical & Professional Issues
+CS,225,3.22,Data Structures
+CS,233,3.2,Computer Architecture
+CS,241,2.84,System Programming
+CS,242,3.47,Programming Studio
+CS,296,3.74,Honors Course
+CS,357,3.16,Numerical Methods I
+CS,361,3.4,Probability & Statistics for Computer Science
+CS,374,2.67,Introduction to Algorithms & Models of Computation
+CS,398,3.06,Special Topics
+CS,410,3.85,Text Information Systems
+CS,411,3.38,Database Systems
+CS,412,3.39,Introduction to Data Mining
+CS,414,3.21,Multimedia Systems
+CS,418,3.33,Interactive Computer Graphics
+CS,419,3.55,Production Computer Graphics
+CS,420,3.29,Parallel Progrmg: Sci & Engrg
+CS,421,3.4,Programming Languages & Compilers
+CS,422,3.79,Programming Language Design
+CS,423,3.44,Operating Systems Design
+CS,424,3.54,Real-Time Systems
+CS,425,3.27,Distributed Systems
+CS,426,3.38,Compiler Construction
+CS,427,3.46,Software Engineering I
+CS,428,3.53,Software Engineering II
+CS,429,3.42,"Software Engineering II, ACP"
+CS,431,3.1,Embedded Systems
+CS,433,3.37,Computer System Organization
+CS,438,3.15,Communication Networks
+CS,440,3.25,Artificial Intelligence
+CS,445,3.61,Computational Photography
+CS,446,3.44,Machine Learning
+CS,447,3.58,Natural Language Processing
+CS,450,3.16,Numerical Analysis
+CS,457,2.86,Numerical Methods II
+CS,460,3.73,Security Laboratory
+CS,461,3.08,Computer Security I
+CS,463,3.36,Computer Security II
+CS,465,3.22,User Interface Design
+CS,466,3.61,Introduction to Bioinformatics
+CS,467,3.73,Social Visualization
+CS,473,2.72,Algorithms
+CS,477,3.52,Formal Software Development Methods
+CS,484,3.19,Parallel Programming
+CS,492,3.53,Senior Project I
+CS,493,3.68,"Senior Project II, ACP"
+CS,494,3.61,Senior Project II
+CS,498,3.53,Special Topics
+CS,510,3.81,Advanced Information Retrieval
+CS,511,3.64,Advanced Data Management
+CS,512,3.71,Data Mining Principles
+CS,513,3.98,Theory & Practice of Data Cleaning
+CS,519,3.7,Scientific Visualization
+CS,523,3.72,Advanced Operating Systems
+CS,525,3.72,Advanced Distributed Systems
+CS,527,3.72,Topics in Software Engineering
+CS,528,3.6,Obj-Oriented Progrmg & Design
+CS,533,3.65,Parallel Computer Architecture
+CS,538,3.81,Advanced Computer Networks
+CS,544,3.96,Optimiz in Computer Vision
+CS,546,3.82,Machine Learning in NLP
+CS,548,3.39,Models of Cognitive Processes
+CS,554,3.64,Parallel Numerical Algorithms
+CS,555,3.75,Numerical Methods for PDEs
+CS,556,3.56,Iterative & Multigrid Methods
+CS,563,3.51,Advanced Computer Security
+CS,565,3.68,Human-Computer Interaction
+CS,573,3.46,Algorithms
+CS,574,3.29,Randomized Algorithms
+CS,579,3.66,Computational Complexity
+CS,583,3.92,Approximation Algorithms
+CS,598,3.8,Special Topics
+CW,100,3.61,Intro to Creative Writing
+CW,200,3.36,Reading for Writers
+CW,243,3.43,"The Craft Essay: Creative Reading, Reflection, and Revision"
+CWL,114,3.41,Global Consciousness and Lit
+CWL,151,3.82,Cross-Cultural Thematics
+CWL,189,3.57,Lit of Asia & Africa I
+CWL,190,3.14,Lit of Asia & Africa II
+CWL,207,3.9,Indian Cinema in Context
+CWL,208,3.84,Cultures & Literatures of South Asia
+CWL,241,3.64,Early Masterpieces of Western Culture
+CWL,242,3.61,Modern Masterpieces of Western Culture
+CWL,450,3.71,Topics in Bodies and Genders
+DANC,100,3.78,Intro to Contemporary Dance
+DANC,101,3.8,Modern Dance I
+DANC,102,3.75,Modern Dance II
+DANC,105,3.81,Jazz Dance I
+DANC,106,3.82,Jazz Dance II
+DANC,107,3.8,Ballet I
+DANC,109,3.67,Ballet III
+DANC,112,3.73,Hip Hop
+DANC,120,3.71,Tap Dance I
+DANC,121,3.89,Tap Dance II
+DANC,125,2.89,Black Dances of Resistance
+DANC,131,3.9,Production Practicum I
+DANC,150,3.92,Orientation to Dance
+DANC,160,3.41,Beg Contemp Modern Tech Core
+DANC,166,3.85,Beginning Ballet Tech Core
+DANC,167,2.95,Beginning Ballet Tech Elect
+DANC,200,3.71,Explore Music through Dance
+DANC,201,3.68,Yoga Practicum
+DANC,212,3.62,Musical Theater Dance
+DANC,240,3.94,Dance History
+DANC,259,3.95,Contact Improv for Act/Mus/Dan
+DANC,260,3.48,Int Contemp Modern Tech Core
+DANC,261,3.44,Int Contemp Modern Tech Elect
+DANC,266,3.53,Intermediate Ballet Tech Core
+DANC,268,3.41,Music Theory for Dancers
+DANC,301,3.62,Yoga Fundamentals
+DANC,310,3.64,Dancing Techniques/Dance Majors:
+DANC,340,3.4,Dancing Black Popular Culture
+DANC,360,3.49,Int/Adv Contemp Mod Tech Core
+DANC,362,3.88,Choreographic Process II
+DANC,363,3.95,Advanced Improvisation
+DANC,366,3.28,Int/Adv Ballet Tech Core
+DANC,410,3.21,Advanced Jazz Technique
+EALC,122,3.66,History East Asian Religions
+EALC,130,3.56,The Chinese Language
+EALC,199,3.37,Undergraduate Open Seminar
+EALC,222,2.91,Chinese Thought and Culture
+EALC,230,3.75,Popular Cultures of Contemporary East Asia
+EALC,240,3.52,Chinese Civilization
+EALC,250,3.16,Intro to Japanese Culture
+EALC,275,3.4,Masterpieces of East Asian Lit
+EALC,285,3.48,Intro to Korea Through Film
+EALC,287,3.1,Introduction to Buddhism
+EALC,305,3.36,Japan Lit in Translation I
+EALC,306,3.35,Japan Lit in Translation II
+EALC,308,3.61,Chinese Popular Lit
+EALC,361,3.3,Women in East Asia
+EALC,365,3.62,Contemporary Korean Society
+EALC,367,3.91,History of Korea
+EALC,398,3.56,Colloquium in EALC
+EALC,415,3.49,Mod Japan Lit in Translation
+ECE,101,3.19,Exploring Digital Info Technol
+ECE,110,3.31,Introduction to Electronics
+ECE,120,3.12,Introduction to Computing
+ECE,198,2.89,Special Topics
+ECE,199,3.75,Undergraduate Open Seminar
+ECE,205,3.03,Electrical and Electronic Circuits
+ECE,206,3.74,Electrical and Electronic Circuits Lab
+ECE,210,2.77,Analog Signal Processing
+ECE,211,2.79,Analog Circuits & Systems
+ECE,220,2.99,Computer Systems & Programming
+ECE,298,3.62,Special Topics
+ECE,304,3.05,Photonic Devices
+ECE,307,3.12,Techniques for Engrg Decisions
+ECE,310,3.02,Digital Signal Processing
+ECE,311,3.57,Digital Signal Processing Lab
+ECE,313,2.78,Probability with Engrg Applic
+ECE,314,3.81,Probability in Engineering Lab
+ECE,316,3.66,Ethics and Engineering
+ECE,317,3.68,ECE Technology & Management
+ECE,329,3.01,Fields and Waves I
+ECE,330,2.73,Power Ckts & Electromechanics
+ECE,333,3.22,Green Electric Energy
+ECE,340,2.78,Semiconductor Electronics
+ECE,342,3.1,Electronic Circuits
+ECE,343,3.76,Electronic Circuits Laboratory
+ECE,350,3.2,Fields and Waves II
+ECE,365,3.58,Data Science and Engineering
+ECE,380,3.23,Biomedical Imaging
+ECE,385,3.22,Digital Systems Laboratory
+ECE,391,3.07,Computer Systems Engineering
+ECE,395,3.68,Advanced Digital Projects Lab
+ECE,398,3.52,Special Topics in ECE
+ECE,401,3.79,Signal and Image Analysis
+ECE,402,3.53,Electronic Music Synthesis
+ECE,403,3.74,Audio Engineering
+ECE,408,3.33,Applied Parallel Programming
+ECE,411,3.03,Computer Organization & Design
+ECE,416,3.26,Biosensors
+ECE,417,3.61,Multimedia Signal Processing
+ECE,418,3.46,Image & Video Processing
+ECE,420,3.63,Embedded DSP Laboratory
+ECE,425,3.21,Intro to VLSI System Design
+ECE,431,3.19,Electric Machinery
+ECE,434,3.69,Mobile Computing & Application
+ECE,435,3.73,Computer Networking Laboratory
+ECE,437,3.74,Sensors and Instrumentation
+ECE,439,3.55,Wireless Networks
+ECE,441,3.31,Physcs & Modeling Semicond Dev
+ECE,442,3.14,Silicon Photonics
+ECE,443,3.49,LEDs and Solar Cells
+ECE,444,3.36,IC Device Theory & Fabrication
+ECE,445,3.2,Senior Design Project Lab
+ECE,447,3.7,Active Microwave Ckt Design
+ECE,451,3.7,Adv Microwave Measurements
+ECE,452,3.59,Electromagnetic Fields
+ECE,453,3.15,Wireless Communication Systems
+ECE,454,3.38,Antennas
+ECE,455,3.19,Optical Electronics
+ECE,456,3.34,Global Nav Satellite Systems
+ECE,457,3.37,Microwave Devices & Circuits
+ECE,458,3.29,Applic of Radio Wave Propag
+ECE,459,3.22,Communications Systems
+ECE,460,3.81,Optical Imaging
+ECE,461,3.23,Digital Communications
+ECE,462,3.24,Logic Synthesis
+ECE,464,3.06,Power Electronics
+ECE,468,3.52,Optical Remote Sensing
+ECE,469,3.56,Power Electronics Laboratory
+ECE,470,3.23,Introduction to Robotics
+ECE,473,3.21,Fund of Engrg Acoustics
+ECE,476,3.07,Power System Analysis
+ECE,480,3.4,Magnetic Resonance Imaging
+ECE,481,3.62,Nanotechnology
+ECE,482,3.11,Digital IC Design
+ECE,483,3.38,Analog IC Design
+ECE,485,3.57,MEMS Devices & Systems
+ECE,486,3.41,Control Systems
+ECE,488,3.55,Compound Semicond & Devices
+ECE,490,3.54,Introduction to Optimization
+ECE,498,3.27,Special Topics in ECE
+ECE,508,3.78,Manycore Parallel Algorithms
+ECE,511,3.63,Computer Architecture
+ECE,515,3.56,Control System Theory & Design
+ECE,517,3.79,Nonlinear & Adaptive Control
+ECE,518,3.8,Adv Semiconductor Nanotech
+ECE,520,3.62,EM Waves & Radiating Systems
+ECE,526,3.6,Distributed Algorithms
+ECE,527,3.71,System-On-Chip Design
+ECE,528,3.71,Analysis of Nonlinear Systems
+ECE,532,3.73,Compnd Semicond & Diode Lasers
+ECE,534,3.59,Random Processes
+ECE,535,3.46,Theory of Semicond & Devices
+ECE,536,3.76,Integ Optics & Optoelectronics
+ECE,540,3.89,Computational Electromagnetics
+ECE,541,3.61,Computer Systems Analysis
+ECE,543,3.79,Statistical Learning Theory
+ECE,544,3.67,Topics in Signal Processing
+ECE,546,3.85,Advanced Signal Integrity
+ECE,547,3.84,Topics in Image Processing
+ECE,549,3.75,Computer Vision
+ECE,550,3.79,Advanced Robotic Planning
+ECE,551,3.66,Digital Signal Processing II
+ECE,553,3.91,Optimum Control Systems
+ECE,554,3.91,Dynamic System Reliability
+ECE,561,3.77,Detection & Estimation Theory
+ECE,563,3.68,Information Theory
+ECE,564,3.75,Modern Light Microscopy
+ECE,566,3.66,Computational Inference and Learning
+ECE,569,3.88,Inverse Problems in Optics
+ECE,576,3.9,Power System Dynm & Stability
+ECE,580,3.74,Optimiz by Vector Space Methds
+ECE,581,3.76,Advanced Analog IC Design
+ECE,586,3.83,Topics in Decision and Control
+ECE,598,3.76,Special Topics in ECE
+ECON,102,3.45,Microeconomic Principles
+ECON,103,2.99,Macroeconomic Principles
+ECON,199,3.7,Undergraduate Open Seminar
+ECON,202,2.99,Economic Statistics I
+ECON,203,2.88,Economic Statistics II
+ECON,220,2.97,Intl Economic Principles
+ECON,302,2.97,Inter Microeconomic Theory
+ECON,303,3.03,Inter Macroeconomic Theory
+ECON,402,3.24,American Economic History
+ECON,411,2.91,Public Sector Economics
+ECON,414,3.17,Urban Economics
+ECON,415,3.07,Environmental Economics
+ECON,417,3.06,Cost-Benefit Analysis
+ECON,418,3.35,Health Economics
+ECON,420,3.26,International Economics
+ECON,425,3.31,Macroeconomic Policy
+ECON,426,3.19,Monetary Economics and Policy
+ECON,437,3.17,Game Theory
+ECON,440,3.22,Economics of Labor Markets
+ECON,442,3.13,Women in the Economy
+ECON,447,3.21,Economics of the Workplace
+ECON,448,3.08,Employee Compensation and Incentives
+ECON,450,3.25,Development Economics
+ECON,451,3.48,Program Evaluation in Developing Economies
+ECON,452,3.36,The Latin American Economies
+ECON,453,3.51,Economies of the Middle East and North Africa
+ECON,455,3.57,Economics of Poverty Alleviation in Developing Countries
+ECON,460,3.44,Financial Economics
+ECON,469,3.46,Economics of Risk
+ECON,471,2.93,Intro to Applied Econometrics
+ECON,472,3.4,Financial Econometrics
+ECON,474,3.4,Econometrics of Policy Evaluation
+ECON,475,3.41,Economic Forecasting
+ECON,480,3.15,Industrial Comp and Monopoly
+ECON,481,3.37,Govt Reg of Economic Activity
+ECON,483,3.45,Econ of Innovation and Tech
+ECON,484,3.19,Law and Economics
+ECON,490,3.27,Topics in Economics
+ECON,500,3.4,Microeconomics
+ECON,501,3.66,Macroeconomics
+ECON,502,3.37,Economic Statistics
+ECON,503,3.56,Econometrics
+ECON,504,3.73,Time Series Analysis in Econ
+ECON,505,3.68,Introduction to Game Theory
+ECON,507,3.46,Computable G E Modeling
+ECON,510,3.71,Economics of Taxation
+ECON,511,3.4,Public Goods Theory
+ECON,513,3.44,International Trade
+ECON,514,3.53,International Financial
+ECON,516,3.65,Monetary Theory
+ECON,517,3.5,Monetary Policy
+ECON,519,3.55,Development and Growth Policy
+ECON,528,3.65,Microeconomics for Business
+ECON,529,3.76,Macroeconomics for Business
+ECON,530,3.54,Microeconomic Theory I
+ECON,531,3.48,Macroeconomic Theory I
+ECON,532,3.66,Econometric Analysis I
+ECON,533,3.44,Microeconomic Theory II
+ECON,534,3.31,Macroeconomic Theory II
+ECON,535,3.55,Econometric Analysis II
+ECON,536,3.61,Applied Econometrics
+ECON,550,3.65,Econ of Development and Growth
+ECON,576,3.7,Time Series
+ECON,590,3.64,Individual Study and Research
+EDUC,101,3.9,Education Orientation Seminar
+EDUC,201,3.8,Identity and Difference in Education
+EDUC,202,3.74,"Social Justice, School and Society"
+EIL,411,3.83,Intro to TESL Methodology
+EIL,422,3.68,Engl Grammar for ESL Teachers
+EIL,445,3.89,Second Lang Reading & Writing
+EIL,456,3.54,Lang and Social Interaction I
+EIL,460,3.78,Principles of Language Testing
+EIL,486,3.74,Ling for Language Teachers
+EIL,488,3.87,Phonology for Second Language Teachers
+ENG,101,3.56,Engineering at Illinois
+ENG,110,3.56,Communicating and Presenting in Engineering
+ENG,177,3.85,Engineering First-Year Experience Seminars
+ENG,191,3.82,International Dimens of Engrg
+ENG,198,3.76,Special Topics
+ENG,199,3.78,Undergraduate Open Seminar
+ENG,298,3.68,Special Topics
+ENG,315,3.57,Learning in Community
+ENG,398,3.85,Special Topics
+ENG,451,3.67,Success in the Workplace
+ENG,471,3.74,Seminar Energy & Sustain Engrg
+ENG,491,3.66,Interdisciplinary Design Proj
+ENG,498,3.89,Special Topics
+ENG,571,3.84,Theory Energy & Sustain Engrg
+ENG,598,3.6,Special Topics
+ENGL,101,3.4,Intro to Poetry
+ENGL,102,3.35,Intro to Drama
+ENGL,103,3.35,Intro to Fiction
+ENGL,104,3.28,Introduction to Film
+ENGL,109,3.49,Intro to Fiction-ACP
+ENGL,115,3.56,Intro to British Literature
+ENGL,116,3.55,Introduction to American Literature
+ENGL,117,3.74,Shakespeare on Film
+ENGL,119,3.5,Literature of Fantasy
+ENGL,120,3.53,Science Fiction
+ENGL,121,3.51,Introduction to Comics
+ENGL,122,3.48,"Swords, Sorcery & Sex: The Middle Ages in Popular Culture"
+ENGL,199,3.74,Undergraduate Open Seminar
+ENGL,200,3.5,Introduction to the Study of Literature and Culture
+ENGL,202,3.38,Medieval Literature and Culture
+ENGL,204,3.46,Renaissance Literature and Culture
+ENGL,206,3.52,Enlightenment Literature and Culture
+ENGL,207,3.4,Romantic Literature and Culture
+ENGL,208,3.32,Victorian Literature and Culture
+ENGL,210,3.42,British Literature from 1800 to the Present
+ENGL,213,3.27,Modernist Literature and Culture
+ENGL,216,3.51,Legends of King Arthur
+ENGL,218,3.58,Introduction to Shakespeare
+ENGL,219,3.52,Literature and Medicine
+ENGL,241,3.22,Modern Poetry
+ENGL,242,3.68,Contemporary Poetry
+ENGL,245,3.51,The Short Story
+ENGL,247,3.43,The British Novel
+ENGL,248,3.5,"British, American, and Continental Fiction"
+ENGL,250,3.43,Nineteenth-Century American Fiction
+ENGL,251,3.35,The Twentieth-Century American Novel
+ENGL,253,3.53,Topics in Literature and New Media
+ENGL,256,3.68,Survey of American Lit II
+ENGL,259,3.63,Early African American Literature and Culture
+ENGL,260,3.55,Modern African American Literature and Culture
+ENGL,261,3.28,Topics in Literature and Culture
+ENGL,270,3.24,American Film Genres
+ENGL,272,3.57,Minority Images in Amer Film
+ENGL,273,3.37,"American Cinema, 1950-2000"
+ENGL,276,3.62,Asian Film Genres
+ENGL,280,3.4,Women Writers
+ENGL,281,3.48,Women in the Literary Imagination
+ENGL,285,3.54,Postcolonial Literature in English
+ENGL,286,3.41,Asian American Literature
+ENGL,301,3.54,Introduction to Critical Theory
+ENGL,310,3.72,Introduction to the Study of the English Language
+ENGL,325,3.79,Topics in LGBT Literature and Film
+ENGL,330,3.32,Slavery and Identity
+ENGL,350,3.65,"Writing about Literature, Text, and Culture"
+ENGL,373,3.4,Special Topics in Film Studies
+ENGL,380,3.43,Topics in Writing Studies
+ENGL,402,3.47,Descriptive English Grammar
+ENGL,407,3.37,Introduction to Old English
+ENGL,412,3.21,Topics in Medieval British and Irish Literature
+ENGL,416,3.63,Topics in British Drama to 1660
+ENGL,418,3.42,Shakespeare
+ENGL,421,3.17,Renaissance Poetry and Prose
+ENGL,423,3.28,Milton
+ENGL,427,3.27,Eighteenth-Century Literature
+ENGL,428,3.39,"British Drama, 1660-1800"
+ENGL,429,3.63,Eighteenth-Century Fiction
+ENGL,431,3.37,Topics in British Romantic Literature
+ENGL,435,3.36,Nineteenth-Century British Fiction
+ENGL,442,3.59,Contemporary British and Irish Literature
+ENGL,449,3.52,American Romanticism
+ENGL,450,3.42,"Becoming Modern: American Literature, 1865-1914"
+ENGL,451,3.4,American Literature in the Age of Modernism
+ENGL,452,3.34,The Postwar Era and Contemporary American Literature
+ENGL,455,3.48,Major Authors
+ENGL,460,3.1,Literature of American Minorities
+ENGL,461,3.44,Advanced Topics in Literature and Culture
+ENGL,462,3.68,Topics in Modern Fiction
+ENGL,475,3.57,Literature and Other Disciplines
+ENGL,481,3.82,Composition Theory and Practice
+ENSU,310,3.62,Renewable & Alternative Energy
+ENSU,410,3.92,Sustainable Organizations
+ENVS,301,3.51,Tools for Sustainability
+EPOL,500,3.97,Proseminar in EPOL
+EPOL,550,3.9,Methods of Educational Inquiry
+EPOL,585,3.77,Ethnographic Methods in Education
+EPS,201,3.77,Foundations of Education
+EPS,202,3.78,Foundations of Education-ACP
+EPS,310,3.58,Race and Cultural Diversity
+EPS,325,3.61,Social Media and Global Change
+EPS,400,3.88,History of American Education
+EPS,402,3.69,Asian American Education
+EPS,405,3.87,Historical and Social Barriers
+EPS,410,3.74,Professional Ethics in Education
+EPS,411,3.67,School and Society
+EPS,412,3.59,Critical Thinking in Education
+EPS,413,3.88,Aesthetic Education
+EPS,415,3.8,Technology and Educational Reform
+EPS,420,3.56,Sociology of Education
+EPS,421,3.39,Racial and Ethnic Families
+EPS,423,3.84,Politics of Education
+EPS,529,3.86,Education and Human Rights
+EPS,530,3.72,Education and Globalization
+EPS,533,3.8,Global Youth and Citizenship
+EPS,535,3.96,Assessment for Learning
+EPS,536,3.91,"Race, Gender and Sexuality Issues"
+EPS,537,3.86,Globalizing Educational Policy
+EPS,538,3.79,Globalization of Higher Education
+EPS,580,3.89,Researching Global Education
+EPS,590,3.88,Advanced Graduate Seminar
+EPSY,200,3.97,Honors Symposium in Education
+EPSY,201,3.82,Educational Psychology
+EPSY,202,3.51,Exploring Cultural Diversity
+EPSY,203,3.55,Social Issues Group Dialogues
+EPSY,220,3.72,Career Theory and Practice
+EPSY,236,3.7,Child Development in Education
+EPSY,400,3.79,Psychology of Learning in Education
+EPSY,401,3.67,Child Language and Education
+EPSY,404,3.94,Adjustment in School Settings
+EPSY,407,3.8,Adult Learning and Development
+EPSY,408,3.93,Learning and Human Development with Educational Technology
+EPSY,420,3.29,Theories of Psychotherapy
+EPSY,430,3.84,Early Adolescent Development
+EPSY,456,3.49,Human Performance and Cognition in Context
+EPSY,470,3.81,Introduction to Evaluation Theory
+EPSY,471,3.75,Introduction to Evaluation Methods
+EPSY,474,3.9,Evaluating Learning Technology
+EPSY,480,3.72,Educational Statistics
+EPSY,485,3.76,Assessing Student Performance
+EPSY,490,3.95,Developments in Educational Psychology
+EPSY,553,3.86,Global Issues in Learning
+EPSY,556,3.88,Analysis of Educational Technologies
+EPSY,575,3.72,Mixed Method Inquiry
+EPSY,577,3.69,Foundations of Qualitative Methods
+EPSY,578,3.92,Qualitative Inquiry Methods
+EPSY,580,3.69,Statistical Inference in Education
+EPSY,581,3.63,Applied Regression Analysis
+EPSY,582,3.41,Advanced Statistical Methods
+EPSY,585,3.9,Theories of Measurement I
+EPSY,587,3.8,Hierarchical Linear Models
+EPSY,589,3.67,Categorical Data Analysis in Educational Psychology
+EPSY,590,3.82,Advanced Seminar in Educational Psychology
+ESE,100,3.25,Sustainable Earth
+ESE,200,3.18,Earth Systems
+ESE,311,3.41,Environmental Issues Today
+ESE,320,3.42,"Water Planet, Water Crisis"
+ESE,360,3.45,Environmental Writing
+ESE,389,3.86,Environment and Sustainability Field Expedition
+ESE,445,3.61,Earth Resources Sustainability
+ESE,482,3.23,Challenges of Sustainability
+ESE,486,3.58,Environmental Consulting
+ESE,497,3.48,Special Topics in ESE
+ESL,115,3.72,Principles of Academic Writing
+EURO,199,3.67,Undergraduate Open Seminar
+EURO,415,3.87,Europe and the Mediterranean
+EURO,501,3.62,EU Institutions and Governance
+FAA,101,3.64,Arts at Illinois
+FAA,102,3.4,Design Beyond Boundaries
+FAA,110,3.95,Exploring Arts and Creativity
+FAA,202,3.8,Artsful Teaching through Integ
+FAA,220,3.9,Introduction to Fashion
+FAA,499,3.53,Special Topics
+FIN,221,3.17,Corporate Finance
+FIN,230,3.26,Introduction to Insurance
+FIN,232,2.8,Intro to Wealth Management
+FIN,241,3.54,Fundamentals of Real Estate
+FIN,300,2.73,Financial Markets
+FIN,321,3.31,Advanced Corporate Finance
+FIN,390,3.93,Finance Academy
+FIN,392,3.82,Investment Management Academy
+FIN,411,3.39,Investment & Portfolio Mngt
+FIN,412,3.26,Options and Futures Markets
+FIN,418,3.69,Financial Modeling
+FIN,419,3.3,Real Client Managed Portfolios
+FIN,422,3.59,Cases in Corporate Finance
+FIN,423,3.76,Financing Emerging Businesses
+FIN,424,3.44,Mergers and Acquisition
+FIN,425,3.61,Private Equity/Venture Capital
+FIN,431,3.59,Property-Liability Insurance
+FIN,432,3.56,Managing Fin Risk for Insurers
+FIN,433,3.91,Corporate Risk Management
+FIN,434,3.35,Employee Benefit Plans
+FIN,435,3.49,Personal Wealth Management
+FIN,443,3.47,Legal Issues in Real Estate
+FIN,444,3.8,Urban Real Estate Valuation
+FIN,445,3.77,Real Estate Investment
+FIN,446,3.68,Real Estate Financial Markets
+FIN,447,3.97,Real Estate Development
+FIN,451,3.45,Intl Financial Markets
+FIN,461,3.48,Banking and Financial Regulation
+FIN,463,3.59,Investment Banking
+FIN,490,3.76,Special Topics in Finance
+FIN,500,3.68,Introduction to Finance
+FIN,501,3.5,Economics of Stock Market Fundamentals
+FIN,502,3.64,Quantitative Finance
+FIN,511,3.54,Investments
+FIN,512,3.56,Financial Derivatives
+FIN,513,3.34,Financial Engineering I
+FIN,514,3.57,Financial Engineering II
+FIN,515,3.48,Fixed Income Portfolios
+FIN,516,3.61,Term Structure Models
+FIN,518,3.94,Financial Modeling
+FIN,520,3.68,Financial Management
+FIN,521,3.51,Advanced Corporate Finance
+FIN,522,3.65,Cases in Financial Strategy
+FIN,524,3.54,Mergers and Acquisitions
+FIN,526,3.71,Enterprise Risk Management
+FIN,527,3.76,Mergers & Acquisitions Topics
+FIN,530,3.77,Foundations in Risk Management
+FIN,536,3.52,Government Insurance Programs
+FIN,541,3.79,Real Estate Fundamentals
+FIN,544,3.78,Urban Real Estate Valuation
+FIN,545,3.76,Real Estate Investment
+FIN,546,3.75,Real Estate Financial Markets
+FIN,551,3.4,International Finance
+FIN,561,3.47,Banking and Financial Regulation
+FIN,563,3.67,Investment Banking
+FIN,566,3.55,Algorithmic Market Microstructure
+FIN,567,3.64,Financial Risk Management
+FIN,568,3.79,Behavioral Finance
+FIN,570,3.4,Business and Public Policy
+FIN,571,3.49,Retirement Policy
+FIN,572,3.34,Health Care Policy
+FIN,573,3.45,Competition Policy
+FIN,574,3.67,Individual Tax Policy
+FIN,575,3.56,Business Tax Policy
+FIN,578,3.62,Govt Market Economy
+FIN,579,3.58,Applied Portfolio Management
+FIN,580,3.67,Special Topics in Finance
+FR,101,3.23,Elementary French I
+FR,102,3.3,Elementary French II
+FR,103,3.19,Intermediate French I
+FR,104,3.3,Intermediate French II
+FR,133,3.47,Accel Intermediate French I
+FR,134,3.35,Accel Intermed French II
+FR,156,3.59,Exploring Paris
+FR,199,3.69,Undergraduate Open Seminar
+FR,205,3.2,Oral French
+FR,387,3.67,French & Comparative Cinema I
+FR,418,3.64,Language & Minorities in Europe
+FSHN,101,3.3,The Science of Food and How it Relates to You
+FSHN,120,3.53,Contemporary Nutrition
+FSHN,125,3.71,Intro to Human Nutrition
+FSHN,140,3.67,Introduction to Hospitality
+FSHN,145,3.74,Intro Hospitality Management
+FSHN,150,3.79,Introduction to Dietetics
+FSHN,175,3.39,Science of Fermented Foods
+FSHN,199,3.76,Undergraduate Open Seminar
+FSHN,220,3.57,Principles of Nutrition
+FSHN,232,3.45,Science of Food Preparation
+FSHN,260,3.58,Raw Materials for Processing
+FSHN,302,3.81,Sensory Evaluation of Foods
+FSHN,322,3.85,Nutrition and the Life Cycle
+FSHN,329,3.85,Communication in Nutrition
+FSHN,340,3.85,Food Production and Service
+FSHN,343,3.83,"Foundations in Beverage Management: Introduction to Wine, Beer and Spirits"
+FSHN,344,3.87,Business Etiquette
+FSHN,345,3.88,Strategic Operations Management
+FSHN,398,3.59,Undergraduate Seminar
+FSHN,414,3.65,Food Chemistry
+FSHN,416,3.66,Food Chemistry Laboratory
+FSHN,418,3.45,Food Analysis
+FSHN,419,3.97,Food Ingredient Technology
+FSHN,420,3.36,Nutritional Aspects of Disease
+FSHN,421,3.55,Pediatric Clinical Nutrition
+FSHN,426,3.74,Biochemical Nutrition I
+FSHN,427,3.4,Biochemical Nutrition II
+FSHN,428,3.61,Community Nutrition
+FSHN,429,3.78,Nutrition Assessment & Therapy
+FSHN,442,3.73,Hospitality Management & Leadership Skills
+FSHN,443,3.65,Management of Fine Dining
+FSHN,450,3.88,Dietetics: Professional Issues
+FSHN,460,3.54,Food Processing Engineering
+FSHN,464,3.86,Beverage Science & Technology
+FSHN,465,3.75,Principles of Food Technology
+FSHN,466,3.8,Food Product Development
+FSHN,469,3.87,Package Engineering
+FSHN,471,3.45,Food & Industrial Microbiology
+FSHN,472,3.59,Applied Food Microbiology
+FSHN,480,3.38,Basic Toxicology
+FSHN,499,3.85,Cur Topics in FS & Human Nutr
+FSHN,502,3.98,Advanced Sensory Science
+FSHN,514,3.89,Advanced Food Chemistry
+FSHN,517,3.64,Fermented &Distilled Beverages
+FSHN,518,3.94,Chemistry of Lipids in Foods
+FSHN,519,3.98,Flavor Chemistry and Analysis
+FSHN,573,3.88,Advanced Food Microbiology
+FSHN,595,3.9,Advanced Topics in Food Science and Human Nutrition
+GEOG,101,3.42,Global Development&Environment
+GEOG,103,3.3,Earth's Physical Systems
+GEOG,104,3.15,Social and Cultural Geography
+GEOG,105,3.35,The Digital Earth
+GEOG,106,3.44,Geographies of Globalization
+GEOG,204,3.19,Cities of the World
+GEOG,205,3.4,Business Location Decisions
+GEOG,210,3.27,Social & Environmental Issues
+GEOG,221,3.41,Geographies of Global Conflict
+GEOG,222,3.49,Big Rivers of the World
+GEOG,254,3.93,"American People, Places, & Environments"
+GEOG,350,3.47,Sustainability and the City
+GEOG,371,3.09,Spatial Analysis
+GEOG,379,3.25,Intro to GIS Systems
+GEOG,380,3.46,GIS II: Spatial Prob Solving
+GEOG,384,3.19,Population Geography
+GEOG,406,3.3,Fluvial Geomorphology
+GEOG,410,3.73,Green Development
+GEOG,412,3.67,Geospatial Tech & Society
+GEOG,438,3.56,Geography of Health Care
+GEOG,440,3.76,Business Applications of GIS
+GEOG,455,3.58,Geog of Sub-Saharn Africa
+GEOG,465,3.56,Transportation & Sustainability
+GEOG,466,3.5,Environmental Policy
+GEOG,468,3.81,Biological Modeling
+GEOG,471,3.89,Recent Trends in Geog Thought
+GEOG,473,3.8,Digital Cartography & Map Design
+GEOG,476,3.88,Applied GIS to Environ Studies
+GEOG,477,3.2,Introduction to Remote Sensing
+GEOG,479,3.6,Advanced Topics in GIS
+GEOG,480,3.59,Principles of GIS
+GEOG,483,3.42,Urban Geography
+GEOG,489,3.74,Programming for GIS
+GEOG,570,3.49,Advanced Spatial Analysis
+GEOL,100,3.15,Planet Earth
+GEOL,104,3.6,Geology of the National Parks
+GEOL,107,3.27,Physical Geology
+GEOL,110,3.82,Exploring Geology in the Field
+GEOL,111,3.32,Emergence of Life
+GEOL,117,3.18,The Oceans
+GEOL,118,3.13,Natural Disasters
+GEOL,143,3.18,History of Life
+GEOL,208,3.11,History of the Earth System
+GEOL,380,3.61,Environmental Geology
+GEOL,401,3.06,Geomorphology
+GEOL,411,3.02,Structural Geol and Tectonics
+GEOL,415,3.36,Field Geology
+GEOL,417,2.91,"Geol Field Methods, Western US"
+GEOL,432,2.66,Mineralogy and Mineral Optics
+GEOL,436,2.91,Petrology and Petrography
+GEOL,440,3.24,Sedimentology and Stratigraphy
+GEOL,452,3.32,Introduction to Geophysics
+GEOL,470,3.38,Introduction to Hydrogeology
+GEOL,497,3.51,Special Topics in Geology
+GEOL,512,3.7,Geotectonics
+GER,101,3.44,Beginning German I
+GER,102,3.25,Beginning German II
+GER,103,3.21,Intermediate German I
+GER,104,3.33,Intermediate German II
+GER,201,3.47,German Popular Culture
+GER,205,3.47,Germany and Europe
+GER,211,3.7,Conversation and Writing I
+GER,250,3.65,Grimms' Fairy Tales - ACP
+GER,251,3.63,Grimm's Fairy Tales in Context
+GER,260,3.53,The Holocaust in Context - ACP
+GER,261,3.62,The Holocaust in Context
+GER,270,3.58,Sexuality and Literature
+GER,420,3.77,German Cultural History
+GER,465,3.71,German Linguistics
+GER,493,3.51,German Cinema I
+GER,494,3.65,German Cinema II
+GLBL,100,3.6,Intro to Global Studies
+GLBL,199,3.59,Undergraduate Open Seminar
+GLBL,200,3.67,Foundations of Research
+GLBL,220,3.5,Governance
+GLBL,225,3.67,Career Development:Internships
+GLBL,240,3.64,Global Health
+GLBL,250,3.62,Development
+GLBL,270,3.59,Introduction to Global Markets and Society
+GLBL,296,3.63,Global St Foundation Seminar
+GLBL,340,3.55,Global Health: Policy & Governance
+GLBL,350,3.54,Poverty in a Global Context
+GLBL,392,3.22,Int Diplomacy and Negotiation
+GLBL,450,3.62,Poverty Interventions and Evaluation
+GLBL,494,3.81,Research Methods I
+GLBL,499,3.67,Special Topics
+GRKM,201,3.94,Elementary Modern Greek I
+GRKM,202,3.41,Elementary Modern Greek II
+GS,101,3.66,Exploring General Studies
+GS,102,3.84,Preparation for 21st Century Challenges
+GS,198,3.95,DGS Honors Seminar
+GS,199,3.78,Undergraduate Open Seminar
+GWS,100,3.17,Intro Gender & Women's Studies
+GWS,201,3.46,"Race, Gender & Power"
+GWS,202,3.47,Sexualities
+GWS,204,3.6,Gender in Gaming
+GWS,250,3.46,Gender and Representation
+GWS,255,3.51,"Queer Lives, Queer Politics"
+GWS,275,3.13,The Politics of Fashion
+GWS,295,3.42,Beginning Topics GWS
+GWS,325,3.84,Lesbian/Queer Media Cultures
+GWS,333,3.54,Memoir & Autobiography
+GWS,335,3.54,"Film, TV, and Gender"
+GWS,337,3.39,Interrogating Masculinities
+GWS,345,3.59,Digital & Gender Cultures
+GWS,350,3.31,Feminist & Gender Theory
+GWS,355,3.65,Beauty and Culture
+GWS,363,3.25,"Gender, Health & Pop Culture"
+GWS,370,3.27,Queer Theory
+GWS,378,3.6,Fairy Tales & Gender Formation
+GWS,380,2.19,Black Women Hist & Cultures
+GWS,382,3.03,Black Women & Popular Culture
+GWS,385,3.6,Transnational Sexualities
+GWS,387,3.48,History of Sexuality in U.S.
+GWS,478,3.61,"Sex, Power and Politics"
+HDFS,101,3.71,Issues & Careers in HDFS
+HDFS,105,3.7,Intro to Human Development
+HDFS,120,3.53,Intro to Family Studies
+HDFS,199,3.95,Undergraduate Open Seminar
+HDFS,206,3.82,Early Childhood Curriculum Dev
+HDFS,208,3.9,Child Fam with Special Needs
+HDFS,220,3.3,Families in Global Perspective
+HDFS,225,3.48,Close Relationships
+HDFS,261,3.43,Self-Help Group Dev & Process
+HDFS,290,3.4,Intro to Research Methods
+HDFS,301,3.14,Infancy & Early Childhood
+HDFS,305,3.65,Middle Childhood
+HDFS,310,3.54,Adult Development
+HDFS,322,3.59,US Latina and Latino Families
+HDFS,340,3.5,"Gender, Relationshps & Society"
+HDFS,379,3.91,HDFS Study Abroad Experience
+HDFS,401,3.65,Socialization and Development
+HDFS,405,3.58,Adolescent Development
+HDFS,408,3.71,Hospitalized Children
+HDFS,420,3.75,"Inequality, Public Policy, and U.S. Families"
+HDFS,425,3.66,Family Stress and Change
+HDFS,426,3.28,Family Conflict Management
+HDFS,444,3.62,"LGBT Indiv, Fam & Community"
+HDFS,494,3.75,Applied Research Methods
+HIST,100,3.41,Global History
+HIST,101,3.51,History Now!
+HIST,103,3.46,A History of Everything: The Big Bang to Big Data
+HIST,104,3.63,Black Music
+HIST,105,3.38,Latin America to Independence
+HIST,106,3.29,Modern Latin America
+HIST,120,3.34,East Asian Civilizations
+HIST,130,3.48,History of South Asia
+HIST,135,3.11,History of Islamic Middle East
+HIST,141,3.09,Western Civ to 1660
+HIST,142,3.31,Western Civ Since 1660
+HIST,164,3.66,The Automobile
+HIST,171,3.27,US History to 1877
+HIST,172,3.29,US History Since 1877
+HIST,200,3.47,Intro Hist Interpretation
+HIST,202,3.14,American Environmental History
+HIST,203,3.71,Reacting to the Past
+HIST,205,3.48,Lived Experience in Latin America
+HIST,207,3.58,Digital Documentary Publishing
+HIST,211,3.52,History of Southern Africa
+HIST,212,3.21,History of Eastern Africa
+HIST,213,3.51,African Muslim Societies
+HIST,220,3.01,Traditional China
+HIST,221,3.48,Modern China
+HIST,222,2.86,Chinese Thought and Culture
+HIST,226,3.31,Premodern Japanese History
+HIST,227,3.13,Modern Japanese History
+HIST,236,3.45,Madness and Modern Society
+HIST,240,3.59,Ancient Greek Civilization
+HIST,241,3.47,History of Ancient Rome
+HIST,245,3.17,"Wives, Workers and Witches in Pre-Modern Europe"
+HIST,247,2.95,Medieval Europe
+HIST,251,2.85,Warfare Milit Insts & Soc
+HIST,252,3.35,The Holocaust
+HIST,253,3.57,Enlightenment to Existentialsm
+HIST,255,3.08,British Isles to 1688
+HIST,256,3.2,Britain and World Since 1688
+HIST,257,2.77,"Terrorism, Past and Present"
+HIST,258,3.19,20thC World to Midcentury
+HIST,259,3.35,20thC World from Midcentury
+HIST,260,3.31,History of Russia
+HIST,262,3.58,Zionism: A Global History
+HIST,263,3.35,History of Medicine in the United States
+HIST,264,3.4,Technology in Western Society
+HIST,265,3.29,Science in Western Culture
+HIST,268,3.59,Biology and Society from Darwin to the Human Genome
+HIST,269,3.65,Jewish History Since 1700
+HIST,270,3.2,United States History to 1815
+HIST,271,3.08,Nineteenth Century America
+HIST,272,3.08,Twentieth Century America
+HIST,273,3.22,Illinois History
+HIST,274,3.29,US Foreign Relations Since 1917
+HIST,275,3.55,Afro-American History to 1877
+HIST,276,3.41,Afro-American Hist Since 1877
+HIST,277,3.27,Encounters in Native America
+HIST,278,3.35,Native American History
+HIST,279,3.36,Mexican-American History
+HIST,280,3.63,Caribbean Latina/o Migration
+HIST,281,3.43,Constructing Race in America
+HIST,283,3.5,Asian American History
+HIST,285,3.41,US Gender History to 1877
+HIST,286,3.45,US Gender History Since 1877
+HIST,287,3.08,African-American Women
+HIST,293,3.33,The President and the People
+HIST,300,3.42,Topics in Film and History
+HIST,305,3.02,Andean Countries of S America
+HIST,310,3.69,Global Capitalism in History
+HIST,311,3.33,Global History of Intelligence
+HIST,312,3.32,Immigrant America
+HIST,314,3.59,Material Culture
+HIST,334,3.09,Modern Palestinian History
+HIST,335,3.15,Middle East 1566-1914
+HIST,337,3.26,Middle East Since World War I
+HIST,338,3.18,Egypt Since World War I
+HIST,339,3.21,The Early Russian Empire
+HIST,345,2.97,Medieval Civilization
+HIST,346,3.25,The Age of the Renaissance
+HIST,347,3.18,Protestant & Catholic Refs
+HIST,348,3.32,Early Euro Absolut & Expansion
+HIST,349,3.32,"Age of Revolution, 1775-1815"
+HIST,350,3.16,19thC Romanticism & Politics
+HIST,352,3.03,Europe in the World
+HIST,353,3.58,European History 1918 to 1939
+HIST,354,3.39,Twentieth Century Europe
+HIST,355,3.61,Soviet Jewish History
+HIST,356,3.6,The Modern Balkans through Literature and Film
+HIST,357,3.23,Modern France
+HIST,358,3.71,History Harvest: Collaborative Digital Public History
+HIST,361,3.51,Euro Thght & Soc Since 1789
+HIST,365,3.76,Fict & Historical Imagination
+HIST,367,3.17,History of Western Medicine
+HIST,369,2.72,Spain and Portugal from 1808
+HIST,370,3.29,Colonial America
+HIST,371,3.35,The American Revolution
+HIST,373,3.4,Origins of the Civil War
+HIST,374,3.24,Civil War and Reconstruction
+HIST,375,3.0,Soc History Indus Am to 1918
+HIST,376,3.2,Soc History Indus Am from 1918
+HIST,377,3.29,United States since 1932
+HIST,380,3.29,US in an Age of Empire
+HIST,381,3.46,Urban History
+HIST,390,3.6,Sport and Society
+HIST,392,3.37,The 1960s in the U.S.
+HIST,394,3.32,Hidden Political Figures
+HIST,396,3.53,Special Topics
+HIST,397,3.23,Sexuality in Modern Europe
+HIST,400,3.32,"War, Soc, Politics, & Culture"
+HIST,401,3.12,History of Terrorism
+HIST,407,3.33,Slavery & Race in Latin Am
+HIST,410,3.42,Decolonization in Africa
+HIST,422,3.4,Soc-Econ Hist Modern China
+HIST,439,3.45,The Ottoman Empire
+HIST,440,3.77,Roman Republic to 44 B C
+HIST,441,3.64,The Roman Empire
+HIST,442,3.21,Roman Law and Legal Trad
+HIST,443,3.62,Byzantine Empire AD 284-717
+HIST,445,3.26,Medieval England
+HIST,450,2.6,European Working Class History
+HIST,456,3.24,Twentieth-Century Germany
+HIST,461,3.38,Russia- Peter the Great to Rev
+HIST,462,3.64,Soviet Union Since 1917
+HIST,466,3.27,The Balkans
+HIST,467,3.22,Eastern Europe
+HIST,473,3.0,Crises of Political Tolerance
+HIST,476,3.54,History of the American West
+HIST,481,3.36,20th Century US Culture Wars
+HNDI,201,3.64,Elementary Hindi-Urdu I
+HORT,100,3.42,Introduction to Horticulture
+HORT,105,3.61,Vegetable Gardening
+HORT,106,3.3,The Sustainable Home Garden
+HORT,107,3.64,Introduction to Floral Design
+HORT,180,3.57,Medicinal Plants and Herbology
+HORT,205,3.7,Local Food Networks
+HORT,240,3.6,Plant Propagation
+HORT,301,2.86,Woody Landscape Plants
+HORT,360,3.27,Vegetable Crop Production
+HORT,361,3.78,Small Fruit Production
+HORT,430,3.6,Children and Nature
+HORT,434,3.3,Designing Urban Agriculture
+HORT,435,3.29,Urban Food Production
+HORT,442,3.83,Plant Nutrition
+HORT,447,3.57,Horticultural Plant Breeding
+HORT,499,3.39,Advanced Special Topics
+HRD,400,3.79,Principles of Human Resource Education
+HRD,402,3.86,Business Principles for Human Resource Development
+HRD,411,3.73,Instructional and Training System Design
+HRD,414,3.95,Facilitation Skills
+HRD,415,3.77,Diversity in the Workplace
+HRD,440,3.56,Work Analysis
+HRD,470,3.76,Designing and Evaluating eLearning Systems
+HRD,472,3.82,Learning Technologies
+HRD,530,3.8,Organization Development
+HRD,532,3.87,Strategic Human Resource Development
+HRD,535,3.79,Consulting in Human Resource Development
+HRD,540,3.73,Learning on the Job
+HRD,572,3.93,eLearning Ecologies
+HRD,585,3.84,Program Evaluation
+IB,100,3.24,Biology in Today's World
+IB,103,2.75,Introduction to Plant Biology
+IB,104,3.27,Animal Biology
+IB,105,3.42,Environmental Biology
+IB,108,3.1,The Biology of Dinosaurs
+IB,150,3.17,Organismal & Evolutionary Biol
+IB,151,3.62,Organismal & Evol Biol Lab
+IB,199,3.88,Undergraduate Open Seminar
+IB,202,3.18,Physiology
+IB,204,2.97,Genetics
+IB,270,3.59,Evolution of Molecules & Cells
+IB,271,3.7,Organismal Biology
+IB,299,3.89,Undergraduate Special Course
+IB,302,3.05,Evolution
+IB,303,2.86,Anatomy
+IB,329,3.52,Animal Behavior
+IB,335,3.12,Plant Systematics
+IB,360,3.41,Evolution and Human Health
+IB,361,3.66,Ecology and Human Health
+IB,362,3.38,Marine Biology
+IB,364,3.7,Genomics and Human Health
+IB,368,3.2,Vertebrate Natural History
+IB,372,3.8,Ecology and Evolution
+IB,401,3.23,Introduction to Entomology
+IB,405,3.47,Evolution of Traits and Genomes
+IB,411,3.46,Bioinspiration
+IB,420,3.54,Plant Physiology
+IB,426,3.0,Env and Evol Physl of Animals
+IB,427,3.75,Insect Physiology
+IB,431,3.68,Behavioral Ecology
+IB,432,3.74,Genes and Behavior
+IB,435,3.82,Critical Evaluation of Herbal Remedies
+IB,439,3.58,Biogeography
+IB,443,3.41,Evolutionary Ecology
+IB,451,3.54,Conservation Biology
+IB,452,3.49,Ecosystem Ecology
+IB,453,3.58,Community Ecology
+IB,461,3.28,Ornithology
+IB,462,3.48,Mammalogy
+IB,463,3.62,Ichthyology
+IB,464,2.88,Herpetology
+IB,468,3.44,Insect Classification and Evol
+IB,471,3.64,General Mycology
+IB,472,3.76,Plant Molecular Biology
+IB,473,3.68,Plant Genomics
+IB,481,3.78,Vector-borne Diseases
+IB,482,3.72,Insect Pest Management
+IB,483,3.14,Insect Pathology
+IB,485,3.61,Environ Toxicology & Health
+IB,494,3.83,Theoretical Biology + Models
+IB,496,3.85,Special Courses
+IB,501,3.51,Programming for Genomics
+IB,504,3.42,Genomic Analysis of Insects
+IB,532,3.88,Sustainability & Global Change
+IB,533,3.97,Human Genome & Bioinformatics
+IB,534,3.93,Evolution and Medicine
+IB,535,3.84,Biology and Tech Innovation
+IB,536,3.92,Evolutionary Biology
+IB,542,3.7,Environmental Plant Physiology
+IB,546,3.92,Topics in Ecology & Evolution
+IE,300,2.97,Analysis of Data
+IE,310,3.23,Deterministic Models in Optimization
+IE,330,3.17,Industrial Quality Control
+IE,340,3.7,Human Factors
+IE,360,3.34,Facilities Planning and Design
+IE,361,3.49,Production Planning & Control
+IE,370,3.38,Stochastic Processes and Applications
+IE,398,3.21,Special Topics
+IE,400,3.39,Design & Anlys of Experiments
+IE,405,3.57,Computing for ISE
+IE,410,2.94,Advanced Topics in Stochastic Processes & Applications
+IE,411,3.44,Optimization of Large Systems
+IE,412,3.13,OR Models for Mfg Systems
+IE,413,2.92,Simulation
+IE,420,3.13,Financial Engineering
+IE,430,3.36,Economic Found of Quality Syst
+IE,431,3.41,Design for Six Sigma
+IE,498,3.68,Special Topics
+IE,510,3.59,Applied Nonlinear Programming
+IE,511,3.83,Integer Programming
+IE,521,3.68,Convex Optimization
+IE,522,3.5,Statistical Methods in Finance
+IE,523,3.66,Financial Computing
+IE,524,3.62,Optimization in Finance
+IE,525,3.53,Stochastic Calculus & Numerical Models in Finance
+IE,529,3.85,Stats of Big Data & Clustering
+IE,531,3.73,Algorithms for Data Analytics
+IE,534,3.83,Deep Learning
+IE,598,3.76,Special Topics
+IHLT,101,3.61,Introduction to i-Health
+IHLT,102,3.79,Survey of Interdisc Health
+IHLT,230,3.89,Leadership in Health
+IHLT,232,3.83,Health Disparities in the U.S.
+IHLT,240,3.72,Aging and Health Policy
+IHLT,375,3.83,Interdis Collab in Health Serv
+IHLT,474,3.83,Pre-Field Experience in Health
+IHLT,475,3.87,Field Experience in i-Health
+INFO,102,3.32,Little Bits to Big Ideas
+INFO,202,3.27,Social Aspects Info Tech
+INFO,390,3.21,Special Topics
+INFO,403,3.77,An Introduction to Top Down Video Game Design
+INFO,490,3.55,Special Topics
+IS,310,3.26,Computing in the Humanities
+IS,403,3.94,Children's Materials
+IS,409,3.84,Web Technologies & Techniques
+IS,418,3.74,Community Engagement
+IS,445,3.92,Data Visualization
+IS,446,3.87,Systems Analysis and Design
+IS,451,3.91,Bibliography of Africa
+IS,453,3.87,Information Books and Resources for Youth
+IS,455,3.7,Database Design and Prototyping
+IS,457,3.5,Data Storytelling
+IS,490,3.74,Topics in Info Foundations
+IS,501,3.89,Reference and Information Services
+IS,503,3.8,History of Children's Lit
+IS,504,3.89,Sociotechnical Information Systems
+IS,505,3.86,Information Organization and Access
+IS,506,3.89,Human-Centered Information Systems
+IS,507,3.81,"Data, Statistical Models and Information"
+IS,508,3.93,Seminar in Information Foundations
+IS,510,3.93,"Libraries, Information and Society"
+IS,514,3.76,Applied Business Research
+IS,515,3.93,Information Modeling
+IS,516,3.95,Scalable Information Systems
+IS,518,3.95,Seminar in Information Services
+IS,524,3.87,Data Governance
+IS,525,3.89,Data Warehousing
+IS,526,3.82,Building Advanced Interactive Systems
+IS,527,3.93,Network Analysis
+IS,532,3.95,School Library Management
+IS,540,3.95,Social Justice in the Information Professions
+IS,542,3.73,Research and Inquiry for Youth
+IS,543,3.73,Digital Preservation
+IS,545,3.75,Advanced Data Visualization
+IS,547,3.91,Foundations of Data Curation
+IS,555,3.85,Naming and Power
+IS,561,3.76,Use and Users of Information
+IS,562,3.69,Administration and Use of Archival Materials
+IS,567,3.77,Text Mining
+IS,569,3.79,Internship
+IS,580,3.75,Information History
+IS,581,3.83,Advanced Topics in Youth Services
+IS,582,3.72,Advanced Topics in Librarianship
+IS,586,3.65,Usability Engineering
+IS,590,3.82,Advanced Topics in Information Foundations
+ITAL,101,3.13,Elementary Italian I
+ITAL,102,3.01,Elementary Italian II
+ITAL,103,3.26,Intermediate Italian I
+ITAL,104,3.19,Intermediate Italian II
+ITAL,156,3.49,Exploring Rome: History and Culture of the Eternal City
+ITAL,200,3.11,Italian Studies in a Mediterranean Context
+ITAL,210,3.71,Practical Review Italian
+ITAL,240,3.59,Italy Middle Ages & Renaiss
+ITAL,413,3.49,Dante
+ITAL,420,3.33,Masterpieces Renaiss Lit
+ITAL,470,3.66,Topics in Italian Cinema
+JAPN,201,3.41,Elementary Japanese I
+JAPN,203,3.07,Intermediate Japanese I
+JOUR,199,3.5,Undergraduate Open Seminar
+JOUR,200,3.36,Introduction to Journalism
+JOUR,205,2.91,History of American Journalism
+JOUR,215,3.45,Multimedia Reporting
+JOUR,250,3.6,Journalism Ethics & Diversity
+JOUR,293,3.57,Digital Photography for Everyone
+JOUR,311,3.49,Media Law
+JOUR,360,3.73,The Media and You
+JOUR,361,3.48,Readings in Sports Journalism
+JOUR,425,3.16,Multimedia Editing and Design
+JOUR,450,3.48,Media and Public Opinion
+JOUR,452,3.4,Great Books of Journalism
+JOUR,453,3.63,Crisis Communications
+JOUR,460,3.43,Special Topics
+JS,355,3.61,Soviet Jewish History
+KIN,100,3.76,Development Activities
+KIN,101,3.67,Dance Activities
+KIN,102,3.9,Individual and Dual Activities
+KIN,103,3.9,Indoor Court Activities
+KIN,104,3.82,Skating Activities
+KIN,107,3.93,Aquatic Sport Activities
+KIN,109,3.81,Team Sport Activities
+KIN,111,3.9,Prescribed Exercise
+KIN,120,3.26,Injuries in Sport
+KIN,121,3.29,Survey of Sports Medicine
+KIN,122,3.5,Physical Activity and Health
+KIN,125,3.9,Orientation KIN & Comm Health
+KIN,130,3.63,Analysis of Basic Movement
+KIN,140,3.12,Social Sci of Human Movement
+KIN,142,3.68,Contemporary Issues in Sport
+KIN,150,3.22,Bioscience of Human Movement
+KIN,160,3.53,Introduction to Kinesiology
+KIN,199,3.74,Undergraduate Open Seminar
+KIN,201,3.59,Physical Activity Research Methods
+KIN,247,3.71,Intro to Sport Psychology
+KIN,249,3.69,Sport & Modern Society
+KIN,259,3.1,Motor Development and Control
+KIN,262,3.24,"Motor Develop, Growth & Form"
+KIN,268,3.71,Children's Movement
+KIN,340,3.34,Soc & Psych of Phys Activity
+KIN,346,3.81,Case Study: Endless Summer
+KIN,352,3.17,Bioenergetics of Movement
+KIN,355,3.24,Biomechanics of Human Movement
+KIN,360,3.72,Adapted Physical Education
+KIN,361,3.57,Curriculum in Grades K-6
+KIN,365,3.84,Civic Engagement in Wellness
+KIN,369,3.61,Coaching Strategies
+KIN,387,3.93,Exper in the Agency Setting
+KIN,401,3.54,Measure & Eval in Kinesiology
+KIN,442,3.72,"Body, Culture & Society"
+KIN,443,3.84,Psychophysiology in Ex & Sport
+KIN,444,3.97,Physical Activity and Chronic Diseases
+KIN,447,3.43,Psych of Sport Performance
+KIN,448,3.49,Exercise & Health Psychology
+KIN,451,3.55,Skeletal Muscle Physiology
+KIN,452,3.64,Clin & Applied Ex Physiology
+KIN,453,3.72,Nutrition for Performance
+KIN,457,3.6,Motor Learning & Control
+KIN,459,3.36,Physical Activity & Aging
+KIN,460,3.74,Technology & Pedagogical KINES
+KIN,473,3.24,Skill Acquisition Strategies
+KIN,494,3.82,Special Topics
+KOR,201,3.8,Elementary Korean I
+KOR,202,3.82,Elementary Korean II
+KOR,203,3.81,Intermediate Korean I
+KOR,222,3.42,Korean Reading and Writing II
+LA,101,3.4,Introduction to Landscape Arch
+LA,212,3.17,Water and Society
+LA,218,3.21,S Asian Cultural Landscapes
+LA,221,3.14,History of the Prison
+LA,222,3.04,Islamic Gardens & Architecture
+LA,233,3.09,Foundation Design Studio
+LA,234,3.4,Site Design Studio
+LA,241,3.15,Landform Design & Construction
+LA,250,3.26,Environmental Site Analysis
+LA,270,3.23,Behavioral Factors in Design
+LA,280,3.31,Design Communications I
+LA,281,3.31,Design Communications II
+LA,314,3.24,History of World Landscapes
+LA,335,3.42,Community & Open Space Studio
+LA,342,3.15,Site Engineering
+LA,343,3.14,Landscape Construction
+LA,346,3.43,Professional Practice
+LA,370,3.4,Environmental Sustainability
+LA,427,3.28,Amer Vernacular Cultural Land
+LA,437,3.34,Regional Design Studio
+LA,446,3.91,Sustainable Planning Seminar
+LA,452,3.45,Natural Precedent in Planting
+LA,470,3.34,Social/Cultural Design Issues
+LA,480,3.42,Sustainable Design Principles
+LA,501,3.54,Landscape Arch Theory & Prac
+LA,590,3.61,Directed Research
+LA,597,3.49,Research Design & Methods
+LAS,101,3.68,Design Your First Year Experience
+LAS,102,3.81,Transfer Advantage
+LAS,199,3.52,Undergraduate Open Seminar
+LAS,292,3.56,Global Perspectives in Cross-Cultural Contexts
+LAS,399,3.87,Leadership & Professional Development
+LAST,170,3.62,Introduction to Latin America
+LAT,101,3.4,Elementary Latin I
+LAT,102,3.24,Elementary Latin II
+LAW,199,3.33,Undergraduate Open Seminar
+LAW,201,3.19,Basic Constitutional Law & Individual Rights
+LAW,301,3.57,Introduction to Law
+LAW,302,3.09,Transitional Justice
+LAW,303,3.76,Living the Law
+LAW,501,3.42,Professional Responsibility
+LAW,601,3.23,Contracts
+LAW,602,3.21,Property
+LAW,603,3.18,Torts
+LAW,604,3.21,Criminal Law
+LAW,605,3.38,Criminal Proc: Investigation
+LAW,606,3.23,Constitutional Law I
+LAW,607,3.23,Civil Procedure
+LAW,609,3.2,Legal Writing & Analysis
+LAW,610,3.2,Introduction to Advocacy
+LAW,612,3.33,Constitutional Law III
+LAW,615,3.39,Administrative Law
+LAW,616,3.42,Environmental Law and Pol I
+LAW,618,3.25,Natural Resources
+LAW,620,3.41,Health Law Policy
+LAW,622,3.29,Land Use Planning
+LAW,624,3.34,Real Estate Finance
+LAW,625,3.32,State and Local Government
+LAW,627,3.15,Legal Research
+LAW,629,3.32,Bankruptcy
+LAW,631,3.28,Secured Transactions
+LAW,633,3.39,Business Associations I
+LAW,634,3.41,Securities Regulation
+LAW,635,3.72,Securities Litigation
+LAW,636,3.39,Business Associations II
+LAW,638,3.45,White Collar Crime
+LAW,639,3.43,Corporate Finance
+LAW,642,3.38,Antitrust Law
+LAW,643,3.42,Trademark & Unfair Competition
+LAW,644,3.2,Copyright Law
+LAW,645,3.4,Patent Law
+LAW,647,3.37,Income Taxation
+LAW,648,3.35,Corporate Taxation
+LAW,651,3.56,Tax Exempt Organizations
+LAW,653,3.34,International Business Trans
+LAW,654,3.59,International Trade Policy
+LAW,656,3.49,International Law
+LAW,657,3.6,International Human Rights Law
+LAW,660,3.3,Individual Employee Rights
+LAW,662,3.33,Labor Law I
+LAW,664,3.4,Employment Discrimination
+LAW,667,3.39,Family Law
+LAW,668,3.31,Decedents' Estates and Trusts
+LAW,670,3.42,Elder Law
+LAW,673,3.41,Workers Compensation
+LAW,675,3.37,Products Liability
+LAW,676,3.37,Insurance Law
+LAW,679,3.38,Criminal Proc: Adjudication
+LAW,680,3.37,Professional Responsibility
+LAW,682,3.36,Evidence
+LAW,683,3.39,Complex Litigation
+LAW,684,3.45,Federal Courts
+LAW,685,3.43,Dispute Resolution
+LAW,686,3.4,Remedies
+LAW,687,3.31,Jurisprudence
+LAW,689,3.47,Law and Economics
+LAW,694,3.45,Trial Advocacy
+LAW,792,3.43,Current Legal Problems
+LAW,793,3.63,Advanced Litigation Topics
+LAW,794,3.39,Adv Topics in Business Law
+LAW,795,3.38,Adv Topics in Criminal Law
+LAW,796,3.42,Comparative Law Topics
+LAW,797,3.35,Intellectual Property Topics
+LAW,798,3.61,Seminars
+LEAD,140,3.75,Harnessing Your Interpersonal Intelligence
+LEAD,170,3.85,Leading Student Organizations
+LEAD,260,3.74,Foundations of Leadership
+LEAD,380,3.72,Leadership in Groups and Teams
+LEAD,470,3.77,Leading Professional Organizations and Communities
+LEAD,480,3.9,Collaborative Leadership
+LER,100,2.98,Introduction to Labor Studies
+LER,110,2.92,Labor and Social Movements
+LER,120,3.0,Contemporary Labor Problems
+LER,130,3.13,Intro Labr Wrkng Class History
+LER,199,3.18,Undergraduate Open Seminar
+LER,200,3.23,Globalization and Workers
+LER,320,3.3,"Gender, Race, Class and Work"
+LER,522,3.93,Government Regulation
+LER,523,3.79,Org Fundamentals for HR
+LER,542,3.69,Collective Bargaining
+LER,543,3.74,Workplace Dispute Resolution
+LER,545,3.57,Economics of Human Resources
+LER,561,3.9,Compensation Systems
+LER,562,3.74,HR Planning and Staffing
+LER,564,3.79,HR Training and Development
+LER,565,3.72,HR Management and Strategy
+LER,566,3.76,International HR Management
+LER,567,3.76,Negotiation in HR Decisions
+LER,568,3.53,Firm Performance and HR
+LER,569,3.88,Power & Influence in HRM
+LER,570,3.9,Leadership for HR Managers
+LER,590,3.71,Individual Topics
+LER,591,3.77,Employment Relations Systems
+LER,593,3.68,Quantitative Methods in LER
+LER,595,3.71,Managing Diversity Globally
+LER,597,3.73,Employee Motivation & Perfmnce
+LER,598,3.74,Impl High Perf Work Systems
+LING,100,3.5,Intro to Language Science
+LING,115,3.72,Language and Culture in India
+LING,210,3.54,Language History
+LING,225,3.24,"Language, Mind, and Brain"
+LING,250,3.41,American Voices: Linguistic Diversity in the US
+LING,270,3.68,"Language, Technology & Society"
+LING,301,3.18,Elements of Syntax
+LING,302,3.21,Elements of Phonology
+LING,307,3.13,Elmnts Semantics & Pragmatics
+LING,357,3.51,Intro to Conversation Analysis
+LING,400,3.64,Intro to Linguistic Structure
+LING,401,3.19,Intro to General Phonetics
+LING,402,3.48,Tools & Tech Spch & Lang Proc
+LING,406,3.81,Introduction to Computational Linguistics
+LING,425,3.35,Intro to Psycholinguistics
+LING,426,3.05,Child & Adult Lang Acquisition
+LING,450,3.61,Sociolinguistics I
+LING,489,3.81,Theoretical Foundations of SLA
+LING,490,3.76,Special Topics in Linguistics
+LLS,100,3.4,Intro Latina/Latino Studies
+LLS,220,3.27,Latina/o Migration
+LLS,230,3.51,Latina/o Genders & Sexualities
+LLS,235,3.78,Race and the Politics of Reproduction
+LLS,238,3.58,Latina/o Social Movements
+LLS,240,3.55,Latina/o Popular Culture
+LLS,242,3.29,Intro to Latina/o Literature
+LLS,250,3.63,Latina/os on the Bronze Screen
+LLS,265,3.58,Politics of Hip Hop
+LLS,279,3.57,Mexican-American History
+LLS,296,2.74,Topics Latina/o Studies
+LLS,301,3.0,19thC US Latina/o Lit-ACP
+LLS,320,3.36,Gender & Latina/o Migration
+LLS,343,3.53,Criminalization and Punishment
+LLS,355,3.52,Race and Mixed Race
+LLS,357,3.93,Literatures of the Displaced
+LLS,360,3.16,Contemporary US Latina/o Lit
+LLS,379,3.51,Latina/os and the City
+LLS,382,3.32,Race and Migration in Chicago
+LLS,385,3.28,Theory and Methods in LLS
+LLS,387,3.76,"Race, Gender and the Body"
+LLS,392,3.68,Chicanas&Latinas: Self&Society
+LLS,396,3.77,Adv Topics Latina/o Studies
+LLS,410,3.32,Writing Latina/o Chicago
+LLS,435,3.71,Commodifying Difference
+LLS,442,3.45,Latina Literature
+LLS,473,3.82,"Immigration, Health & Society"
+MACS,100,3.51,Intro to Popular TV & Movies
+MACS,101,3.59,Introduction to the Media
+MACS,166,3.65,Contemporary Media Literacy
+MACS,199,3.23,Undergraduate Open Seminar
+MACS,203,3.44,Contemporary Movies
+MACS,205,3.55,Introduction to Documentary
+MACS,224,3.77,Sportsmedia Technology & Culture
+MACS,260,3.86,Film Production
+MACS,261,3.19,Survey of World Cinema I
+MACS,262,3.37,Survey of World Cinema II
+MACS,264,3.3,Creative and Information Economies
+MACS,282,3.84,A World of Death and Blood: The Horror Movie
+MACS,295,3.71,Intro Media/Cinema Topics
+MACS,317,3.36,Media History
+MACS,320,3.35,Popular Culture
+MACS,321,3.32,Film Culture
+MACS,323,3.76,Studies Film/Media Production
+MACS,326,3.44,"New Media, Culture & Society"
+MACS,331,3.44,Media and Democracy
+MACS,351,3.22,Social Aspects of Media
+MACS,356,3.43,Sex & Gender in Popular Media
+MACS,361,3.43,Film Theory and Criticism
+MACS,364,3.77,Topics in Media Business
+MACS,372,3.62,Screenwriting
+MACS,375,3.33,Latina/o Media in the US
+MACS,389,3.56,International Communications
+MACS,395,3.59,Special Media/Cinema Topics
+MACS,410,3.3,Media Ethics
+MACS,464,3.57,Film Festivals
+MACS,466,3.43,Japanese Cinema
+MACS,496,3.8,Advanced Media/Cinema Topics
+MATH,101,2.6,Thinking Mathematically
+MATH,103,3.2,Theory of Arithmetic
+MATH,112,2.68,Algebra
+MATH,115,2.6,Preparation for Calculus
+MATH,117,3.28,Elementary Mathematics
+MATH,119,3.27,Ideas in Geometry
+MATH,124,3.04,Finite Mathematics
+MATH,125,2.76,Elementary Linear Algebra
+MATH,181,2.95,A Mathematical World
+MATH,199,3.8,Undergraduate Open Seminar
+MATH,213,3.12,Basic Discrete Mathematics
+MATH,220,2.73,Calculus
+MATH,221,2.9,Calculus I
+MATH,225,2.99,Introductory Matrix Theory
+MATH,231,2.84,Calculus II
+MATH,234,2.73,Calculus for Business I
+MATH,241,2.86,Calculus III
+MATH,249,3.57,Honors Supplement
+MATH,285,3.13,Intro Differential Equations
+MATH,286,3.07,Intro to Differential Eq Plus
+MATH,292,2.8,Vector Calculus Supplement
+MATH,299,2.97,Topics in Mathematics
+MATH,347,3.11,Fundamental Mathematics
+MATH,348,2.97,Fundamental Mathematics-ACP
+MATH,402,3.28,Non Euclidean Geometry
+MATH,403,3.13,Euclidean Geometry
+MATH,405,3.5,Teacher's Course
+MATH,412,3.15,Graph Theory
+MATH,413,3.24,Intro to Combinatorics
+MATH,414,2.84,Mathematical Logic
+MATH,415,3.02,Applied Linear Algebra
+MATH,416,3.08,Abstract Linear Algebra
+MATH,417,3.06,Intro to Abstract Algebra
+MATH,418,3.48,Intro to Abstract Algebra II
+MATH,423,3.38,Differential Geometry
+MATH,424,3.52,Honors Real Analysis
+MATH,427,3.56,Honors Abstract Algebra
+MATH,428,3.94,Honors Topics in Mathematics
+MATH,432,3.14,Set Theory and Topology
+MATH,441,3.1,Differential Equations
+MATH,442,3.06,Intro Partial Diff Equations
+MATH,444,3.21,Elementary Real Analysis
+MATH,446,2.98,Applied Complex Variables
+MATH,447,3.24,Real Variables
+MATH,448,3.34,Complex Variables
+MATH,453,3.3,Elementary Theory of Numbers
+MATH,461,2.93,Probability Theory
+MATH,481,3.17,Vector and Tensor Analysis
+MATH,482,3.33,Linear Programming
+MATH,484,3.39,Nonlinear Programming
+MATH,487,3.44,Advanced Engineering Math
+MATH,489,3.49,Dynamics & Differential Eqns
+MATH,490,2.99,Advanced Topics in Mathematics
+MATH,500,3.17,Abstract Algebra I
+MATH,518,3.25,Differentiable Manifolds I
+MATH,525,3.46,Algebraic Topology I
+MATH,530,3.87,Algebraic Number Theory
+MATH,540,3.59,Real Analysis
+MATH,541,3.88,Functional Analysis
+MATH,542,3.51,Complex Variables I
+MATH,550,3.77,Dynamical Systems I
+MATH,553,3.76,Partial Differential Equations
+MATH,561,3.62,Theory of Probability I
+MATH,562,3.86,Theory of Probability II
+MATH,563,3.22,Risk Modeling and Analysis
+MATH,564,3.73,Applied Stochastic Processes
+MATH,580,3.71,Combinatorial Mathematics
+MATH,595,3.97,Advanced Topics in Mathematics
+MBA,501,3.5,Foundations of Business I
+MBA,502,3.56,Foundations of Business II
+MBA,503,3.62,Prin & Proc of Management I
+MBA,504,3.67,Prin & Proc of Management II
+MBA,505,3.57,Topics in Management
+MBA,531,3.94,Special Projects
+MBA,541,3.91,Marketing in a Digital World
+MBA,542,3.97,Digital Marketing Analytics
+MBA,543,3.9,Digital Media & Marketing
+MBA,544,3.81,Marketing in an Analog World
+MBA,546,3.92,Global Business Horizons
+MBA,547,3.92,Global Impact: Cultural Psychology & Business Ethics
+MBA,548,3.8,Global Strategy
+MBA,551,3.81,Strategic Innovation
+MBA,552,3.76,Fostering Creative Thinking
+MBA,553,3.65,Entrepreneurship: From Startup to Growth
+MBA,561,3.74,Introduction to Business Analytics with R
+MBA,562,3.96,Introduction to Business Analytics: Communicating with Data
+MBA,563,3.83,Data Toolkit: Business Data Modeling & Predictive Analytics
+MBA,565,3.5,Infonomics
+MBA,592,3.94,Current Topics in Business
+MCB,100,2.92,Introductory Microbiology
+MCB,101,3.34,Intro Microbiology Laboratory
+MCB,150,2.91,Molec & Cellular Basis of Life
+MCB,151,3.58,Molec & Cellular Laboratory
+MCB,170,3.71,Society and the Brain
+MCB,180,2.83,Human Reproduction & Society
+MCB,199,3.71,Undergraduate Open Seminar
+MCB,215,2.69,Foundation in Mol & Cell Bio
+MCB,244,2.92,Human Anatomy & Physiology I
+MCB,245,2.87,Human Anat & Physiol Lab I
+MCB,246,2.8,Human Anatomy & Physiology II
+MCB,247,2.88,Human Anat & Physiol Lab II
+MCB,250,2.72,Molecular Genetics
+MCB,251,3.47,Exp Techniqs in Molecular Biol
+MCB,252,3.29,"Cells, Tissues & Development"
+MCB,253,3.57,Exp Techniqs in Cellular Biol
+MCB,270,3.6,Medical Genetics
+MCB,297,3.84,MCB Honors Discussion
+MCB,299,3.92,MCB Merit Program Discussion
+MCB,300,3.04,Microbiology
+MCB,301,3.19,Experimental Microbiology
+MCB,314,2.97,Introduction to Neurobiology
+MCB,316,3.06,Genetics and Disease
+MCB,317,3.05,Genetics and Genomics
+MCB,320,3.32,Mechanisms of Human Disease
+MCB,354,2.84,Biochem & Phys Basis of Life
+MCB,400,3.25,Cancer Cell Biology
+MCB,401,3.21,Cell & Membrane Physiology
+MCB,402,3.26,Sys & Integrative Physiology
+MCB,406,3.42,Gene Expression & Regulation
+MCB,408,3.2,Immunology
+MCB,410,3.4,"Developmental Biology, Stem Cells and Regenerative Medicine"
+MCB,413,3.05,Endocrinology
+MCB,419,3.35,"Brain, Behavior & Info Process"
+MCB,421,3.34,Microbial Genetics
+MCB,424,3.71,Microbial Biochemistry
+MCB,426,3.06,Bacterial Pathogenesis
+MCB,428,3.44,Microbial Pathogens Laboratory
+MCB,429,3.08,Cellular Microbiology &Disease
+MCB,431,3.5,Microbial Physiology
+MCB,432,3.49,Computing in Molecular Biology
+MCB,435,3.47,Evolution of Infectious Disease
+MCB,436,3.74,Global Biosecurity
+MCB,450,2.8,Introductory Biochemistry
+MCB,458,3.55,Basic Human Pathology
+MCB,461,3.71,Cell & Molecular Neuroscience
+MCB,462,3.54,Integrative Neuroscience
+MCB,465,3.29,Human Metabolic Disease
+MCB,471,3.64,Cell Structure and Dynamics
+MCB,480,3.74,Eukaryotic Cell Signaling
+MCB,493,3.55,Special Topics Mol Cell Biol
+MCB,501,3.44,Advanced Biochemistry
+MCB,502,3.4,Advanced Molecular Genetics
+MCB,529,3.52,Special Topics Cell Devel Biol
+MCB,555,3.38,Anlys Biochemical Literature
+MDIA,100,3.49,College of Media Orientation
+MDIA,199,3.54,Special Topics
+MDIA,223,2.97,Watching the Environment
+MDIA,290,3.56,Undergraduate Open Seminar
+MDIA,390,3.76,Special Topics in Media
+ME,170,3.78,Computer-Aided Design
+ME,199,3.9,Undergraduate Open Seminar
+ME,200,3.3,Thermodynamics
+ME,270,3.39,Design for Manufacturability
+ME,310,3.06,Fundamentals of Fluid Dynamics
+ME,320,3.11,Heat Transfer
+ME,330,3.4,Engineering Materials
+ME,340,3.27,Dynamics of Mechanical Systems
+ME,360,3.31,Signal Processing
+ME,370,3.42,Mechanical Design I
+ME,371,3.67,Mechanical Design II
+ME,400,3.43,Energy Conversion Systems
+ME,402,3.57,Design of Thermal Systems
+ME,403,3.5,Internal Combustion Engines
+ME,404,3.48,Intermediate Thermodynamics
+ME,410,3.3,Intermediate Gas Dynamics
+ME,412,3.66,Numerical Thermo-Fluid Mechs
+ME,420,3.72,Intermediate Heat Transfer
+ME,430,3.32,Failure of Engrg Materials
+ME,431,3.82,Mechanical Component Failure
+ME,432,3.55,Fundamentals of Photovoltaics
+ME,450,3.64,Modeling Materials Processing
+ME,451,3.44,Computer-Aided Mfg Systems
+ME,452,3.5,Num Control of Mfg Processes
+ME,460,3.47,Industrial Control Systems
+ME,461,3.92,Computer Cntrl of Mech Systems
+ME,465,3.9,Optics: Theory & Applications
+ME,470,3.74,Senior Design Project
+ME,471,3.33,Finite Element Analysis
+ME,472,3.67,Introduction to Tribology
+ME,481,3.62,Whole-Body Musculoskel Biomech
+ME,482,3.57,Musculoskel Tissue Mechanics
+ME,483,3.8,Mechanobiology
+ME,487,3.42,MEMS-NEMS Theory & Fabrication
+ME,498,3.76,Special Topics
+ME,501,3.41,Combustion Fundamentals
+ME,510,3.86,Advanced Gas Dynamics
+ME,521,3.81,Convective Heat Transfer
+ME,523,3.68,Nanoscale Energy Transport
+ME,591,3.88,Interest Group Seminar
+MILS,120,2.95,Intro to US Armed Forces
+MILS,341,3.84,Leadership and Management
+MSE,101,3.37,Materials in Today's World
+MSE,182,3.45,Introduction to MatSE
+MSE,183,3.95,Freshman Materials Laboratory
+MSE,201,3.22,Phases and Phase Relations
+MSE,206,2.96,Mechanics for MatSE
+MSE,280,3.12,Engineering Materials
+MSE,304,2.97,Electronic Properties of Matls
+MSE,307,3.25,Materials Laboratory I
+MSE,308,3.51,Materials Laboratory II
+MSE,395,3.8,Materials Design
+MSE,396,3.89,Introduction to Research
+MSE,398,3.58,Special Topics
+MSE,401,2.99,Thermodynamics of Materials
+MSE,402,3.13,Kinetic Processes in Materials
+MSE,403,3.15,Synthesis of Materials
+MSE,404,3.48,Laboratory Studies in Materials Science and Engineering
+MSE,405,3.07,Microstructure Determination
+MSE,406,2.92,Thermal-Mech Behavior of Matls
+MSE,420,3.22,Ceramic Materials & Properties
+MSE,421,3.36,Ceramic Processing
+MSE,422,3.14,Electrical Ceramics
+MSE,440,3.2,Mechanical Behavior of Metals
+MSE,441,3.05,Metals Processing
+MSE,443,3.33,Design of Engineering Alloys
+MSE,445,3.18,Corrosion of Metals
+MSE,450,3.19,Polymer Science & Engineering
+MSE,453,3.21,Plastics Engineering
+MSE,455,3.17,Macromolecular Solids
+MSE,456,3.02,Mechanics of Composites
+MSE,457,3.33,Polymer Chemistry
+MSE,458,3.25,Polymer Physics
+MSE,460,3.1,Electronic Materials I
+MSE,461,3.55,Electronic Materials II
+MSE,470,3.58,Design and Use of Biomaterials
+MSE,473,3.39,Biomolecular Materials Science
+MSE,474,3.63,Biomaterials and Nanomedicine
+MSE,480,3.44,Surfaces and Colloids
+MSE,481,3.52,Electron Microscopy
+MSE,485,3.64,Atomic Scale Simulations
+MSE,487,3.59,Materials for Nanotechnology
+MSE,488,3.44,Optical Materials
+MSE,489,3.72,Matl Select for Sustainability
+MSE,498,3.74,Special Topics
+MSE,500,3.53,Statistical Thermodyn of Matls
+MSE,565,3.74,Thin Film Materials
+MSE,580,3.59,Diffraction Physics of Matls
+MSE,583,3.56,Dynamics of Complex Fluids
+MSE,584,3.96,Point and Line Defects
+MSE,598,3.68,Special Topics
+MUS,101,2.71,Music Theory and Practice I
+MUS,102,3.12,Music Theory and Practice II
+MUS,103,3.47,Rudiments of Music Theory I
+MUS,104,3.56,Rudiments of Music Theory II
+MUS,105,3.76,Computation and Music I
+MUS,107,3.25,Musicianship I
+MUS,108,3.27,Musicianship II
+MUS,110,3.33,Introd Art Mus: Intl Perspect
+MUS,130,3.43,Music Then and Now
+MUS,132,3.68,Popular Music Studies
+MUS,133,3.4,Introduction to World Music
+MUS,199,3.84,Undergraduate Open Seminar
+MUS,201,3.36,Music Theory and Practice III
+MUS,202,3.03,Music Theory and Practice IV
+MUS,207,3.52,Musicianship III
+MUS,208,2.75,Musicianship IV
+MUS,240,3.72,Orientation Mus Tchg Lrng K-HS
+MUS,242,3.46,Elements of Conducting
+MUS,243,3.78,Introductory Music Ed Tech
+MUS,244,3.55,Social Foundations of Music Ed
+MUS,313,3.03,The History of Music I
+MUS,314,3.19,The History of Music II
+MUS,320,3.65,Pre-Student Tchng Experience
+MUS,333,3.42,Cond/Teach Strings-Grp Setting
+MUS,335,3.71,Elem and Mid Sch Instrum Music
+MUS,339,3.76,Princpls and Technqs in Mus Ed
+MUS,342,3.79,Music in Childhood
+MUS,343,3.77,Music in Adolescence
+MUS,344,3.71,Instrumental Methods for Secondary Ensembles
+MUS,346,3.77,Choral Methods for Secondary Ensembles
+MUS,348,3.81,Choral Literature
+MUS,350,3.71,Music Teaching in Ensemble Settings
+MUS,400,3.58,Counterpoint and Fugue
+MUS,407,3.49,Elect Music Techniques I
+MUS,408,3.47,Analysis of Musical Form
+MUS,410,3.19,Period Studies in Musicology
+MUS,411,3.57,Genre Studies in Musicology
+MUS,413,3.6,Music and Performance
+MUS,414,3.57,Music and Society
+MUS,415,3.75,Music and Media
+MUS,418,3.58,Regional Studies in Musicology
+MUS,421,3.15,The Music of America
+MUS,433,3.98,Music Interdisciplinary Curriculum
+MUS,434,3.65,Assessment and Evaluation in Music Education
+MUS,437,4.0,Popular Music Pedagogy
+MUS,439,3.69,Differentiating Music Instruction
+MUS,443,3.98,Orchestral Repertory
+MUS,444,3.79,Healthy Music Practices
+MUS,447,3.95,Advanced Music Ed Technology
+MUS,464,3.61,Jazz History I
+MUS,499,3.72,Proseminar in Music
+MUS,501,3.43,Grad Music History Review
+MUS,502,3.22,Graduate Theory Review
+MUS,519,3.48,Analytical Methods: Musicology
+MUS,521,3.91,Hist Studies in 20thC Music
+MUS,524,3.43,Sem in Wrks of Select Composer
+MUS,526,3.72,Baroque Performance Practice
+MUS,527,3.83,Classical Performance Practice
+MUS,528,3.71,Res & Bibliography in Music
+MUS,533,3.88,Research in Music Education
+MUS,558,3.88,Vocal Literature
+MUS,560,3.14,String Instrument Literature
+MUSE,200,3.59,Introduction to Museums
+MUSE,250,3.61,The World Through Museums
+NPRE,100,3.8,Orientation to NPRE
+NPRE,101,3.02,Introduction to Energy Sources
+NPRE,199,3.79,Undergraduate Open Seminar
+NPRE,201,3.62,Energy Systems
+NPRE,247,2.97,Modeling Nuclear Energy System
+NPRE,402,3.5,Nuclear Power Engineering
+NPRE,412,3.37,Nuclear Power Econ & Fuel Mgmt
+NPRE,421,3.2,Plasma and Fusion Science
+NPRE,431,3.11,Materials in Nuclear Engrg
+NPRE,432,3.64,Nuclear Engrg Materials Lab
+NPRE,441,3.55,Radiation Protection
+NPRE,442,3.39,Radioactive Waste Management
+NPRE,446,3.61,Radiation Interact w/Matter I
+NPRE,447,3.62,Radiation Interact w/Matter II
+NPRE,448,2.91,Nuclear Syst Engrg & Design
+NPRE,451,3.36,NPRE Laboratory
+NPRE,455,2.84,Neutron Diffusion & Transport
+NPRE,457,3.69,Safety Anlys Nucl Reactor Syst
+NPRE,458,3.66,Design in NPRE
+NPRE,470,3.62,Fuel Cells & Hydrogen Sources
+NPRE,475,3.8,Wind Power Systems
+NPRE,480,3.57,Energy and Security
+NPRE,481,3.56,Writing on Technol & Security
+NPRE,483,3.63,Seminar on Security
+NPRE,498,3.58,Special Topics
+NPRE,501,3.47,Fundamentals of Nuclear Engrg
+NPRE,521,3.79,Interact of Radiation w/Matter
+NPRE,555,3.9,Reactor Theory I
+NPRE,598,3.91,Special Topics
+NRES,100,3.48,Fundamentals of Env Sci
+NRES,101,3.27,Wildlife Conservation in the 21st Century
+NRES,102,3.3,Introduction to NRES
+NRES,103,3.24,The Great Lakes - Freshwater Wonder at Risk
+NRES,105,3.13,Climate Change Impacts on Ecological Systems
+NRES,199,3.52,Undergraduate Open Seminar
+NRES,201,2.84,Introductory Soils
+NRES,219,3.17,Applied Ecology
+NRES,285,3.76,Field Experience
+NRES,287,3.3,Environment and Society
+NRES,302,3.1,Dendrology
+NRES,325,3.51,Natural Resource Policy Mgmt
+NRES,340,3.63,Environ Social Sci Res Meth
+NRES,348,3.37,Fish and Wildlife Ecology
+NRES,362,3.54,Ecology of Invasive Species
+NRES,401,3.31,Watershed Hydrology
+NRES,407,3.03,Wildlife Population Ecology
+NRES,409,3.14,Fishery Ecol and Conservation
+NRES,415,3.17,Native Plant ID and Floristics
+NRES,418,3.6,Wetland Ecology & Management
+NRES,419,3.33,Env and Plant Ecosystems
+NRES,420,3.31,Restoration Ecology
+NRES,421,3.29,Quantitative Methods in NRES
+NRES,424,3.68,"US Environ, Justic & Policy"
+NRES,425,3.61,Natural Resources Law & Policy
+NRES,426,3.56,Renewable Energy Policy
+NRES,429,3.29,Aquatic Ecosystem Conservation
+NRES,439,3.66,Env and Sustainable Dev
+NRES,454,3.18,GIS in Natural Resource Mgmt
+NRES,456,3.1,Integrative Ecosystem Management
+NRES,465,3.39,Landscape Ecology
+NRES,472,3.51,Environmental Psychology
+NRES,474,3.15,Soil and Water Conservation
+NRES,475,3.53,Environmental Microbiology
+NRES,488,2.89,Soil Fertility and Fertilizers
+NRES,499,3.45,Special Topics
+NRES,502,3.71,Research Methods in NRES
+NRES,511,3.72,Principles of Applied Ecology
+NRES,593,3.6,Statistical Methods in Ecology
+NRES,598,3.52,Experimental Graduate Courses
+NS,101,3.82,Introduction to Naval Science
+NS,102,3.32,Sea Power and Maritime Affairs
+NS,303,3.78,Leadership and Management
+NUTR,510,3.64,Topics in Nutrition Research
+NUTR,511,3.53,Regulation of Metabolism
+NUTR,561,3.78,Advanced Clinical Nutrition
+PATH,433,3.01,Virology & Viral Pathogenesis
+PATH,439,3.7,Health Applications of GIS
+PHIL,100,3.14,Intro to Philosophy-ACP
+PHIL,101,3.15,Introduction to Philosophy
+PHIL,102,3.26,Logic and Reasoning
+PHIL,103,3.19,Logic and Reasoning QR II
+PHIL,104,3.19,Intro to Ethics-ACP
+PHIL,105,3.18,Introduction to Ethics
+PHIL,107,3.39,Intro to Political Philosophy
+PHIL,202,3.19,Symbolic Logic
+PHIL,203,3.12,Ancient Philosophy
+PHIL,206,3.18,Early Modern Philosophy
+PHIL,210,3.51,Ethics
+PHIL,214,3.39,Biomedical Ethics
+PHIL,230,3.29,Philosophy of Religion Intro
+PHIL,250,3.38,Conceptions of Human Nature
+PHIL,270,3.06,Philosophy of Science
+PHIL,380,3.34,Current Controversies
+PHIL,404,3.54,Medieval Philosophy
+PHIL,410,2.83,Classical Ancient Philosophers
+PHIL,412,3.68,Classical Modern Philosophers
+PHIL,414,3.73,Major Recent Philosophers
+PHIL,421,3.22,Ethical Theories
+PHIL,422,3.5,Recent Developments in Ethics
+PHIL,424,3.31,Philosophy of Religion
+PHIL,425,3.42,Philosophy of Mind
+PHIL,426,3.42,Metaphysics
+PHIL,429,3.04,Value Theory
+PHIL,430,3.25,Theory of Knowledge
+PHIL,435,3.37,Social Philosophy
+PHIL,436,3.35,Phil of Law and of the State
+PHIL,438,2.98,Philosophy of Language
+PHIL,439,3.46,Philosophy of Mathematics
+PHIL,441,3.4,Existential Philosophy
+PHIL,477,3.25,Philosophy of Psychology
+PHYS,100,3.24,Thinking About Physics
+PHYS,101,2.78,College Physics: Mech & Heat
+PHYS,102,2.84,College Physics: E&M & Modern
+PHYS,123,3.84,Physics Made Easy
+PHYS,140,3.09,How Things Work
+PHYS,150,3.1,Physics of Societal Issues
+PHYS,199,3.7,Undergraduate Open Seminar
+PHYS,211,3.0,University Physics: Mechanics
+PHYS,212,2.81,University Physics: Elec & Mag
+PHYS,213,2.8,Univ Physics: Thermal Physics
+PHYS,214,2.77,Univ Physics: Quantum Physics
+PHYS,225,3.08,Relativity & Math Applications
+PHYS,280,3.57,Nuclear Weapons & Arms Control
+PHYS,298,3.7,Freshmen/Sophomore Special Topics in Physics
+PHYS,325,3.04,Classical Mechanics I
+PHYS,326,3.07,Classical Mechanics II
+PHYS,398,3.73,Sophomore/Junior Special Topics in Physics
+PHYS,401,3.32,Classical Physics Lab
+PHYS,402,3.44,Light
+PHYS,403,3.88,Modern Experimental Physics
+PHYS,404,3.14,Electronic Circuits
+PHYS,406,3.81,Acoustical Physics of Music
+PHYS,419,3.26,"Space, Time, and Matter-ACP"
+PHYS,427,3.16,Thermal & Statistical Physics
+PHYS,435,3.18,Electromagnetic Fields I
+PHYS,436,3.36,Electromagnetic Fields II
+PHYS,460,3.39,Condensed Matter Physics
+PHYS,470,3.44,Subatomic Physics
+PHYS,475,3.31,Introduction to Biophysics
+PHYS,485,3.11,Atomic Phys & Quantum Theory
+PHYS,486,3.09,Quantum Physics I
+PHYS,487,3.26,Quantum Physics II
+PHYS,496,3.77,Intro to Physics Research
+PHYS,498,3.43,Special Topics in Physics
+PHYS,499,3.85,Senior Thesis
+PHYS,504,3.57,Statistical Physics
+PHYS,505,3.75,Classical Electromagnetism
+PHYS,508,3.3,Mathematical Physics I
+PHYS,513,3.76,Quantum Optics & Information
+PHYS,514,3.79,Modern Atomic Physics
+PHYS,515,3.51,General Relativity I
+PHYS,550,3.54,Biomolecular Physics
+PHYS,560,3.72,Condensed Matter Physics I
+PHYS,563,3.74,Phase Transitions
+PHYS,569,3.6,Emergent States of Matter
+PHYS,570,3.74,Subatomic Physics
+PHYS,580,3.55,Quantum Mechanics I
+PHYS,581,3.58,Quantum Mechanics II
+PHYS,582,3.53,General Field Theory
+PHYS,596,3.94,Graduate Physics Orientation
+PHYS,598,3.81,Special Topics in Physics
+PLPA,200,3.5,"Plants, Pathogens, and People"
+PLPA,407,3.14,Diseases of Field Crops
+POL,115,3.71,Intro to Polish Culture
+PORT,400,3.55,Intensive Beginning Portuguese
+PORT,401,2.91,Intensive Intermediate Portuguese
+PS,100,3.21,Intro to Political Science
+PS,101,3.04,Intro to US Gov & Pol
+PS,152,3.33,The New Middle East
+PS,170,3.56,"Power, Politics, and Protest"
+PS,180,3.05,IntroPolitics of Globalization
+PS,191,3.61,Topics in Civic Leadership
+PS,199,3.37,Undergraduate Open Seminar
+PS,201,3.23,US Racial & Ethnic Politics
+PS,202,3.12,Religion & Politics in the US
+PS,220,2.97,Intro to Public Policy
+PS,224,3.7,Politics of the National Parks
+PS,225,2.86,Environmental Politics & Policy
+PS,230,3.39,Intro to Pol Research
+PS,231,3.06,Strategic Models
+PS,240,3.37,Intro to Comp Politics
+PS,241,3.16,Comp Politics in Dev Nations
+PS,270,3.07,Intro to Political Theory
+PS,272,3.33,Women and Politics
+PS,280,3.07,Intro to Intl Relations
+PS,281,3.31,Intro to Intl Relations-ACP
+PS,282,3.38,Governing Globalization
+PS,283,3.44,Intro to Intl Security
+PS,300,3.4,Special Topics
+PS,301,3.3,The US Constitution I
+PS,302,3.31,The US Constitution II
+PS,303,3.38,The US Congress
+PS,304,2.76,The US Presidency
+PS,305,3.14,The US Supreme Court
+PS,312,2.72,Politics and the Media
+PS,313,2.93,Congress and Foreign Policy
+PS,316,3.71,Latina/Latino Politics
+PS,317,3.26,Asian American Politics
+PS,318,3.48,Interests Grps & Soc Movements
+PS,319,3.04,Campaigns and Elections
+PS,320,3.27,Public Opinion
+PS,321,3.11,Principles of Public Policy
+PS,322,3.1,Law and Public Policy
+PS,323,2.97,Law and Representation
+PS,329,3.11,Immigration & Citizenship
+PS,330,2.65,Intro to Political Behavior
+PS,340,3.29,Politics in Intl Development
+PS,341,3.36,Gov & Pol in Africa
+PS,343,3.62,Gov & Pol of China
+PS,345,3.34,Gov & Pol of SE Asia
+PS,346,3.68,Gov & Pol of South Asia
+PS,347,3.08,Gov & Pol of Middle East
+PS,348,3.41,Gov & Pol in Western Europe
+PS,351,3.51,Gov & Pol Post-Soviet States
+PS,352,3.56,Gov & Pol of East Europe
+PS,353,3.4,Gov & Pol of Latin America
+PS,355,3.58,Democratization
+PS,356,3.57,Comparative Political Economy
+PS,357,3.08,Ethnic Conflict
+PS,370,3.86,Justice in the Law
+PS,376,2.9,American Political Theory
+PS,377,3.39,Topics Contemp Pol Theory
+PS,379,3.51,Intl Rel & Domestic Politics
+PS,380,3.4,International Cooperation
+PS,382,3.44,Intl Political Economy
+PS,385,3.38,Politics of the European Union
+PS,386,2.98,International Law
+PS,390,3.47,American Foreign Policy
+PS,391,3.54,Soviet & Post-Sov Foreign Pol
+PS,392,3.22,Intl Organizations&Regionalism
+PS,394,3.37,Crisis Diplomacy
+PS,395,3.13,International Organization
+PS,396,3.44,International Conflict
+PS,397,3.48,Authoritarian Regimes
+PS,398,2.64,Strategic Interntl Relations
+PS,491,3.62,Internship
+PS,525,3.88,Formal Theory I: Game Theory
+PSM,501,3.89,PSM Industry Seminar I
+PSM,502,3.71,PSM Industry Seminar II
+PSM,503,3.8,PSM Industry Seminar III
+PSYC,100,3.01,Intro Psych
+PSYC,103,2.98,Intro Experimental Psych
+PSYC,199,3.64,Undergraduate Open Seminar
+PSYC,201,3.27,Intro to Social Psych
+PSYC,204,3.35,Intro to Brain and Cognition
+PSYC,207,3.2,Psychology of Prejudice and Discrimination
+PSYC,210,2.77,Behavioral Neuroscience
+PSYC,216,3.09,Child Psych
+PSYC,220,3.07,Images of Mind
+PSYC,224,2.97,Cognitive Psych
+PSYC,230,3.41,Perception & Sensory Processes
+PSYC,235,3.22,Intro to Statistics
+PSYC,238,3.28,Psychopathology and Problems in Living
+PSYC,239,3.5,Community Psych
+PSYC,245,3.29,Industrial Org Psych
+PSYC,248,3.07,Learning and Memory
+PSYC,250,3.15,Psych of Personality
+PSYC,265,2.76,"Power, Status, and Influence"
+PSYC,302,3.43,Applied Neuroscience
+PSYC,306,3.27,Psychology of Morality
+PSYC,308,3.5,Psychology of Religion and Spirituality
+PSYC,312,3.12,Psychology of Race & Ethnicity
+PSYC,318,3.19,Psych of the Infant
+PSYC,320,3.1,The Teenage Years
+PSYC,321,3.19,Human Memory
+PSYC,324,2.92,Developmental Psychopathology
+PSYC,326,2.92,Development and Relationships
+PSYC,327,3.37,Psychology of Human Sexuality
+PSYC,328,3.06,Psychology of Gender
+PSYC,331,3.15,Cognitive Psych Lab
+PSYC,332,3.23,Social Psych Methods Lab
+PSYC,333,3.24,Social Psych in Society Lab
+PSYC,334,3.38,Perception Lab
+PSYC,336,3.54,Topics in Clin/Comm Psych
+PSYC,340,3.85,Community Projects
+PSYC,341,3.75,Advanced Community Projects
+PSYC,350,3.61,Personality Lab
+PSYC,351,3.23,Thinking and Reasoning
+PSYC,352,3.72,Attitude Theory and Change
+PSYC,353,3.25,Social Cognition
+PSYC,358,3.32,Human Factors
+PSYC,361,3.1,The Psychology of Aging
+PSYC,363,3.58,Developmental Child Psych Lab
+PSYC,365,3.23,"Stress, Trauma and Resilience"
+PSYC,373,3.21,Culture & Psychology
+PSYC,379,3.15,Clinical/Abnormal Psych Lab
+PSYC,396,3.48,Intermediate Current Topics in Psychology
+PSYC,402,3.73,Intro Clin Neuropsych
+PSYC,403,3.52,Memory and Amnesia
+PSYC,404,3.53,Cognitive Neuroscience
+PSYC,408,3.79,Human Behavior Genetics
+PSYC,410,3.46,Hate Crimes
+PSYC,413,3.08,Psychopharmacology
+PSYC,414,3.24,"Brain, Learning, and Memory"
+PSYC,417,3.42,Neuroscience of Eating & Drinking
+PSYC,421,3.58,Principles of Psychophysiology
+PSYC,423,2.85,Language Acquisition
+PSYC,425,3.15,Psych of Language
+PSYC,427,2.4,Language and the Brain
+PSYC,433,3.13,Evolutionary Neuroscience
+PSYC,437,3.7,Advanced Psychology Lab
+PSYC,445,3.57,Cognitive Neuroscience Lab
+PSYC,450,3.63,Cognitive Psychophysiology
+PSYC,451,3.44,Neurobio of Aging
+PSYC,453,3.27,Cog Neuroscience of Vision
+PSYC,455,3.26,Organizational Psych
+PSYC,456,3.28,Human Performance and Cognition in Context
+PSYC,462,3.09,How Children Think
+PSYC,465,3.2,Personality and Soc Dev
+PSYC,468,3.32,Psych and Law
+PSYC,475,3.5,Personnel Psych
+PSYC,490,3.93,Measurement & Test Develop Lab
+PSYC,496,3.71,Adv Current Topics in Psych
+PSYC,506,3.87,Statistical Methods I
+PSYC,507,3.71,Statistical Methods II
+PSYC,514,3.64,Seminar in Cognitive Science
+PSYC,525,3.88,Psycholinguistics
+PSYC,530,3.87,Found of Ind Org Psych
+PSYC,588,3.88,Covar Struct and Factor Models
+PSYC,594,3.7,Multivar Anlys in Psych and Ed
+REES,201,3.83,Introduction to Eastern Europe
+REHB,330,3.61,Disability in American Society
+REHB,402,3.42,Medical Aspects of Disability
+REHB,435,3.66,Work and Disability
+REL,101,3.44,Bible as Literature
+REL,104,3.31,Asian Mythology
+REL,108,3.89,Religion & Society in West I
+REL,109,3.81,Religion & Society in West II
+REL,110,3.63,World Religions
+REL,120,3.62,A History of Judaism
+REL,132,3.74,Zen
+REL,208,3.94,Cultures & Literatures of South Asia
+REL,214,3.24,Introduction to Islam
+REL,231,3.65,Religion and Philosophy
+REL,235,3.37,History of Religion in America
+REL,236,3.39,"Religion, Violence & America"
+REL,270,3.33,"Religion, Ethics, Environment"
+REL,286,3.65,Introduction to Hinduism
+REL,287,3.21,Introduction to Buddhism
+RHET,105,3.54,Writing and Research
+RHET,233,3.56,Adv Rhetoric & Composition
+RST,100,3.31,"Recreation, Sport, and Tourism in Modern Society"
+RST,101,3.58,"Orientation to Recreation, Sport and Tourism"
+RST,110,3.24,Service Delivery in RST
+RST,120,3.48,"Parks, Recreation, and Environments"
+RST,130,3.09,Foundations of Sport Mgt
+RST,140,3.4,Nature and Wilderness
+RST,150,3.55,Foundations of Tourism
+RST,199,3.53,Undergraduate Open Seminar
+RST,200,3.45,"Leadership in Recreation, Sport and Tourism"
+RST,210,3.19,"Management in Recreation, Sport and Tourism"
+RST,216,3.64,"Technology in Recreation, Sport and Tourism"
+RST,218,3.29,Entrepreneurship
+RST,230,3.14,"Diversity in Recreation, Sport, and Tourism"
+RST,240,3.33,"Financial Resource Management in Recreation, Sport and Tourism"
+RST,242,3.7,Nature and American Culture
+RST,255,3.35,"Ethical Issues in Recreation, Sport and Tourism"
+RST,260,3.59,"Disability in Recreation, Sport and Tourism"
+RST,300,3.55,Leisure Programming
+RST,316,3.29,"Human Development and Recreation, Sport and Tourism"
+RST,325,3.28,"Marketing in Recreation, Sport and Tourism"
+RST,335,3.2,Leisure and Consumer Culture
+RST,340,3.51,"Facility Management in Recreation, Sport and Tourism"
+RST,350,3.25,Tourism and Culture
+RST,354,2.95,Legal Aspects of Sport
+RST,360,3.55,"Communication in Recreation, Sport & Tourism"
+RST,370,3.35,Research Methods & Analysis
+RST,393,3.63,Special Problems
+RST,410,3.14,"Strategic Thinking in Recreation, Sport and Tourism"
+RST,429,3.22,"Contemporary Issues in Recreation, Sport and Tourism"
+RST,430,3.46,Sport & Development
+RST,440,3.1,HR Management in RST
+RST,460,3.47,"Event Management in Recreation, Sport and Tourism"
+RST,465,3.52,"Event Implementation and Evaluation in Recreation, Sport and Tourism"
+RST,480,3.4,Orientation to Internship
+RST,501,3.71,"Concepts & Applications in Recreation, Sport & Tourism"
+RST,503,3.79,Adv Leisure Research Methods
+RST,512,3.73,"Managing Recreation, Sport & Tourism Organizations"
+RST,516,3.92,Finance & Budgeting in RST
+RST,518,3.6,Event Management
+RST,520,3.67,Critical Issues Sport Mgt
+RST,593,3.9,Special Problems
+RST,594,3.78,Special Topics in Leisure
+RUSS,115,3.7,Intro to Russian Culture
+RUSS,202,3.52,Second-Year Russian II
+RUSS,220,3.16,Golden Age of Russian Lit
+RUSS,225,3.33,Russian Lit and Revolution
+RUSS,323,3.44,Tolstoy
+SAME,152,3.18,The New Middle East
+SBC,500,3.94,Strategic Brand Communication Essentials
+SBC,501,3.68,Strategic Branding: Global Perspectives
+SBC,502,3.82,Essentials of Business Management
+SBC,504,3.72,Managing Projects & Teams
+SBC,505,3.83,Consumer Insights II
+SBC,506,3.66,Measurement and Evaluation
+SBC,509,3.81,Strategic Media Management
+SBC,511,3.81,Strategic Analytics & Data Visual
+SBC,512,3.89,Professional SBC Capstone Project
+SCAN,101,3.73,Beginning Scandinavian I
+SCAN,215,3.25,"Madness, Myth, and Murder"
+SCAN,225,3.74,Vikings to Volvos: Scandinavia
+SCAN,251,3.3,Viking Mythology
+SCAN,252,3.37,Viking Sagas in Translation
+SCAN,490,3.09,Green Screen: Film and Nature
+SCAN,492,3.18,Scandinavian Cinema
+SE,100,3.86,Introduction to ISE
+SE,101,3.26,Engineering Graphics & Design
+SE,261,3.21,Business Side of Engineering
+SE,310,3.23,Design of Structures and Mechanisms
+SE,311,3.37,Engineering Design Analysis
+SE,312,3.21,Instrumentation and Test Lab
+SE,320,3.29,Control Systems
+SE,361,3.43,Emotional Intelligence Skills
+SE,400,3.55,Engineering Law
+SE,402,3.46,Comp-Aided Product Realization
+SE,410,3.36,Component Design
+SE,413,2.96,Engineering Design Optimization
+SE,420,3.58,Digital Control Systems
+SE,422,3.56,Robot Dynamics and Control
+SE,423,3.72,Mechatronics
+SE,424,3.34,State Space Design for Control
+SE,450,3.32,Decision Analysis I
+SE,494,3.77,Senior Engineering Project I
+SE,495,3.87,Senior Engineering Project II
+SHS,120,3.57,"Child, Comm, & Lang Ability"
+SHS,121,3.3,American Sign Language I
+SHS,150,3.13,Hearing Processes & Disorders
+SHS,170,3.35,Intro Hum Comm Sys & Disorders
+SHS,200,3.2,General Phonetics
+SHS,221,3.34,American Sign Language II
+SHS,222,3.58,Language & Culture of Deaf Communities
+SHS,240,3.2,Intro Sound & Hearing Science
+SHS,270,3.53,Comm Disability in the Media
+SHS,271,3.65,Communication and Aging
+SHS,280,3.28,Communication Neuroscience
+SHS,300,3.11,Anat & Physiol Spch Mechanism
+SHS,301,3.29,General Speech Science
+SHS,320,3.51,Development of Spoken Language
+SHS,321,3.2,American Sign Language III
+SHS,333,3.51,Children with Neurodevelopmental Disorders Across Communication Contexts
+SHS,352,3.83,Hearing Health and Society
+SHS,375,3.87,Comm Partners & Health
+SHS,380,3.4,Comm Competence and Disorders
+SHS,383,3.66,Special Topics
+SHS,385,3.34,Evidence-Based Practice in Communication Sciences and Disorders
+SHS,390,3.24,Individual Study
+SHS,410,3.63,Stuttering: Theory & Practice
+SHS,411,3.53,Normal and Disordered Voice
+SHS,427,2.88,Language and the Brain
+SHS,430,3.68,Devel & Disorders Phonol Artic
+SHS,431,3.47,Lang Disorders Preschool Child
+SHS,450,3.06,Intro Audiol & Hear Disorders
+SHS,451,3.28,Aural Rehab Children to Adults
+SHS,470,3.6,Neural Bases Spch Lang
+SHS,473,3.74,Augmentative & Alt Comm
+SHS,477,3.86,Beginning Practicum in SHS
+SHS,511,3.71,Assessment and Management of Voice Disorders
+SHS,512,3.51,Orofacial Anomalies
+SHS,513,3.65,Assessment and Management of Dysphagia
+SHS,514,3.86,Motor Speech Disorders
+SHS,532,3.87,Lang Disorders Schl-Age Child
+SHS,533,3.88,Advanced Language Diagnostics
+SHS,534,3.74,Aphasia and Related Disorders
+SHS,570,3.19,Quant Reasoning Spch Hear Sci
+SHS,571,3.65,Clinical Sociolinguistics
+SHS,572,3.82,Counseling in Comm Disorders
+SHS,576,3.96,School Intrnshp Spch-Lang Path
+SHS,577,3.87,Advanced Practicum in SHS
+SHS,579,3.71,Prof/Eth/Legal Issues AuD/SLP
+SHS,593,3.91,Special Problems
+SLAV,117,3.67,Russ & E Euro Science Fiction
+SLAV,120,3.44,Russian & E Euro Folktales
+SOC,100,3.41,Introduction to Sociology
+SOC,101,2.94,Sociology of Gender
+SOC,122,3.39,Africa in World Perspective
+SOC,160,3.47,Global Ineq and Social Change
+SOC,161,3.3,Introduction to Poverty
+SOC,162,3.47,Intro to Intl Health Policy
+SOC,163,3.47,Social Problems
+SOC,170,3.14,"Integration, Assimilation and Multiculturalism: America's Immigrant Society"
+SOC,179,3.56,Social Organization
+SOC,196,3.16,Issues in Sociology
+SOC,199,3.64,Undergraduate Open Seminar
+SOC,200,3.47,Introduction to Sociological Theory
+SOC,225,3.56,Race and Ethnicity
+SOC,226,3.43,Political Sociology
+SOC,270,3.03,Global Demography
+SOC,273,3.12,Social Perspectives on the Family
+SOC,274,3.52,"Health, Illness and Society"
+SOC,275,3.53,Criminology
+SOC,280,3.1,Intro to Social Statistics
+SOC,310,3.34,Sociology of Deviance
+SOC,350,3.55,Technology and Society
+SOC,364,3.26,Impacts of Globalization
+SOC,373,3.39,Social Inequality
+SOC,375,3.41,Criminal Justice System
+SOC,378,3.65,Sociology of Law
+SOC,380,3.44,Social Research Methods
+SOC,396,3.44,Topics in Sociology
+SOC,426,3.88,"Race, Educational Policy, and Sociology"
+SOC,447,3.41,Environmental Sociology
+SOC,450,3.19,Senior Capstone Seminar
+SOC,470,2.93,Social Movements
+SOC,477,3.73,Law and Society- ACP
+SOC,479,3.48,Law and Society
+SOC,480,3.41,Methods of Field Research
+SOC,481,3.22,Survey Research
+SOC,485,3.12,Intermediate Social Statistics
+SOC,488,2.84,Demographic Analysis
+SOC,496,3.26,Advanced Topics in Sociology
+SOC,583,3.83,Qualitative Research Methods
+SOC,586,3.57,Adv Social Statistics I
+SOCW,101,3.58,SOCW Orientation Seminar
+SOCW,199,3.67,Undergraduate Open Seminar
+SOCW,200,3.2,Introduction to Social Work
+SOCW,225,3.25,Social Work Statistics
+SOCW,240,3.51,Death & Dying
+SOCW,245,3.65,Doing Good through the Nonprofit Sector
+SOCW,297,3.9,Asian Families in America
+SOCW,300,3.49,Diversity: Identities & Issues
+SOCW,315,3.58,Social Work Services for Older Adults
+SOCW,321,3.62,Social Entre & Social Change
+SOCW,360,3.77,Social Work and the Military
+SOCW,380,3.66,Current Topics in Social Work
+SOCW,400,3.74,Generalist SW Practice Methods
+SOCW,401,3.73,Practice I
+SOCW,402,3.63,Practice II
+SOCW,403,3.67,Practice III
+SOCW,410,3.74,Social Welfare Pol and Svcs
+SOCW,412,3.73,Hispanics in the U.S.
+SOCW,416,3.55,Child Welfare Issues & Trends
+SOCW,417,3.71,Dementia Care for Older Adults
+SOCW,420,3.75,Subst Use in Social Context
+SOCW,427,3.6,Social Work Research Methods
+SOCW,436,3.51,Intl SW & Development
+SOCW,451,3.73,HBSE I: Human Development
+SOCW,455,3.89,Social Work with Women
+SOCW,461,3.84,Professional Practice Seminar I
+SOCW,470,3.86,Field Practicum & Professional Seminar II
+SOCW,500,3.68,SW Practice with Indiv and Fam
+SOCW,501,3.75,SW Practice with Groups
+SOCW,502,3.79,Brief Motivational Interventions for Substance Use
+SOCW,503,3.83,Trauma Informed Social Work with Children and Adolescents
+SOCW,504,3.91,SUD Treatment in S W
+SOCW,505,3.88,Behav and Cogn Methods for SW
+SOCW,506,3.77,SW Practice with Child/Adol
+SOCW,507,3.78,School Social Work Practice
+SOCW,508,3.9,Family Therapy Seminar
+SOCW,509,3.8,Adv Clin Assess & Interviewing
+SOCW,513,3.96,Delivery of Health Care
+SOCW,514,3.87,Mental Health Pol and Svcs
+SOCW,515,3.84,Integrated Health Care Policy and Services
+SOCW,516,3.47,"Child, Youth and Family Svcs"
+SOCW,519,3.85,Public School Policy/Services
+SOCW,520,3.44,Social Welfare Planning
+SOCW,521,3.95,Leadership and Social Change
+SOCW,525,3.76,Supervision/Staff Development
+SOCW,526,3.71,Managing Human Service Orgs
+SOCW,531,3.91,Field Practicum and Integrative Seminar I
+SOCW,532,3.9,Field Practicum and Integrative Seminar II
+SOCW,541,3.56,Clinical Research Seminar
+SOCW,542,3.71,Program Evaluation
+SOCW,552,3.71,HBSE II: Mental Disorders
+SOCW,553,3.84,Integrated Behavorial Health & Health Care
+SOCW,554,3.85,Inequalities In A Diverse Society
+SOCW,561,3.84,Special Studies in Soc Work I
+SOCW,589,3.65,Social Work and the Law
+SPAN,101,3.18,Elementary Spanish I
+SPAN,102,3.25,Elementary Spanish II
+SPAN,122,2.83,Intensive Elementary Spanish
+SPAN,130,3.55,Intermediate Spanish
+SPAN,141,2.98,Introduction to Spanish Grammar
+SPAN,142,3.24,Spanish in the Professions
+SPAN,200,3.37,Readings in Hispanic Texts
+SPAN,204,3.38,Advanced Spanish Grammar in Context
+SPAN,208,3.7,Oral Spanish
+SPAN,228,3.44,Spanish Composition
+SPAN,232,3.83,Spanish in the Community
+SPAN,246,3.48,Gender & Sexuality in Latina/o Literature
+SPAN,250,3.61,Introduction to Literary Analysis
+SPAN,252,3.54,Introduction to Hispanic Linguistics
+SPAN,254,3.44,Introduction to Cultural Analysis
+SPAN,303,3.58,The Sounds of Spanish
+SPAN,305,3.5,The Structure of Spanish
+SPAN,307,3.54,Bilingualism
+SPAN,308,3.68,Spanish in the United States
+SPAN,309,3.52,Varieties of Spoken Spanish
+SPAN,312,3.12,Modern Spanish Literatures & Cultures
+SPAN,316,3.36,Latin American Literatures & Cultures from 1800
+SPAN,318,3.68,Spanish Cultural Studies I
+SPAN,320,3.48,Spanish Cultural Studies II
+SPAN,324,3.06,Latin America Cultural Studies I
+SPAN,326,3.7,Latin America Cultural Studies II
+SPAN,332,3.8,Spanish and Entrepreneurship
+SPAN,571,3.8,Proseminar For Lang Tchg
+SPED,117,3.8,The Culture of Disability
+SPED,199,3.62,Undergraduate Open Seminar
+SPED,312,3.87,Introduction to Educational Technology
+SPED,317,3.83,Characteristics & Eligibility
+SPED,322,3.5,Introduction to Intellectual Disability
+SPED,405,3.77,General Educator's Role in Special Education
+SPED,414,3.8,Assessment in Early Childhood Special Education
+SPED,424,3.63,Foundations of Assessment
+SPED,426,3.89,Collaboration and Teaming
+SPED,431,3.81,Assistive Technology and Physical Disabilities
+SPED,438,3.9,Collaborating with Families
+SPED,440,3.81,Instructional Strategies I
+SPED,441,3.63,Instructional Strategies II
+SPED,444,3.91,Career Development and Transition
+SPED,446,3.89,Curriculum Development I
+SPED,447,3.93,Curriculum Development II
+SPED,448,3.62,Curriculum Development III
+SPED,450,3.9,Introduction to Early Childhood Special Education
+SPED,461,3.81,Alternative and Augmentative Communication and Literacy
+SPED,465,3.7,Curriculum and Methods in Early Childhood Special Education
+SPED,470,3.95,Learning Environments I
+SPED,471,3.88,Learning Environments II
+SPED,514,3.91,Equity Issues in Special Education
+SPED,517,3.79,Disability Issues in Special Education
+SPED,526,3.92,Collaborative Leaders in Special Education
+STAT,100,3.39,Statistics
+STAT,107,3.64,Data Science Discovery
+STAT,200,3.47,Statistical Analysis
+STAT,212,3.54,Biostatistics
+STAT,385,3.61,Statistics Programming Methods
+STAT,400,3.2,Statistics and Probability I
+STAT,408,3.06,Actuarial Statistics I
+STAT,409,3.16,Actuarial Statistics II
+STAT,410,3.13,Statistics and Probability II
+STAT,420,3.57,Methods of Applied Statistics
+STAT,424,3.49,Analysis of Variance
+STAT,425,3.46,Applied Regression and Design
+STAT,426,3.43,Sampling and Categorical Data
+STAT,428,3.37,Statistical Computing
+STAT,429,3.4,Time Series Analysis
+STAT,430,3.54,Topics in Applied Statistics
+STAT,431,3.6,Applied Bayesian Analysis
+STAT,432,3.71,Basics of Statistical Learning
+STAT,433,3.72,Stochastic Processes
+STAT,434,3.54,Survival Analysis
+STAT,440,3.66,Statistical Data Management
+STAT,443,3.54,Professional Statistics
+STAT,448,3.56,Advanced Data Analysis
+STAT,480,3.62,Data Science Foundations
+STAT,510,3.59,Mathematical Statistics I
+STAT,511,3.87,Mathematical Statistics II
+STAT,525,3.89,Computational Statistics
+STAT,527,3.66,Advanced Regression Analysis
+STAT,542,3.84,Statistical Learning
+STAT,553,3.4,Probability and Measure I
+STAT,571,3.81,Multivariate Analysis
+STAT,578,3.78,Topics in Statistics
+SWAH,201,3.3,Elementary Swahili I
+SWAH,202,3.46,Elementary Swahili II
+SWAH,403,2.51,Intermediate Swahili I
+SWAH,404,3.57,Intermediate Swahili II
+TAM,195,3.55,Mechanics in the Modern World
+TAM,201,3.74,Mechanics for Technol & Mgmt
+TAM,210,2.86,Introduction to Statics
+TAM,211,2.74,Statics
+TAM,212,2.93,Introductory Dynamics
+TAM,251,2.95,Introductory Solid Mechanics
+TAM,252,3.58,Solid Mechanics Design
+TAM,302,3.58,Engineering Design Principles
+TAM,335,2.83,Introductory Fluid Mechanics
+TAM,412,3.04,Intermediate Dynamics
+TAM,427,3.03,Mechanics of Polymers
+TAM,428,3.21,Mechanics of Composites
+TAM,435,3.36,Intermediate Fluid Mechanics
+TAM,445,3.04,Continuum Mechanics
+TAM,451,3.26,Intermediate Solid Mechanics
+TAM,456,3.47,Experimental Stress Analysis
+TAM,461,3.74,Cellular Biomechanics
+TAM,470,3.2,Computational Mechanics
+TAM,498,3.13,Special Topics
+TAM,531,3.62,Inviscid Flow
+TAM,532,3.6,Viscous Flow
+TAM,538,3.55,Turbulence
+TAM,541,3.55,Mathematical Methods I
+TAM,542,3.7,Mathematical Methods II
+TAM,551,3.32,Solid Mechanics I
+TE,100,3.88,"Introduction to Innovation, Leadership and Engineering Entrepreneurship"
+TE,250,3.8,From Idea to Enterprise
+TE,298,3.74,Special Topics I
+TE,333,3.48,"Creativity, Innovation, Vision"
+TE,360,3.85,Lectures in Engineering Entrepreneurship
+TE,398,3.75,Special Topics II
+TE,401,3.83,Developing Breakthrough Projects
+TE,450,3.55,"Startups: Incorporation, Funding, Contracts, & Intellectual Property"
+TE,460,3.9,Lectures in Engineering Entrepreneurship
+TE,461,3.8,Technology Entrepreneurship
+TE,466,3.75,High-Tech Venture Marketing
+TE,498,3.97,Special Topics III
+TE,565,3.83,Technol Innovation & Strategy
+TE,566,3.85,Finance for Engineering Mgmt
+TE,567,3.95,Venture Funded Startups
+THEA,100,3.81,Practicum I
+THEA,101,3.69,Introduction to Theatre Arts
+THEA,110,3.79,Broadway Musicals
+THEA,170,3.54,Fundamentals of Acting I
+THEA,175,3.15,Fundamentals of Acting II
+THEA,208,3.68,21st Century Dramaturgy
+THEA,218,3.53,Intro to Social Issues Theatre
+THEA,220,3.23,Survey of Theatrical Design
+THEA,262,3.63,Literature of Modern Theatre
+THEA,263,3.19,Intro African American Theat
+THEA,270,3.77,Relationships in Acting I
+THEA,271,3.63,Voice and Movement I
+THEA,360,2.76,History of Theatre I
+THEA,361,2.8,History of Theatre II
+THEA,399,3.97,Undergraduate Group Seminar
+THEA,400,3.86,Practicum IV
+THEA,450,3.89,Management Seminar
+THEA,452,3.13,Principles of Arts Management
+THEA,595,3.63,Creative Project
+TRST,201,3.37,Intro to Translation Studies
+TRST,407,3.57,Terminology
+TRST,410,3.75,Translation and Interpreting Theory & Practice
+TRST,415,3.69,Machine Translation: History and Applications
+TSM,100,2.68,Technical Systems in Agr
+TSM,199,3.33,Undergraduate Open Seminar
+TSM,232,3.03,Materials and Construction Sys
+TSM,233,3.08,Metallurgy & Welding Process
+TSM,234,3.01,"Wiring, Motors and Control Sys"
+TSM,262,3.07,Off-Road Equipment Management
+TSM,311,3.49,Humanity in the Food Web
+TSM,352,3.2,Land and Water Mgt Systems
+TSM,363,3.46,Fluid Power Systems
+TSM,371,3.09,Residential Housing Design
+TSM,372,3.1,Environ Control & HVAC Systems
+TSM,381,3.26,Grain Drying & Storage Systems
+TSM,421,3.15,Ag Safety-Injury Prevention
+TSM,422,3.55,Ag Health-Illnesses Prevention
+TSM,425,3.32,Managing Ag Safety Risk
+TSM,435,3.63,Elec Computer Ctrl Sys
+TSM,438,3.09,Renewable Energy Applications
+TSM,464,2.97,Engine and Tractor Power
+TSM,465,2.75,Chemical Applications Systems
+TSM,486,3.42,Grain Bioprocessing Coproducts
+UKR,113,3.84,Ukrainian Culture
+UP,101,3.43,Introduction to City Planning
+UP,116,3.41,Urban Informatics I
+UP,136,3.76,Urban Sustainability
+UP,185,3.36,Cities in a Global Perspective
+UP,199,3.44,Undergraduate Open Seminar
+UP,201,3.7,Planning in Action
+UP,203,3.43,Cities: Planning & Urban Life
+UP,204,3.13,Chicago: Planning & Urban Life
+UP,205,3.25,Ecology & Environmental Sustainability
+UP,211,3.65,"Local Planning, Gov't and Law"
+UP,260,3.51,Social Inequality and Planning
+UP,312,3.28,Communication for Planners
+UP,316,3.17,Urban Informatics II
+UP,330,3.37,The Modern American City
+UP,335,3.23,Cities and Immigrants
+UP,340,3.72,Planning for Healthy Cities
+UP,345,3.48,Economic Development Planning
+UP,347,3.49,Junior Planning Workshop
+UP,357,3.66,The Land Development Process
+UP,405,3.44,Watershed Ecology and Planning
+UP,406,3.33,Urban Ecology
+UP,407,3.8,State and Local Public Finance
+UP,418,3.6,GIS for Planners
+UP,423,3.68,Community Development in the Global South
+UP,426,2.85,Urban Design and Planning
+UP,430,3.6,Urban Transportation Planning
+UP,438,3.3,Disasters and Urban Planning
+UP,446,3.53,Sustainable Planning Seminar
+UP,447,3.78,Land Use Planning Workshop
+UP,456,3.76,Sustainable Planning Workshop
+UP,460,3.71,Transportation/Land Use Policy
+UP,466,3.68,Energy & the Built Environment
+UP,470,3.45,Shrinking Cities
+UP,473,3.75,Housing & Urban Policy
+UP,474,3.29,Neighborhood Revitalization
+UP,475,3.84,Real Estate Development Fundamentals
+UP,480,3.42,Sustainable Design Principles
+UP,494,3.44,Special Topics in Planning
+UP,501,3.63,Planning History and Theory
+UP,503,3.81,Physical Planning
+UP,504,3.7,Urban History and Theory
+UP,505,3.58,Urban and Regional Analysis
+UP,508,3.81,Survey Design and Analysis
+UP,509,3.84,Economics for Planners
+UP,510,3.65,Plan Making
+UP,511,3.77,Law and Planning
+UP,545,3.78,Economic Development Policy
+UP,594,3.46,Seminar
+VCM,625,3.92,Zoological Companion Mammal Medicine
+VCM,636,3.97,Advanced Clinical Pathology
+VCM,637,3.02,Advanced Clinical Cardiology
+VCM,639,3.95,Forensic Veterinary Medicine
+VCM,649,3.91,Avian Medicine and Surgery
+VCM,660,3.4,Advanced Equine Anatomy
+VCM,667,3.1,Ethics and Conflict in Zoological Medicine
+VCM,673,3.97,Companion Animal Rehab
+VCM,685,3.94,Advanced Diagnostic Imaging
+VM,602,2.66,Structure and Function I
+VM,603,2.88,Structure and Function II
+VM,604,2.79,Structure and Function III
+VM,605,2.7,Pathobiology I
+VM,607,2.89,Pathobiology II
+VM,608,2.85,Pathobiology III
+VM,609,2.85,Medicine and Surgery I
+VM,610,2.65,Medicine and Surgery II
+VM,611,2.76,Medicine and Surgery III
+VM,620,3.81,Canine Feline Behavior
+YDSH,220,3.62,Jewish Storytelling
+YDSH,320,3.44,Lit Responses to the Holocaust
