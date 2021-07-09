@@ -35,8 +35,8 @@ CREATE TABLE Professor(
 
 CREATE TABLE Section(
 	Crn INTEGER,
-    CourseNumber INTEGER,
-    CourseDepartment VARCHAR(4),
+    CourseNumber INTEGER NOT NULL,
+    CourseDepartment VARCHAR(4) NOT NULL,
     creditHours INTEGER,
     startTime VARCHAR(8),
     endTime VARCHAR(8),
@@ -52,7 +52,9 @@ CREATE TABLE TeachingCourse(
     Crn Integer,
     PRIMARY KEY (ProfessorLastName, ProfessorFirstName, Crn),
     FOREIGN KEY (Crn)
-		REFERENCES Section(Crn)
+		REFERENCES Section(Crn),
+	FOREIGN KEY (ProfessorFirstName, ProfessorLastName)
+		REFERENCES Professor(FirstName, LastName)
 );
 
 CREATE TABLE Restriction(
@@ -78,6 +80,7 @@ CREATE TABLE PrereqCourses(
 	RequiringCourseNumber INTEGER,
     RequiringCourseDepartment VARCHAR(4),
     RequirementGroupId INTEGER,
+    PRIMARY KEY (CourseNumber, CourseDepartment, RequiringCourseNumber, RequiringCourseDepartment, RequirementGroupId),
 	FOREIGN KEY (RequiringCourseNumber, RequiringCourseDepartment, RequirementGroupId) 
 		REFERENCES RequirementGroup(RequiringCourseNumber, RequiringCourseDepartment, Id),
     FOREIGN KEY (CourseNumber, CourseDepartment)
