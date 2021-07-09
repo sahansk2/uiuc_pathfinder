@@ -48,3 +48,17 @@ Then, run
 ```sh
 q -H -d , "SELECT Subject,Number, GPA from ./util/uiuc_classes_bot_data/2021-sp.csv GROUP BY Subject,Number, GPA" > out.csv
 ```
+
+
+## Combining GPA and Course Info for importing into MySQL
+
+```sh
+q -H -d ',' "SELECT courseDept, courseNum, GPA, title FROM ./classDeptNumGPA.csv NATURAL JOIN ./courseInfo.csv infofile" > test
+```
+
+## Getting existing professors listed in crns
+
+```sh
+q -H -d ',' "SELECT instructorFirstName, instructorLastName from ./crn_info.csv WHERE instructorFirstName IS NOT NULL GROUP BY instructorFirstName, instructorLastName" | sort > crnProfs.csv
+```
+
