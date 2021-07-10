@@ -68,3 +68,8 @@ q -H -d ',' "SELECT instructorFirstName, instructorLastName from ./crn_info.csv 
 q -H -d ',' "SELECT DISTINCT courseDept, courseNum, id, type FROM ./prereqs.csv" > requirementGroups.csv
 ```
 
+## Scraping interests from the ECE subdisciplines site using tampermonkey
+
+1. Install tampermonkey
+1. Install the tampermonkey extension here (ends with .zip)
+1. Enable it and visit each subdiscipline in https://ece.illinois.edu/academics/ugrad/subdisciplines
