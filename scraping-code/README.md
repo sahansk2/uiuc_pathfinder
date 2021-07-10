@@ -62,3 +62,9 @@ q -H -d ',' "SELECT courseDept, courseNum, GPA, title FROM ./classDeptNumGPA.csv
 q -H -d ',' "SELECT instructorFirstName, instructorLastName from ./crn_info.csv WHERE instructorFirstName IS NOT NULL GROUP BY instructorFirstName, instructorLastName" | sort > crnProfs.csv
 ```
 
+## Creating requirement groups from prereqs.csv
+
+```sh
+q -H -d ',' "SELECT DISTINCT courseDept, courseNum, id, type FROM ./prereqs.csv" > requirementGroups.csv
+```
+
