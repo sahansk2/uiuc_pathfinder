@@ -16,11 +16,51 @@ class BackendApp():
     @cherrypy.expose
     def index(self):
         return "Midterm server is running"
-    
+
     @cherrypy.expose
-    def section(self):
-        return "This endpoint deletes sections"
-    
+    @cherrypy.tools.json_out()
+    def course(self, dept, num, title, rating='NULL'):
+        query = """
+        INSERT INTO `cs411ppdb_experimental_local`.`Course`
+        (`Title`,
+        `Number`,
+        `Department`,
+        `averageGPA`)
+        VALUES
+        (%s, %s, %s, %s);
+        """
+        cur = connection.cursor()
+        cur.execute(query, (dept, num, title, rating))
+        insert_count = cur.rowcount
+        return { 'insertedRows': insert_count }
+
+    @cherrypy.expose
+    @cherrypy.tools.json_out()
+    def profrating(self, firstname, lastname, rating):
+        query = """
+        UPDATE Professor
+        SET
+        Rating = %s
+        WHERE FirstName = %s AND LastName = %s;
+        """
+        cur = connection.cursor()
+        cur.execute(query, (rating, firstname, lastname))
+        impact_count = cur.rowcount
+        return { 'updatedRows': impact_count }
+
+    @cherrypy.expose
+    @cherrypy.tools.json_out()
+    def delrestriction(self, interest, detail):
+        query = """
+        DELETE FROM Restriction rst
+        WHERE rst.Crn = %s AND rst.Detail = %s
+        """
+        cur = connection.cursor()
+        cur.execute(query, (interest, detail))
+        delete_count = cur.rowcount
+        return { 'deletedRows': delete_count }
+
+
     @cherrypy.expose
     @cherrypy.tools.json_out() # Automatically respond with json
     def courses(self, keyword, limit=10):
