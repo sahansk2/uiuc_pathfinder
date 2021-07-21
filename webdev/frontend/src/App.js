@@ -14,9 +14,9 @@ function BasicResult(props) {
   const result = props.result;
   return (
     <div>
-      <p>
-        {JSON.stringify(result)}
-      </p>
+      <pre>
+        {JSON.stringify(result, null, 2)}
+      </pre>
     </div>
   )
 }
@@ -33,7 +33,11 @@ function DemoItem(props) {
     const data = new FormData(e.target);
 
     let params = {}
-    data.forEach((v, k) => params[k] = v)
+    data.forEach((v, k) => {
+      if (v.length) {
+        params[k] = v 
+      }
+    })
     axios.get(endpoint, {params: params})
       .then(resp => {
         setResponse(resp["data"])
@@ -67,9 +71,13 @@ function DemoItem(props) {
 function App() {
   return (
     <div>
+      <DemoItem
+        title="Keyword search on course titles"
+        fields={['keyword', 'limit']}
+        endpoint="http://localhost:8080/courses"/>
       <DemoItem 
         title="Advanced Query 1: Course Context" 
-        fields={['dept', 'num']} 
+        fields={['dept', 'num', 'limit']} 
         endpoint="http://localhost:8080/coursecontext"/>
       <DemoItem
         title="Advanced Query 2: Professors teaching at least N courses with at least K gpa"
@@ -89,10 +97,6 @@ function App() {
         title="DELETE Demo: Restrictions"
         fields={['crn', 'detail']}
         endpoint="http://localhost:8080/delrestriction"/>
-      <DemoItem
-        title="Keyword search on course titles"
-        fields={['keyword', 'limit']}
-        endpoint="http://localhost:8080/courses"/>
     </div>
   );
 }
