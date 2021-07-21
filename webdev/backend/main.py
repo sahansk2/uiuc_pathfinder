@@ -2,8 +2,8 @@ import cherrypy
 import MySQLdb
 from MySQLdb.cursors import DictCursor
 
-admin_user = "cs411ppdb_admin"
-db_name = "cs411ppdb_experimental"
+admin_user = "me" or "cs411ppdb_admin"
+db_name = "cs411ppdb_experimental" + "_local"
 
 connection = MySQLdb.connect(
     cursorclass=DictCursor,
@@ -19,6 +19,65 @@ class BackendApp():
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
+    def highgpaprofs(self, gpa=3.5, count=3, limit=15):
+        query = """
+        SELECT p.FirstName, p.LastName
+        FROM Professor p JOIN TeachingCourse tc ON tc.ProfessorLastName=p.LastName AND tc.ProfessorFirstName=p.FirstName
+        JOIN Section s ON tc.Crn=s.Crn JOIN Course c ON s.CourseNumber=c.Number AND s.CourseDepartment=c.Department
+        WHERE c.averageGPA > %s
+        GROUP BY p.FirstName, p.LastName
+        HAVING COUNT(c.averageGPA) >= %s
+        LIMIT %s
+        """
+        cur = connection.cursor()
+        cur.execute(query, (float(gpa), int(count), int(limit),))
+        results = cur.fetchall()
+        return results
+    @cherrypy.expose
+    @cherrypy.tools.json_out()
+    def coursecontext(self, dept, num, limit=15):
+        query = """
+        SELECT * FROM (SELECT
+                pre.CourseNumber,
+                pre.CourseDepartment,
+                pre.RequiringCourseNumber,
+                pre.RequiringCourseDepartment,
+                pre.RequirementGroupId,
+                req.ReqType
+            FROM
+                (PrereqCourses pre
+                JOIN RequirementGroup req
+                ON
+                    pre.RequirementGroupId=req.Id
+                    AND pre.RequiringCourseNumber=req.RequiringCourseNumber
+                    AND pre.RequiringCourseDepartment=req.RequiringCourseDepartment) -- Get entire requirement table
+                WHERE pre.CourseNumber=%s
+                AND pre.CourseDepartment=%s) AS unlockables
+        UNION
+            (SELECT
+                pre.CourseNumber,
+                pre.CourseDepartment,
+                pre.RequiringCourseNumber,
+                pre.RequiringCourseDepartment,
+                pre.RequirementGroupId,
+                req.ReqType
+            FROM
+                (PrereqCourses pre
+                JOIN RequirementGroup req
+                ON
+                    pre.RequirementGroupId=req.Id
+                    AND pre.RequiringCourseNumber=req.RequiringCourseNumber
+                    AND pre.RequiringCourseDepartment=req.RequiringCourseDepartment) -- Get entire requirement table
+                WHERE req.RequiringCourseNumber=%s
+                AND req.RequiringCourseDepartment=%s)
+        LIMIT %s;
+        """
+        cur = connection.cursor()
+        cur.execute(query, (num, dept, num, dept, int(limit)))
+        results = cur.fetchall()
+        return results
+    @cherrypy.expose
+    @cherrypy.tools.json_out()
     def course(self, dept, num, title, rating='NULL'):
         query = """
         INSERT INTO `cs411ppdb_experimental_local`.`Course`
@@ -32,6 +91,7 @@ class BackendApp():
         cur = connection.cursor()
         cur.execute(query, (dept, num, title, rating))
         insert_count = cur.rowcount
+        connection.commit()
         return { 'insertedRows': insert_count }
 
     @cherrypy.expose
@@ -46,6 +106,7 @@ class BackendApp():
         cur = connection.cursor()
         cur.execute(query, (rating, firstname, lastname))
         impact_count = cur.rowcount
+        connection.commit()
         return { 'updatedRows': impact_count }
 
     @cherrypy.expose
@@ -58,6 +119,7 @@ class BackendApp():
         cur = connection.cursor()
         cur.execute(query, (interest, detail))
         delete_count = cur.rowcount
+        connection.commit()
         return { 'deletedRows': delete_count }
 
 
