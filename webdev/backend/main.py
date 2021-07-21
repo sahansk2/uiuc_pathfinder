@@ -24,6 +24,7 @@ class BackendApp():
     @cherrypy.expose
     @cherrypy.tools.json_out() # Automatically respond with json
     def courses(self, keyword, limit=10):
+        # you can hit this endpoint at /courses?keyword=whatever
         query = """
         SELECT * FROM Course c
         WHERE LOWER(c.Title) LIKE %s
