@@ -1,4 +1,5 @@
 import cherrypy
+import cherrypy_cors
 import MySQLdb
 from MySQLdb.cursors import DictCursor
 
@@ -78,7 +79,7 @@ class BackendApp():
         return results
     @cherrypy.expose
     @cherrypy.tools.json_out()
-    def course(self, dept, num, title, rating='NULL'):
+    def makecourse(self, dept, num, title, avgGpa='NULL'):
         query = """
         INSERT IGNORE INTO Course
         (`Title`,
@@ -89,7 +90,7 @@ class BackendApp():
         (%s, %s, %s, %s);
         """
         cur = connection.cursor()
-        cur.execute(query, (dept, num, title, rating))
+        cur.execute(query, (dept, num, title, avgGpa))
         insert_count = cur.rowcount
         connection.commit()
         return { 'insertedRows': insert_count }
@@ -111,13 +112,13 @@ class BackendApp():
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
-    def delrestriction(self, interest, detail):
+    def delrestriction(self, crn, detail):
         query = """
         DELETE FROM Restriction rst
         WHERE rst.Crn = %s AND rst.Detail = %s
         """
         cur = connection.cursor()
-        cur.execute(query, (interest, detail))
+        cur.execute(query, (crn, detail))
         delete_count = cur.rowcount
         connection.commit()
         return { 'deletedRows': delete_count }
@@ -138,5 +139,10 @@ class BackendApp():
         results = cur.fetchall()
         return results
     
-
-cherrypy.quickstart(BackendApp())
+cherrypy_cors.install()
+config = {
+    '/': {
+        'cors.expose.on': True
+    }
+}
+cherrypy.quickstart(BackendApp(), config=config)
