@@ -2,8 +2,8 @@ import cherrypy
 import MySQLdb
 from MySQLdb.cursors import DictCursor
 
-admin_user = "me" or "cs411ppdb_admin"
-db_name = "cs411ppdb_experimental" + "_local"
+admin_user = "cs411ppdb_admin"
+db_name = "cs411ppdb_experimental"
 
 connection = MySQLdb.connect(
     cursorclass=DictCursor,
@@ -19,7 +19,7 @@ class BackendApp():
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
-    def highgpaprofs(self, gpa=3.5, count=3, limit=15):
+    def highgpaprofs(self, gpa=3.5, count=3, limit=50):
         query = """
         SELECT p.FirstName, p.LastName
         FROM Professor p JOIN TeachingCourse tc ON tc.ProfessorLastName=p.LastName AND tc.ProfessorFirstName=p.FirstName
@@ -35,7 +35,7 @@ class BackendApp():
         return results
     @cherrypy.expose
     @cherrypy.tools.json_out()
-    def coursecontext(self, dept, num, limit=15):
+    def coursecontext(self, dept, num, limit=50):
         query = """
         SELECT * FROM (SELECT
                 pre.CourseNumber,
@@ -80,7 +80,7 @@ class BackendApp():
     @cherrypy.tools.json_out()
     def course(self, dept, num, title, rating='NULL'):
         query = """
-        INSERT INTO `cs411ppdb_experimental_local`.`Course`
+        INSERT IGNORE INTO Course
         (`Title`,
         `Number`,
         `Department`,
