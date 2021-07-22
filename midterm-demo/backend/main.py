@@ -34,6 +34,7 @@ class BackendApp():
         cur.execute(query, (float(gpa), int(count), int(limit),))
         results = cur.fetchall()
         return results
+
     @cherrypy.expose
     @cherrypy.tools.json_out()
     def coursecontext(self, dept, num, limit=50):
@@ -77,6 +78,7 @@ class BackendApp():
         cur.execute(query, (num, dept, num, dept, int(limit)))
         results = cur.fetchall()
         return results
+
     @cherrypy.expose
     @cherrypy.tools.json_out()
     def makecourse(self, dept, num, title, avgGpa='NULL'):
@@ -140,9 +142,11 @@ class BackendApp():
         return results
     
 cherrypy_cors.install()
+
 config = {
     '/': {
         'cors.expose.on': True
     }
 }
+
 cherrypy.quickstart(BackendApp(), config=config)
