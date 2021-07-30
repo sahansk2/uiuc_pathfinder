@@ -1,10 +1,10 @@
 import cherrypy
 import cherrypy_cors
-import MySQLdb
+import MySQLdb # pip3 install mysqlclient
 from MySQLdb.cursors import DictCursor
 
-admin_user = "cs411ppdb_admin"
-db_name = "cs411ppdb_experimental"
+admin_user = "me" or "cs411ppdb_admin"
+db_name = "cs411ppdb_experimental" + "_local"
 
 connection = MySQLdb.connect(
     cursorclass=DictCursor,
@@ -28,6 +28,7 @@ class BackendApp():
         WHERE c.averageGPA > %s
         GROUP BY p.FirstName, p.LastName
         HAVING COUNT(c.averageGPA) >= %s
+        ORDER BY p.LastName, p.FirstName
         LIMIT %s
         """
         cur = connection.cursor()
@@ -81,7 +82,7 @@ class BackendApp():
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
-    def makecourse(self, dept, num, title, avgGpa='NULL'):
+    def makecourse(self, dept, num, title, avgGpa=None):
         query = """
         INSERT IGNORE INTO Course
         (`Title`,
@@ -92,14 +93,14 @@ class BackendApp():
         (%s, %s, %s, %s);
         """
         cur = connection.cursor()
-        cur.execute(query, (dept, num, title, avgGpa))
+        cur.execute(query, (title, num, dept, avgGpa))
         insert_count = cur.rowcount
         connection.commit()
-        return { 'insertedRows': insert_count }
+        return [{ 'insertedRows': insert_count }]
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
-    def profrating(self, firstname, lastname, rating):
+    def profrating(self, firstname, lastname, rating=None):
         query = """
         UPDATE Professor
         SET
@@ -110,7 +111,7 @@ class BackendApp():
         cur.execute(query, (rating, firstname, lastname))
         impact_count = cur.rowcount
         connection.commit()
-        return { 'updatedRows': impact_count }
+        return [{ 'updatedRows': impact_count }]
 
     @cherrypy.expose
     @cherrypy.tools.json_out()
@@ -123,7 +124,7 @@ class BackendApp():
         cur.execute(query, (crn, detail))
         delete_count = cur.rowcount
         connection.commit()
-        return { 'deletedRows': delete_count }
+        return [{ 'deletedRows': delete_count }]
 
 
     @cherrypy.expose
@@ -141,6 +142,32 @@ class BackendApp():
         results = cur.fetchall()
         return results
     
+    @cherrypy.expose
+    @cherrypy.tools.json_out()
+    def findprof(self, lastname):
+        query = """
+        SELECT * FROM Professor p
+        WHERE p.lastname LIKE %s
+        ORDER BY p.lastname, p.firstname
+        """
+        cur = connection.cursor()
+        cur.execute(query, ("%{}%".format(lastname),))
+        results = cur.fetchall()
+        return results
+
+    @cherrypy.expose
+    @cherrypy.tools.json_out()
+    def findrestrict(self, detail):
+        query = """
+        SELECT * FROM Restriction rst
+        WHERE rst.Detail LIKE %s
+        ORDER BY rst.Crn
+        """
+        cur = connection.cursor()
+        cur.execute(query, ("%{}%".format(detail),))
+        results = cur.fetchall()
+        return results
+
 cherrypy_cors.install()
 
 config = {
