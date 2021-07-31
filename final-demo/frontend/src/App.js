@@ -1,6 +1,12 @@
+import './index.css';
+import {Dashboard} from './Dashboard'
+
 function App() {
   return (
-   <h1>Hello world!</h1>
+    <div className="container">
+      <h1>Admin Dashboard</h1>
+      <Dashboard/>
+    </div>
   );
 }
 
