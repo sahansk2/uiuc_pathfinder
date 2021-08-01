@@ -1,4 +1,4 @@
-import flask
-import MySQLdb
+from app import app
 
-print("If this runs, everything is good")
+if __name__ == '__main__':
+	app.run(debug = True)
