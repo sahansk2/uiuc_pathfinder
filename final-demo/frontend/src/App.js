@@ -7,6 +7,7 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
+import { getGraph } from './user/util'
 
 function UserPage() {
   return (
