@@ -11,7 +11,7 @@
 }
 
 .table-modifier > button {
-    height: max(5vh, 25px);
+    height: max(5vh, 45px);
     align-items: center;
     border-radius: 0px;
 }
