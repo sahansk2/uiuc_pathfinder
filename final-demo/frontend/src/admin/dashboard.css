@@ -1,0 +1,37 @@
+.dashboard-main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 2px solid black;
+}
+
+.table-modifier {
+    display: flex;
+    flex-direction: row;
+}
+
+.table-modifier > button {
+    height: max(5vh, 45px);
+    align-items: center;
+    border-radius: 0px;
+}
+
+.table-modifier > button:hover {
+    background-color: lightblue;
+}
+.search-result-panel {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.search-result {
+    background-color: antiquewhite;
+    margin: 4px;
+    padding: 4px;
+    cursor: pointer;
+}
+
+.search-result:hover {
+    background-color: lightblue;
+}
