@@ -10,7 +10,9 @@ class RateMyProfScraper:
             self.numProfs = 0
             self.professorlist = self.createprofessorlist()
             self.indexnumber = False
-            self.prof_names = self.GetProfessorNames()
+            self.prof_names_tuple = self.GetProfessorNames()
+            self.p_names = self.prof_names_tuple[0]
+            self.p_names_formatted = self.prof_names_tuple[1]
                     
         def createprofessorlist(self):#creates List object that include basic information on all Professors from the IDed University
             tempprofessorlist = []
@@ -52,7 +54,8 @@ class RateMyProfScraper:
             if self.indexnumber == False:
                 print("error")
             else:
-                print(self.professorlist[self.indexnumber])
+                return
+               # print(self.professorlist[self.indexnumber])
 
         def PrintProfessorDetail(self,key):  # print search professor's name and RMP score
             if self.indexnumber == False:
@@ -63,32 +66,35 @@ class RateMyProfScraper:
                 return self.professorlist[self.indexnumber][key]
         def GetProfessorNames(self):
             names = []
+            formatted_names = []
             for dict in self.professorlist:
-                if dict['tMiddlename'] == '':
+                if dict['tMiddlename'] == '': 
                     name = dict['tFname'] + ' ' + dict['tLname']
+                    fname = dict['tFname'][0] + ' ' + dict['tLname']
                 else:
                     name = dict['tFname'] + ' ' + dict['tMiddlename'] + ' '+ dict['tLname']
-                
-                names.append(name)
-                
-            return names
-                    
-            
+                    fname = dict['tFname'][0] + ' ' + dict['tMiddlename'] + ' ' + dict['tLname']
 
-def ratings_to_csv(lis, scraper):
-    num_of_profs = len(lis)
+                names.append(name)
+                formatted_names.append(fname)
+                
+            return names, formatted_names
+                    
+def ratings_to_csv(names, formatted, scraper):
+    num_of_profs = len(names)
     blank = np.zeros(num_of_profs)
-    df = pd.DataFrame(data = blank, columns= ['Rating'], index= lis)
+    df = pd.DataFrame(data = blank, columns= ['Rating'], index= formatted)
     
-    print(df)
-    
-    for name in lis:
+    for i in range(len(names)):
+        name = names[i]
+        fname = formatted[i]
         scraper.SearchProfessor(name)
         rating = scraper.PrintProfessorDetail('overall_rating')
-        df.loc[name]['Rating'] = rating
+        df.loc[fname]['Rating'] = rating
 
     df.to_csv('prof_ratings.csv')
 
 uiucProfRatings = RateMyProfScraper(1112)
-profs = uiucProfRatings.prof_names
-ratings_to_csv(profs, uiucProfRatings)
+profs = uiucProfRatings.p_names
+fprofs = uiucProfRatings.p_names_formatted
+ratings_to_csv(names = profs, formatted = fprofs, scraper = uiucProfRatings)
