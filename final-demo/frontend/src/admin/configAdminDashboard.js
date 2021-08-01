@@ -1,3 +1,5 @@
+import { endpointBase } from '../config'
+
 const TABLES = {
     COURSES: "courses",
     SECTIONS: "sections",
@@ -6,7 +8,7 @@ const TABLES = {
 }
 
 const CRUDMODE = {
-    search: "search",
+    delete: "search",
     create: "create",
     update: "update"
 }
@@ -120,10 +122,10 @@ const tableToSearchParamsMap = {
 }
 
 const tableToEndpointMap = {
-    [TABLES.COURSES]: "https://www.blah.com/courses",
-    [TABLES.PROFESSORS]: "https://www.blah.com/professors",
-    [TABLES.SECTIONS]: "https://www.blah.com/sections",
-    [TABLES.INTERESTS]: "https://www.blah.com/interests"
+    [TABLES.COURSES]: endpointBase + "/courses",
+    [TABLES.PROFESSORS]: endpointBase + "/professors",
+    [TABLES.SECTIONS]: endpointBase + "/sections",
+    [TABLES.INTERESTS]: endpointBase + "/interests"
 }
 
 export {

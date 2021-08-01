@@ -3,6 +3,7 @@
     flex-direction: column;
     flex-wrap: wrap;
     border: 2px solid black;
+    padding: 10px;
 }
 
 .table-modifier {
@@ -14,6 +15,10 @@
     height: max(5vh, 45px);
     align-items: center;
     border-radius: 0px;
+}
+
+.selected-table {
+    background-color: lightblue;
 }
 
 .table-modifier > button:hover {

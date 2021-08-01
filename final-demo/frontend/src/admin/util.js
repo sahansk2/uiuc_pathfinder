@@ -4,7 +4,7 @@ function getEmptyParams(knownParams) {
     for (let p of knownParams) {
         emptySearchParams[p.name] = "";
         if (p.nullable) {
-            emptySearchParams[`${p.name}Null`] = false;
+            emptySearchParams[getNullName(p.name)] = false;
         }
     }
     return emptySearchParams
@@ -13,6 +13,7 @@ function getEmptyParams(knownParams) {
 function getNullName(param) {
     return `${param}Null`
 }
+
 export {
     getNullName,
     getEmptyParams

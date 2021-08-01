@@ -53,53 +53,48 @@ const SearchInputPanel = ({ setSearchResults, setSelectedItem, crudMode, table }
         setSearchParams(newSearchParams)
     };
     
-    if (crudMode === CRUDMODE.create) {
-        return (
-            <p>Search disabled when creating items</p>
-        )
-    } else {
-        let searchArea = 
-            knownParams.map((searchParam, idx, _arr) => {
-                let currInput = null;
-                if (searchParam.nullable === true) {
-                    currInput = 
-                    <input 
-                            type={searchParam.type}
-                            value={searchParams[searchParam.name]}
-                            name={searchParam.name}
-                            onChange={handleOnChange}
-                            disabled={searchParams[getNullName(searchParam.name)]}/>
-                } else {
-                    currInput = 
-                    <input 
-                            type={searchParam.type}
-                            value={searchParams[searchParam.name]}
-                            name={searchParam.name}
-                            onChange={handleOnChange}/>
-                }
-                return <React.Fragment>
-                    <label key={idx}>{searchParam.pretty}<br/>
-                        {currInput}
-                    </label>
-                    { searchParam.nullable && 
-                        <React.Fragment>
-                            <input 
-                                key={idx} 
-                                type="checkbox" 
-                                value={searchParams[getNullName(searchParam.name)]} 
-                                name={getNullName(searchParam.name)} 
-                                onChange={handleOnChange}/>Empty?
-                        </React.Fragment> }
-                    <br/>
-                    </React.Fragment>
-        })
+
+    let searchArea = 
+        knownParams.map((searchParam, idx, _arr) => {
+            let currInput = null;
+            if (searchParam.nullable === true) {
+                currInput = 
+                <input 
+                        type={searchParam.type}
+                        value={searchParams[searchParam.name]}
+                        name={searchParam.name}
+                        onChange={handleOnChange}
+                        disabled={searchParams[getNullName(searchParam.name)]}/>
+            } else {
+                currInput = 
+                <input 
+                        type={searchParam.type}
+                        value={searchParams[searchParam.name]}
+                        name={searchParam.name}
+                        onChange={handleOnChange}/>
+            }
+            return <React.Fragment>
+                <label key={idx}>{searchParam.pretty}<br/>
+                    {currInput}
+                </label>
+                { searchParam.nullable && 
+                    <React.Fragment>
+                        <input 
+                            key={idx} 
+                            type="checkbox" 
+                            value={searchParams[getNullName(searchParam.name)]} 
+                            name={getNullName(searchParam.name)} 
+                            onChange={handleOnChange}/>Search for missing?
+                    </React.Fragment> }
+                <br/>
+                </React.Fragment>
+    })
 
         
-        return <form id={`${TABLES.COURSES}Form`} onSubmit={handleOnSubmit}>
-            {searchArea}
-            <button type="submit">Search!</button>
-        </form>
-    }
+    return <form id={`${TABLES.COURSES}Form`} onSubmit={handleOnSubmit}>
+        {searchArea}
+        <button type="submit">Search!</button>
+    </form>
 }
 
 
@@ -132,12 +127,12 @@ const SearchResultsPanel = ({ currTable, setSelectedItem, searchResults }) => {
 
 const SearchPanel = ({ currTable, crudMode, selectedItem, setSelectedItem }) => {
     const [searchResults, setSearchResults] = React.useState([]);
-    
+
     return (
         <React.Fragment>
             <SearchInputPanel
                 table={currTable}
-                crudMode={CRUDMODE.search}
+                crudMode={crudMode}
                 setSearchResults={setSearchResults}/>
             <SearchResultsPanel
                 table={currTable}
@@ -145,6 +140,7 @@ const SearchPanel = ({ currTable, crudMode, selectedItem, setSelectedItem }) => 
                 searchResults={mockCourses}/>
         </React.Fragment>
     )
+
 }
 
 export {
