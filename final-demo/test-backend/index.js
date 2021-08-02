@@ -1,25 +1,23 @@
 const express = require('express')
 const app = express()
 const port = 4000
+const adminrouter = express.Router()
 
 function makeMap(rows, values) {
     return values.map((val) => {
         row = {}
         for (let v = 0; v < val.length; v++) {
-            if (values[v]) {
-                row[rows[v]] = values[v]
+            if (val[v] !== null) {
+                row[rows[v]] = val[v]
             }
         }
         return row
     })
 }
 
-app.listen(port, () => {
-    console.log("Listening on port", port)
-})
 
-app.get('/courses', (req, res) => {
-    console.log("Got ", req.body)
+adminrouter.get('/courses', (req, res) => {
+    console.log("Got ", req.query, new Date())
     res.json([
         {
             dept: "CS",
@@ -41,50 +39,51 @@ app.get('/courses', (req, res) => {
     ])
 })
 
-app.post('/courses', (req, res) => {
-    console.log("Got ", req.body);
+adminrouter.post('/courses', (req, res) => {
+    console.log("Got ", req.query, new Date());
     res.send({ affectedRows: 5 })
 })
 
-app.delete('/courses', (req, res) => {
-    console.log("Got ", req.body)
+adminrouter.delete('/courses', (req, res) => {
+    console.log("Got ", req.query, new Date())
     res.send({ affectedRows: 3 })
 })
 
-app.get('/professors', (req, res) => {
-    console.log("Got ", req.body)
+adminrouter.get('/professors', (req, res) => {
+    console.log("Got ", req.query, new Date())
     res.send(makeMap(
         ['FirstName', 'LastName', 'Rating'],
-        ['C', 'Larrison', NULL],
-        ['C', 'Murphy', 3],
-        ['D', 'Riechers', NULL],
-        ['X', 'Chen', 4.5],
-        ['D', 'King', NULL],
-        ['J', 'Gulley', NULL],
-        ['R', 'May', NULL],
-        ['I', 'Minefee', 2.2],
-        ['Z', 'Revell', NULL],
-        ['J', 'Fisher', 5.0],
-        ['A', 'Belmont', NULL],
-        ['J', 'Guest', NULL],
-        ['M', 'Pool', NULL],
-        ['A', 'Aguayo', NULL],
-        ['W', 'Davey', NULL],
-
+        [
+            ['C', 'Larrison', null],
+            ['C', 'Murphy', 3],
+            ['D', 'Riechers', null],
+            ['X', 'Chen', 4.5],
+            ['D', 'King', null],
+            ['J', 'Gulley', null],
+            ['R', 'May', null],
+            ['I', 'Minefee', 2.2],
+            ['Z', 'Revell', null],
+            ['J', 'Fisher', 5.0],
+            ['A', 'Belmont', null],
+            ['J', 'Guest', null],
+            ['M', 'Pool', null],
+            ['A', 'Aguayo', null],
+            ['W', 'Davey', null]
+        ]
     ))
 })
 
-app.post('/professors', (req, res) => {
-    console.log("Got ", req.body)
+adminrouter.post('/professors', (req, res) => {
+    console.log("Got ", req.query, new Date())
     res.send({ affectedRows: 1 })
 })
-app.delete('/professors', (req, res) => {
-    console.log("Got ", req.body)
+adminrouter.delete('/professors', (req, res) => {
+    console.log("Got ", req.query, new Date())
     res.send({ affectedRows: 8 })
 })
 
-app.get('/interests', (req, res) => {
-    console.log("Got ", req.body)
+adminrouter.get('/interests', (req, res) => {
+    console.log("Got ", req.query, new Date())
     res.send(
         makeMap(['interest', 'id'], [
             ['ARTIFICIAL INTELLIGENCE, ROBOTICS, AND CYBERNETICS', '7'],
@@ -108,18 +107,18 @@ app.get('/interests', (req, res) => {
     )
 })
 
-app.post('/interests', (req, res) => {
-    console.log("Got ", req.body)
+adminrouter.post('/interests', (req, res) => {
+    console.log("Got ", req.query, new Date())
     res.send({'affectedRows': 7})
 })
 
-app.delete('/interests', (req, res) => {
-    console.log("Got ", req.body)
+adminrouter.delete('/interests', (req, res) => {
+    console.log("Got ", req.query, new Date())
     res.send({'affectedRows': 8})
 })
 
-app.get('/sections', (req, res) => {
-    console.log("Got ", req.body)
+adminrouter.get('/sections', (req, res) => {
+    console.log("Got ", req.query, new Date())
     res.send(makeMap(
         ['Crn', 'CourseNumber', 'CourseDepartment', 'creditHours', 'startTime', 'endTime', 'days'], [,
         ['12238', '399', 'ANTH', '3', '01:00 PM', '02:50 PM', 'MWF'],
@@ -141,12 +140,18 @@ app.get('/sections', (req, res) => {
     )
 )})
 
-app.post('/sections', (req, res) => {
-    console.log("Got ", req.body)
+adminrouter.post('/sections', (req, res) => {
+    console.log("Got ", req.query, new Date())
     res.send({'affectedRows': 18})
 })
 
-app.delete('/sections', (req, res) => {
-    console.log("Got ", req.body)
+adminrouter.delete('/sections', (req, res) => {
+    console.log("Got ", req.query, new Date())
     res.send({'affectedRows': 13})
+})
+
+app.use('/admin', adminrouter)
+
+app.listen(port, () => {
+    console.log("Listening on port", port)
 })
