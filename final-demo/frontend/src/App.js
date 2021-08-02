@@ -2,19 +2,18 @@ import './index.css';
 import * as React from 'react';
 import { Dashboard } from './admin/Dashboard'
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Link,
   Route,
   Switch
 } from 'react-router-dom';
-import { getGraph } from './user/util'
+import { UserDashboard } from './user/UserDashboard'
 
 function UserPage() {
   return (
-    <div>
-      <p>
-        Insert the user code here.
-      </p>
+    <div className="container">
+      <h1>User Dashboard</h1>
+      <UserDashboard/>
     </div>
   )
 }

@@ -76,7 +76,7 @@ function getCourseKeyWithGroup(dept, num, group) {
 }
 
 function getORnode(requiring, group) {
-    return `OR_${requiring}_${group}, `
+    return `OR_${requiring}_${group}`
 }
 function getGraph(data) {
     let keyMap = {}
@@ -113,7 +113,7 @@ function getGraph(data) {
     for (const courseId of Object.keys(prereq_map)) {
         nodes.push({
             id: courseId,
-            data: { label: `${keyMap[courseId].dept} ${keyMap[courseId].number}` }
+            label: `${keyMap[courseId].dept} ${keyMap[courseId].number}`
         })
     }
     // Second pass
@@ -123,11 +123,17 @@ function getGraph(data) {
             // If we have a group with multiple courses in it, we need to make an OR node and point everything to the OR node
             let targetOfPrereqs = null
             if (prereq_map[courseId][groupId].length > 1) {
+                // We link to the OR node
                 targetOfPrereqs = getORnode(courseId, groupId)
                 // create an OR node
                 nodes.push({
                     id: targetOfPrereqs,
-                    data: { label: "OR" }
+                    label: "OR"
+                })
+
+                edges.push({
+                    source: targetOfPrereqs,
+                    target: courseId
                 })
             } else {
                 targetOfPrereqs = courseId
@@ -142,8 +148,8 @@ function getGraph(data) {
         }
     }
     return {
-        nodes,
-        edges
+        nodes: nodes,
+        edges: edges
     }
 }
 
@@ -156,7 +162,12 @@ console.log("Prereqs ECE 210")
 console.log(getGraph(mockReturnDataPrereqsECE210))
 console.log("Prereqs CS 225")
 console.log(getGraph(mockReturnDataPrereqsCS225))
-
+console.log("Mixed")
+console.log(getGraph(mockReturnDataPrereqsFake100))
 export {
-    getGraph
+    getGraph,
+    mockLinearPrereqsAES211,
+    mockReturnDataPrereqsCS225,
+    mockReturnDataContextCS225,
+    mockReturnDataPrereqsFake100
 }
