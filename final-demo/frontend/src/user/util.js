@@ -1,3 +1,22 @@
+const mockReturnDataContextECE210 = [
+
+makeMockRow('ECE', '210', 'ECE', '307',  '0', 'PREREQ'),
+makeMockRow('ECE', '210', 'ECE', '310',  '0', 'PREREQ'),
+makeMockRow('ECE', '210', 'ECE', '311',  '0', 'COREQ'),
+makeMockRow('ECE', '210', 'ECE', '329',  '0', 'PREREQ'),
+makeMockRow('ECE', '210', 'ECE', '330',  '0', 'PREREQ'),
+makeMockRow('ECE', '210', 'ECE', '333',  '0', 'PREREQ'),
+makeMockRow('ECE', '210', 'ECE', '340',  '0', 'PREREQ'),
+makeMockRow('ECE', '210', 'ECE', '342',  '0', 'PREREQ'),
+makeMockRow('ECE', '210', 'ECE', '343',  '0', 'COREQ'),
+makeMockRow('ECE', '210', 'ECE', '403',  '1', 'PREREQ'),
+makeMockRow( 'ECE', '210','BIOE', '414',  '0', 'PREREQ'),
+makeMockRow('ECE', '210', 'ECE', '461',  '1', 'PREREQ'),
+makeMockRow('ECE', '210', 'ECE', '486',  '0', 'PREREQ'),
+makeMockRow('ECE', '110', 'ECE', '210',  '1', 'PREREQ'),
+makeMockRow('PHYS', '212','ECE', '210',   '0', 'PREREQ'),
+
+]
 const mockReturnDataContextCS225 = [
     makeMockRow('CS', '225', 'CS', '210', '0', 'PREREQ'),
     makeMockRow('CS', '225', 'CS', '241', '1', 'PREREQ'),
@@ -169,5 +188,6 @@ export {
     mockLinearPrereqsAES211,
     mockReturnDataPrereqsCS225,
     mockReturnDataContextCS225,
-    mockReturnDataPrereqsFake100
+    mockReturnDataPrereqsFake100,
+    mockReturnDataContextECE210
 }
