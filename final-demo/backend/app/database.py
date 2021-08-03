@@ -28,7 +28,7 @@ from flask import jsonify
 
 #pre_req queries:
 def get_prereq_chain():
-    #Already written need to transfer
+    #Already written need to transfer ==> advanced query
     return
 
 def get_prereq_single_level():
@@ -81,7 +81,7 @@ def get_highgpaprofs(gpa=3.5, count=3, limit=50):
     cur = connection.cursor()
     cur.execute(query, (float(gpa), int(count), int(limit),))
     results = cur.fetchall()
-    return results
+    return jsonify(results)
 
 
 # """Should it return the course title or Department + Number"""
@@ -190,6 +190,7 @@ def course_search(dept, num, gpa):
                 FROM Course
                 WHERE Number = %s
                 """
+
         return
 
     #two variables given
@@ -230,3 +231,78 @@ def course_search(dept, num, gpa):
                 """
         return
 
+#inputs
+#fn = professors First Name 
+#ln = Professors Last Name
+def get_professor(fn, ln, gpa):
+    #SQL queries to search professors :
+
+    #QUERIES WITH ONE VARIABLE GIVEN
+
+    if gpa != None and fn == None and ln == None:
+        #SQL query to get professors with AT LEAST gpa
+        query = """
+                """
+        return
+
+    elif gpa == None and fn != None and ln == None:
+        #SQL query to get professors with the given first name
+        query = """
+                """
+        return
+
+    elif gpa == None and fn == None and ln != None:
+        #SQL query to get professors with the given last name
+        query = """
+                """
+
+        return
+
+    #two variables given
+    elif gpa == None and fn != None and ln != None:
+        #SQL query to get professors with the given first & last name
+        query = """
+                """
+        return
+
+    elif gpa != None and fn == None and ln != None:
+        #SQL query to get professors with the given last name and AT LEAST the given GPA
+        query = """
+                """
+        return
+
+    elif gpa != None and fn != None and ln == None:
+        #SQL query to get professors with the given first name and AT LEAST the given GPA
+        query = """
+                """
+        return
+
+    #all three given
+    else:
+        #sql query to get professors given first name, last name, AT LEAST the given gpa
+        query = """
+                """
+    return
+    
+def get_restrictions(crn, number, dept, credit_hours, start_time, end_time, days):
+    #these will be sql queries to display restrictions for a given course
+    #need to figure out frontend logic first dont do yet
+    query = """
+            """
+
+    return
+
+
+def interest_searching():
+    #sahan said this is done 
+    return
+
+#need to add trigger 
+def trigger():
+    return
+    
+
+
+        
+        
+    
