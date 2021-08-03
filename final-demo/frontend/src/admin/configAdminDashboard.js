@@ -1,5 +1,7 @@
 import { endpointBase } from '../config'
 
+const endpointBaseAdmin = endpointBase + '/admin'
+
 const TABLES = {
     COURSES: "courses",
     SECTIONS: "sections",
@@ -122,10 +124,10 @@ const tableToSearchParamsMap = {
 }
 
 const tableToEndpointMap = {
-    [TABLES.COURSES]: endpointBase + "/courses",
-    [TABLES.PROFESSORS]: endpointBase + "/professors",
-    [TABLES.SECTIONS]: endpointBase + "/sections",
-    [TABLES.INTERESTS]: endpointBase + "/interests"
+    [TABLES.COURSES]: endpointBaseAdmin + "/courses",
+    [TABLES.PROFESSORS]: endpointBaseAdmin + "/professors",
+    [TABLES.SECTIONS]: endpointBaseAdmin + "/sections",
+    [TABLES.INTERESTS]: endpointBaseAdmin + "/interests"
 }
 
 export {
