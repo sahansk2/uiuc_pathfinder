@@ -1,3 +1,4 @@
+import * as React from 'react';
 import { CRUDMODE } from './configAdminDashboard'
 
 const ModeSelector = ({ setCrudMode }) => {

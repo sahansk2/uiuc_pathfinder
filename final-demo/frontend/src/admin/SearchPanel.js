@@ -17,7 +17,7 @@ const SearchInputPanel = ({ setSearchResults, setSelectedItem, crudMode, table }
     let endpoint = tableToEndpointMap[table]
 
     const [searchParams, setSearchParams] = React.useState(getEmptyParams(knownParams));
-    
+   
     React.useEffect(() => {
         return () => {
             console.log("Table has changed, clearing previous params...")
@@ -55,35 +55,35 @@ const SearchInputPanel = ({ setSearchResults, setSelectedItem, crudMode, table }
     
 
     let searchArea = 
-        knownParams.map((searchParam, idx, _arr) => {
+        knownParams.map((param, idx, _arr) => {
             let currInput = null;
-            if (searchParam.nullable === true) {
+            if (param.nullable === true) {
                 currInput = 
                 <input 
-                        type={searchParam.type}
-                        value={searchParams[searchParam.name]}
-                        name={searchParam.name}
+                        type={param.type}
+                        value={searchParams[param.name]}
+                        name={param.name}
                         onChange={handleOnChange}
-                        disabled={searchParams[getNullName(searchParam.name)]}/>
+                        disabled={searchParams[getNullName(param.name)]}/>
             } else {
                 currInput = 
                 <input 
-                        type={searchParam.type}
-                        value={searchParams[searchParam.name]}
-                        name={searchParam.name}
+                        type={param.type}
+                        value={searchParams[param.name]}
+                        name={param.name}
                         onChange={handleOnChange}/>
             }
             return <React.Fragment>
-                <label key={idx}>{searchParam.pretty}<br/>
+                <label key={idx}>{param.pretty}<br/>
                     {currInput}
                 </label>
-                { searchParam.nullable && 
+                { param.nullable && 
                     <React.Fragment>
                         <input 
                             key={idx} 
                             type="checkbox" 
-                            value={searchParams[getNullName(searchParam.name)]} 
-                            name={getNullName(searchParam.name)} 
+                            value={searchParams[getNullName(param.name)]} 
+                            name={getNullName(param.name)} 
                             onChange={handleOnChange}/>Search for missing?
                     </React.Fragment> }
                 <br/>
@@ -118,7 +118,7 @@ function ResultItem({ currTable, data }) {
 
 
 const SearchResultsPanel = ({ currTable, setSelectedItem, searchResults }) => {
-    return <div class="search-result-panel">
+    return <div className="search-result-panel">
         {searchResults.data.map((item, idx, _) => 
             <ResultItem currTable={TABLES.COURSES} data={item} id={idx}/>
         )}
