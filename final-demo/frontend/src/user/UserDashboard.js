@@ -15,26 +15,52 @@ function UserGraphConfig({ setGraphData }) {
     const handleOnSubmit = (e) => {
         e.preventDefault();
         console.log("Fetching data from endpoint at", new Date());
-        const fetchUrl = new URL(endpointBase + '/context')
+        let fetchUrl = null;
+        if (option === "prereqs") {
+            fetchUrl = new URL(endpointBase + '/prereqs');
+        } else if (option === "reverse") {
+            fetchUrl = new URL(endpointBase + '/reverse')
+        } else {
+            fetchUrl = new URL(endpointBase + '/context')
+        }
+
         // fetchUrl.searchParams.set("searchmode", option)
         fetchUrl.searchParams.set("number", num)
         fetchUrl.searchParams.set("dept", dept)
         console.log(fetchUrl)
         if (option === "prereqs") {
             console.log("Prereq fetch")
-            graphFetch(fetchUrl, mockData)
-                .then((data) => {
-                    console.log("Successfully fetched data at", new Date());
-                    console.log(data)
-                    setGraphData(data)
+            fetch(fetchUrl)
+                .then((data) => data.json())
+                .then(data => {
+                    const renamedGraphData = data.map(val => {
+                        return {courseDepartment: val.preCourseDept,
+                            courseNumber: val.preCourseNum,
+                            requiringCourseDepartment: val.reqCourseDept,
+                            requiringCourseNumber: val.reqCourseNum,
+                            groupId: val.reqId,
+                            type: val.reqType,}
+                        })
+                        console.log("Successfully fetched data at", new Date());
+                        console.log(renamedGraphData)
+                    setGraphData(getGraph(renamedGraphData))
                 });
         } else if (option === "reverse") {
             console.log("Reverse fetch")
-            graphFetch(fetchUrl, reverseMock)
-                .then((data) => {
+            fetch(fetchUrl)
+                .then((data) => data.json())
+                .then(data => {
+                    const renamedGraphData = data.map(val => {
+                        return {courseDepartment: val.preCourseDept,
+                            courseNumber: val.preCourseNum,
+                            requiringCourseDepartment: val.reqCourseDept,
+                            requiringCourseNumber: val.reqCourseNum,
+                            groupId: val.reqId,
+                            type: val.reqType,}
+                        })
                     console.log("Successfully fetched data at", new Date());
-                    console.log(data)
-                    setGraphData(data)
+                    console.log(renamedGraphData)
+                    setGraphData(getGraph(renamedGraphData))
                 });
         } else {
             console.log("A real fetch")

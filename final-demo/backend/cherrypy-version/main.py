@@ -450,19 +450,18 @@ class CourseContext():
 @cherrypy.expose
 class Prereqs():
     @cherrypy.tools.json_out()
-    def GET(self, dept, num):
+    def GET(self, dept, number):
         cur = connection.cursor()
-        data = cur.callproc('find_prereqs_cascade',(dept, num))[0]
-        return data
+        cur.execute('CALL find_prereqs_cascade(%s, %s)',(dept, number))
+        return cur.fetchall()
 
 @cherrypy.expose
 class Reverse():
     @cherrypy.tools.json_out()
-    def GET(self, dept, num):
+    def GET(self, dept, number):
         cur = connection.cursor()
-        data = cur.callproc('find_reverse_depends',(dept, num))[0]
-        return data
-    
+        cur.execute('CALL find_reverse_depends(%s, %s)',(dept, number))
+        return cur.fetchall()
 
 conf = {
     '/': {
