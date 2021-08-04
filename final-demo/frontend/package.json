@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^12.8.3",
     "corejs": "^1.0.0",
     "cytoscape-dagre": "^2.3.2",
+    "immutable": "*",
     "jasmine": "^3.8.0",
     "react": "^17.0.2",
     "react-cytoscapejs": "^1.2.1",

@@ -1,5 +1,5 @@
 import * as React from 'react'
-
+import { fakeFetch } from '../mockutils'
 import {     
     TABLES,
     CRUDMODE,
@@ -22,7 +22,8 @@ const SearchInputPanel = ({ setSearchResults, setSelectedItem, crudMode, table }
         return () => {
             console.log("Table has changed, clearing previous params...")
             setSearchParams({});
-            setSearchResults({});
+            setSearchResults(null);
+            setSelectedItem(null);
         }
     }, [table])
 
@@ -36,8 +37,11 @@ const SearchInputPanel = ({ setSearchResults, setSelectedItem, crudMode, table }
         }
         console.log("The requestURL is", requestUrl);
         // Pretend there was a fetch
-        setSearchResults(mockCourses);
-        console.log("Fetched results", new Date());
+        fakeFetch(requestUrl, mockCourses)
+            .then(data => {
+                setSearchResults(data);
+                console.log("Fetched results", new Date());
+            })
     }
 
     const handleOnChange = (e) => {
@@ -98,7 +102,7 @@ const SearchInputPanel = ({ setSearchResults, setSelectedItem, crudMode, table }
 }
 
 
-function ResultItem({ currTable, data }) {
+function ResultItem({ currTable, data, setSelectedItem }) {
     const view = tableToViewMap[currTable]
     let presentableFields = new Array(data.length).fill({});
     for (let attr in data) {
@@ -109,7 +113,10 @@ function ResultItem({ currTable, data }) {
     }
     return <div className="search-result" >
         {presentableFields.map((field, idx, _) => {
-            return <div key={idx} onClick={() => {}}>
+            return <div key={idx} onClick={() => {
+                console.log("Selected item will be updated to", data)
+                setSelectedItem(data)
+            }}>
                 {field.name}: {field.value}
             </div>
         })}
@@ -119,25 +126,26 @@ function ResultItem({ currTable, data }) {
 
 const SearchResultsPanel = ({ currTable, setSelectedItem, searchResults }) => {
     return <div className="search-result-panel">
-        {searchResults.data.map((item, idx, _) => 
-            <ResultItem currTable={TABLES.COURSES} data={item} id={idx}/>
+        {searchResults?.data.map((item, idx, _) => 
+            <ResultItem currTable={TABLES.COURSES} data={item} id={idx} setSelectedItem={setSelectedItem}/>
         )}
     </div>
 }
 
 const SearchPanel = ({ currTable, crudMode, selectedItem, setSelectedItem }) => {
-    const [searchResults, setSearchResults] = React.useState([]);
+    const [searchResults, setSearchResults] = React.useState(null);
 
     return (
         <React.Fragment>
             <SearchInputPanel
                 table={currTable}
                 crudMode={crudMode}
-                setSearchResults={setSearchResults}/>
+                setSearchResults={setSearchResults}
+                setSelectedItem={setSelectedItem}/>
             <SearchResultsPanel
                 table={currTable}
                 setSelectedItem={setSelectedItem}
-                searchResults={mockCourses}/>
+                searchResults={searchResults}/>
         </React.Fragment>
     )
 
