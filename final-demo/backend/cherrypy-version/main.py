@@ -331,7 +331,6 @@ class Interest():
     @cherrypy.tools.json_out()
     def PUT(self, name):
         pass
-        
 
 @cherrypy.expose
 class NiceProfessors():
@@ -367,12 +366,12 @@ class CourseInfo():
         ON (p.FirstName = tc.ProfessorFirstName AND p.LastName = tc.ProfessorLastName))
         JOIN Restriction r
         ON (r.Crn = s.Crn))
-        WHERE c.Number = %s AND c.Department LIKE %s 
+        WHERE c.Number = %s AND LOWER(c.Department) = %s 
         LIMIT 60    
         """
 
         cur = connection.cursor()
-        cur.execute(query, (int(num), "%{}%".format(dept.lower())))
+        cur.execute(query, (int(num), "{}".format(dept.lower())))
         results = cur.fetchall()
 
         #python processing here
@@ -403,13 +402,29 @@ class CourseInfo():
 
         return ret_dict
 
-
-    @cherrypy.expose
-    class CourseContext():
-        @cherrypy.tools.json_out()
-        def GET(self, dept, num):
-            query = """
-            SELECT * FROM (SELECT
+@cherrypy.expose
+class CourseContext():
+    @cherrypy.tools.json_out()
+    def GET(self, dept=None, number=None, **kwargs):
+        query = """
+        SELECT * FROM (SELECT
+            pre.CourseNumber,
+            pre.CourseDepartment,
+            pre.RequiringCourseNumber,
+            pre.RequiringCourseDepartment,
+            pre.RequirementGroupId,
+            req.ReqType
+        FROM
+            (PrereqCourses pre
+            JOIN RequirementGroup req
+            ON
+                pre.RequirementGroupId=req.Id
+                AND pre.RequiringCourseNumber=req.RequiringCourseNumber
+                AND pre.RequiringCourseDepartment=req.RequiringCourseDepartment) -- Get entire requirement table
+            WHERE pre.CourseNumber=%s
+            AND pre.CourseDepartment=%s) AS unlockables
+        UNION
+            (SELECT
                 pre.CourseNumber,
                 pre.CourseDepartment,
                 pre.RequiringCourseNumber,
@@ -423,46 +438,30 @@ class CourseInfo():
                     pre.RequirementGroupId=req.Id
                     AND pre.RequiringCourseNumber=req.RequiringCourseNumber
                     AND pre.RequiringCourseDepartment=req.RequiringCourseDepartment) -- Get entire requirement table
-                WHERE pre.CourseNumber=%s
-                AND pre.CourseDepartment=%s) AS unlockables
-            UNION
-                (SELECT
-                    pre.CourseNumber,
-                    pre.CourseDepartment,
-                    pre.RequiringCourseNumber,
-                    pre.RequiringCourseDepartment,
-                    pre.RequirementGroupId,
-                    req.ReqType
-                FROM
-                    (PrereqCourses pre
-                    JOIN RequirementGroup req
-                    ON
-                        pre.RequirementGroupId=req.Id
-                        AND pre.RequiringCourseNumber=req.RequiringCourseNumber
-                        AND pre.RequiringCourseDepartment=req.RequiringCourseDepartment) -- Get entire requirement table
-                    WHERE req.RequiringCourseNumber=%s
-                    AND req.RequiringCourseDepartment=%s)
-            """
-            cur = connection.cursor()
-            cur.execute(query, (num, dept, num, dept))
-            results = cur.fetchall()
-            return results
+                WHERE req.RequiringCourseNumber=%s
+                AND req.RequiringCourseDepartment=%s)
+        """
+        cur = connection.cursor()
+        cur.execute(query, (number, dept, number, dept))
+        results = cur.fetchall()
+        print(results)
+        return results
 
-    @cherrypy.expose
-    class Prereqs():
-        @cherrypy.tools.json_out()
-        def GET(self, dept, num):
-            cur = connection.cursor()
-            data = cur.callproc('find_prereqs_cascade',(dept, num))[0]
-            return data
+@cherrypy.expose
+class Prereqs():
+    @cherrypy.tools.json_out()
+    def GET(self, dept, num):
+        cur = connection.cursor()
+        data = cur.callproc('find_prereqs_cascade',(dept, num))[0]
+        return data
 
-    @cherrypy.expose
-    class Reverse():
-        @cherrypy.tools.json_out()
-        def GET(self, dept, num):
-            cur = connection.cursor()
-            data = cur.callproc('find_reverse_depends',(dept, num))[0]
-            return data
+@cherrypy.expose
+class Reverse():
+    @cherrypy.tools.json_out()
+    def GET(self, dept, num):
+        cur = connection.cursor()
+        data = cur.callproc('find_reverse_depends',(dept, num))[0]
+        return data
     
 
 conf = {
@@ -476,4 +475,9 @@ cherrypy.tree.mount(Courses(), '/course', conf)
 cherrypy.tree.mount(Professors(), '/professor', conf)
 cherrypy.tree.mount(Section(), '/section', conf)
 cherrypy.tree.mount(NiceProfessors(), '/nice', conf)
+cherrypy.tree.mount(Interest(), '/interest', conf)
+cherrypy.tree.mount(CourseContext(), '/context', conf)
+cherrypy.tree.mount(Prereqs(), '/prereqs', conf)
+cherrypy.tree.mount(Reverse(), '/reverse', conf)
+
 cherrypy.quickstart()
