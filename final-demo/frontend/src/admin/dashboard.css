@@ -40,3 +40,16 @@
 .search-result:hover {
     background-color: lightblue;
 }
+
+.mode-selector-item {
+    padding: 10px;
+    margin: 4px;
+    background-color: azure;
+    border: 1px solid black;
+}
+
+.mode-selector-container {
+    display: flex;
+    flex-direction: row;
+    justify-content:flex-start;
+}

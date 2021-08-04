@@ -7,10 +7,16 @@ const ModeSelector = ({ setCrudMode }) => {
         console.log("Updating mode to", e.target.value)
         setCrudMode(e.target.value);
     }
-    return <div onChange={handleOnChange}>
-        <input type="radio" value={CRUDMODE.create} name="crudMode" required={true}/>Create
-        <input type="radio" value={CRUDMODE.update} name="crudMode" required={true}/>Update
-        <input type="radio" value={CRUDMODE.delete} name="crudMode" required={true}/>Delete
+    return <div className="mode-selector-container" onChange={handleOnChange}>
+        <div className="mode-selector-item">
+            <input className="mode-selector-item" type="radio" value={CRUDMODE.create} name="crudMode" required={true}/>Create
+        </div>
+        <div className="mode-selector-item">
+            <input className="mode-selector-item" type="radio" value={CRUDMODE.update} name="crudMode" required={true}/>Update
+        </div>
+        <div className="mode-selector-item">
+            <input className="mode-selector-item" type="radio" value={CRUDMODE.delete} name="crudMode" required={true}/>Delete
+        </div>
     </div>
 }
 
