@@ -1,3 +1,15 @@
 #cytoscapeGraph {
     background-color: slategray;
 }
+
+.nice-professor-container {
+    display: flex;
+    flex-direction: row;
+}
+
+.nice-professor-result {
+    background-color: thistle;
+    border: 1px solid black;
+    margin: 6px;
+    padding: 3px;
+}

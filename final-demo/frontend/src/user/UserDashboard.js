@@ -4,7 +4,7 @@ import { getGraph,  mockReturnDataPrereqsCS225 as mockData, mockReturnDataContex
 
 import { GraphDisplay } from './GraphDisplay'
 
-import { graphFetch } from '../mockutils'
+import { graphFetch, fakeFetch } from '../mockutils'
 
 function UserGraphConfig({ setGraphData }) {
     const [option, setOption] = React.useState("prereqs");
@@ -31,10 +31,8 @@ function UserGraphConfig({ setGraphData }) {
                     console.log("Successfully fetched data at", new Date());
                     console.log(data)
                     setGraphData(data)
-                });       
-
+                });
         }
-
     }
 
     return <form onSubmit={handleOnSubmit}>
@@ -73,13 +71,47 @@ function UserGraphConfig({ setGraphData }) {
 }
 
 function CourseInformationPanel({  }) {
+    return <div>
+
+    </div>
+}
+
+function NiceProfessorResult({ prof }) {
+    return <div className="nice-professor-result">
+        <p>First Name: {prof.firstName}</p>
+        <p>Last Name: {prof.lastName}</p>
+    </div>
 
 }
+
+function NiceProfessorPanel({ }) {
+    const mockData = [
+        { firstName: "J", lastName: "Livengood" },
+        { firstName: "N", lastName: "IceGuy" }
+    ]
+    const [niceProfessors, setNiceProfessors] = React.useState([])
+    const handleOnSubmit = (e) => {
+        e.preventDefault()
+        fakeFetch('NEW URL', mockData)
+            .then(data => setNiceProfessors(data))
+    }
+    
+    return <form onSubmit={handleOnSubmit}>
+        <button type="submit">Find professors who teach easy courses often!</button> 
+        <div className="nice-professor-container">
+            {niceProfessors.map(prof => <NiceProfessorResult prof={prof}/>)}
+        </div>
+    </form>
+}
+
 function UserDashboard(props) { 
     const [graphData, setGraphData] = React.useState(null);
     return <div>
         <UserGraphConfig setGraphData={setGraphData}/>
         <GraphDisplay data={graphData}/>
+        <CourseInformationPanel/>
+        <hr/>
+        <NiceProfessorPanel/>
     </div>
 }
 
