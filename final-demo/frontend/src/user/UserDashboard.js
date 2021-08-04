@@ -117,10 +117,25 @@ function UserGraphConfig({ setGraphData }) {
     </form>
 }
 
-function CourseInformationPanel({  }) {
-    return <div>
+function CourseInformationPanel({selectedCourse}) {
+    if (selectedCourse) {
 
+        return <div>
+        <h2>{selectedCourse.course.title}</h2>
+        <h3>{selectedCourse.course.num} {selectedCourse.course.dept}</h3>
+        {selectedCourse.course.avgGpa && <h4>Average GPA: {selectedCourse.course.avgGpa}</h4>}
+        <h3>Restrictions:</h3>
+        <ul>
+            {selectedCourse.restrictions.map(r => <li>{r}</li>)}
+        </ul>
+        <h3>Professors</h3>
+        <ul>
+        {selectedCourse.professors.map(p => <li>{p.firstname} {p.lastname}</li>)}
+            </ul>
     </div>
+    } else {
+        return <div>Click on an element to getstarted!</div>
+    }
 }
 
 function NiceProfessorResult({ prof }) {
@@ -154,10 +169,11 @@ const [niceProfessors, setNiceProfessors] = React.useState([])
 
 function UserDashboard(props) { 
     const [graphData, setGraphData] = React.useState(null);
+    const [selectedCourse, setSelectedCourse] = React.useState(null);
     return <div>
         <UserGraphConfig setGraphData={setGraphData}/>
-        <GraphDisplay data={graphData}/>
-        <CourseInformationPanel/>
+        <GraphDisplay setSelectedCourse={setSelectedCourse} data={graphData}/>
+        <CourseInformationPanel selectedCourse={selectedCourse}/>
         <hr/>
         <NiceProfessorPanel/>
     </div>

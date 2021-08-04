@@ -4,6 +4,7 @@ import cytoscape from 'cytoscape';
 import cydagre from 'cytoscape-dagre'
 import * as React from 'react';
 import './user.css'
+import { endpointBase } from '../config';
 
 cytoscape.use(cydagre);
 
@@ -78,7 +79,7 @@ const graphStyleSheet = [
     }
 ]
 
-function MyCytoscape({ data: elements, cyRef }) {
+function MyCytoscape({ data: elements, cyRef, setSelectedCourse }) {
     const prenodes = elements.nodes;
     const preedges = elements.edges;
     // We need to wrap this like this for cytoscape.
@@ -109,12 +110,29 @@ function MyCytoscape({ data: elements, cyRef }) {
                 layout={graphLayout}
                 cy={cy => {
                     cyRef.current = cy
+                    cyRef.current.on('click', 'node', (e) => {
+                        console.log("cy event", e.target)
+                        const [dept, num] = e.target.id().split('_').slice(0, 2)
+                        const fetchUrl = new URL(endpointBase + '/courseinfo')
+                        fetchUrl.searchParams.set('dept', dept)
+                        fetchUrl.searchParams.set('number', num)
+
+                        fetch(fetchUrl)
+                            .then(data => data.json())
+                            .then(data => {
+                                console.log("found data!", data)
+                                setSelectedCourse(data)
+                            })
+                            .catch(err => {
+                                setSelectedCourse(null)
+                            })
+                    })
                 }}
                 diff={() => true}/>
 }
 
 
-const GraphDisplay = ({ data }) => {
+const GraphDisplay = ({ data, setSelectedCourse }) => {
     const cyRef = React.useRef(null);
     return <div> {
         data && <React.Fragment>
@@ -124,7 +142,7 @@ const GraphDisplay = ({ data }) => {
                 cyRef.current?.layout(graphLayout).run()
             }}>Reset GraphDisplay</button>
         </div>
-        <MyCytoscape data={data} cyRef={cyRef}/>
+        <MyCytoscape setSelectedCourse={setSelectedCourse} data={data} cyRef={cyRef}/>
             </React.Fragment>
     }</div>
 }

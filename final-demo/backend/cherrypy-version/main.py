@@ -2,7 +2,7 @@ import MySQLdb
 from MySQLdb.cursors import DictCursor
 import cherrypy
 import cherrypy_cors
-
+import pprint
 ############################## CONFIGURATION
 cherrypy_cors.install()
 #Connects to database server
@@ -354,9 +354,9 @@ class NiceProfessors():
 @cherrypy.expose
 class CourseInfo():
     @cherrypy.tools.json_out()
-    def GET(self, dept, num):
+    def GET(self, dept, number, **kwargs):
         query = """
-        SELECT c.Title, c.Department, c.Number, c.averageGPA, p.FirstName, p.LastName, p.Rating, r.Detail
+        SELECT DISTINCT c.Title, c.Department, c.Number, c.averageGPA, p.FirstName, p.LastName, p.Rating, r.Detail
         FROM ((((
         Course c JOIN Section s 
         ON (c.Number = s.CourseNumber AND c.Department = s.CourseDepartment))
@@ -371,30 +371,31 @@ class CourseInfo():
         """
 
         cur = connection.cursor()
-        cur.execute(query, (int(num), "{}".format(dept.lower())))
+        cur.execute(query, (int(number), "{}".format(dept.lower())))
         results = cur.fetchall()
 
         #python processing here
-        gpa = results[0]['c.averageGPA']
-        title = results[0]['c.Title']
+        pprint.pprint(results)
+        gpa = results[0]['averageGPA']
+        title = results[0]['Title']
         if gpa is not None:
-            c = {'title': title, 'num': num, 'dept': dept, 'avgGpa': gpa}
+            c = {'title': title, 'num': number, 'dept': dept, 'avgGpa': gpa}
         else:
-            c = {'title': title, 'num': num, 'dept': dept}
+            c = {'title': title, 'num': number, 'dept': dept}
 
         ret_dict = {'restrictions': [], 'professors': [], 'course': c}
         rests = []
         profs = []
 
         for tpl in results:
-            cur_rest = tpl['r.Detail']
+            cur_rest = tpl['Detail']
             rests.append(cur_rest)
 
-            if tpl['p.Rating'] is not None:
-                cur_prof = {'firstname': tpl['p.FirstName'], 'lastname': tpl['p.LastName'], 'avgrating': tpl['p.Rating']}        
+            if tpl['Rating'] is not None:
+                cur_prof = {'firstname': tpl['FirstName'], 'lastname': tpl['LastName'], 'avgrating': tpl['Rating']}        
                 profs.append(cur_prof)
             else:
-                cur_prof = {'firstname': tpl['p.FirstName'], 'lastname': tpl['p.LastName']}        
+                cur_prof = {'firstname': tpl['FirstName'], 'lastname': tpl['LastName']}        
                 profs.append(cur_prof)
 
         ret_dict['restrictions'] = rests
@@ -478,5 +479,5 @@ cherrypy.tree.mount(Interest(), '/interest', conf)
 cherrypy.tree.mount(CourseContext(), '/context', conf)
 cherrypy.tree.mount(Prereqs(), '/prereqs', conf)
 cherrypy.tree.mount(Reverse(), '/reverse', conf)
-
+cherrypy.tree.mount(CourseInfo(), '/courseinfo', conf)
 cherrypy.quickstart()

@@ -166,7 +166,7 @@ function makeMockRow(predept, prenum, reqdept, reqnum, group, type) {
 }
 
 function getCourseKey(dept, num) {
-    return `${dept}${num}`
+    return `${dept}_${num}`
 }
 
 function getCourseKeyWithGroup(dept, num, group) {
