@@ -5,169 +5,183 @@ from flask import jsonify
 
 # """How does %s work, is this fine"""
 # """When they add a course should they specify interest as well?"""
-def add_course(dept, num, title, avggpa = 0):     
+def add_course(dept, num, title, avggpa = None):     
     #SQL query addding course to Course relation       
     query = """
-        INSERT INTO Course VALUES (%s, %s, %s, %s)
-        """
-    return
+            INSERT INTO Course ('Department', 'Number', 'Title', 'averageGPA')
+            VALUES (%s, %s, %s, %s)
+            """
 
+    cur = connection.cursor()
+    cur.execute(query, (str(dept), int(num), str(title), float(avggpa)))
+    insert_count = cur.rowcount
+    connection.commit()
+
+    return [{ 'insertedRows': insert_count }]
+
+def add_professor(fn, ln, rating):
+    query = """
+            INSERT INTO Professor ('FirstName', 'LastName', 'Rating')
+            VALUES (%s, %s, %s)
+            """
+    cur = connection.cursor()
+    cur.execute(query, (str(fn), str(ln), int(rating)))
+    insert_count = cur.rowcount 
+    connection.commit()
+
+    return [{ 'insertedRows': insert_count }]
+
+def add_section(crn, number, dept, hours, stime, etime , days):
+    query = """
+            INSERT INTO Section ('Crn', 'CourseNumber', 'CourseDepartment', 'creditHours', 'startTime', 'endTime', 'days')
+            VALUES (%s, %s, %s, %s, %s, %s, %s)
+            """
+    cur = connection.cursor()
+    cur.execute(query, (int(crn), int(number), str(dept), int(hours), str(stime), str(etime) , str(days)))
+    insert_count = cur.rowcount 
+    connection.commit()
+
+    return [{ 'insertedRows': insert_count }]
+
+def add_interests(name, id):
+    query = """
+            INSERT INTO Section ('Name','Id')
+            VALUES (%s, %s)
+            """
+    cur = connection.cursor()
+    cur.execute(query, (str(name), int(id)))
+    insert_count = cur.rowcount 
+    connection.commit()
+
+    return [{ 'insertedRows': insert_count }]
+    
 
 #GET Functions (Read)
 
 #pre_req queries:
-def get_prereq_chain():
+def get_prereq_chain(targetdept, targetnum):
     #Already written need to transfer ==> advanced query
-    procedure = """
-    CREATE PROCEDURE find_prereqs_cascade(
-    IN targetDept VARCHAR(4),
-    IN targetNum INTEGER
-    )
-    -- Do we need to add another begin?
-    find_prereq_main:BEGIN
-        DECLARE new_preCourseNum INTEGER;
-        DECLARE new_preCourseDept VARCHAR(4);
-        DECLARE new_reqCourseNum INTEGER;
-        DECLARE new_reqCourseDept VARCHAR(4);
-        DECLARE new_reqId INTEGER;
-        DECLARE new_reqType ENUM('COREQ', 'PREREQ');
+    #Notes
+    
+    cur = connection.cursor()
+    data = cur.callproc('find_prereqs_cascade',(targetdept, targetnum))[0]
+    
+    return data
+
+def get_prereq_single_level(targetdept, targetnum):
+    #r
+    
+    return data
+
+#inputs
+#fn = professors First Name 
+#ln = Professors Last Name
+def get_professor(fn, ln, gpa = 0):
+    #SQL queries to search professors :
+
+    #QUERIES WITH ONE VARIABLE GIVEN
+
+    if gpa != None and fn == None and ln == None:
+        #SQL query to get professors with AT LEAST gpa
+        query = """
+                SELECT t.ProfessorFirstName, t.ProfessorLastName
+                FROM (TeachingCourse t JOIN Section s USING(Crn)) JOIN Course c ON((s.CourseNumber = c.Number)AND (s.CourseDepartment = c.Department))
+                WHERE c.averageGPA >= %s
+                """
+        cur = connection.cursor()
+        cur.execute(query, (float(gpa),))
+        results = cur.fetchall()
+
+        return jsonify(results)
+
+    elif gpa == None and fn != None and ln == None:
+        #SQL query to get professors with the given first name
+        query = """
+                SELECT t.ProfessorFirstName, t.ProfessorLastName
+                FROM (TeachingCourse t JOIN Section s USING(Crn)) JOIN Course c ON((s.CourseNumber = c.Number)AND (s.CourseDepartment = c.Department))
+                WHERE LOWER(t.ProfessorFirstName) LIKE %s
+                """
+        cur = connection.cursor()
+        cur.execute(query, ("%{}%".format(fn.lower()),))
+        results = cur.fetchall()
+
+        return jsonify(results)
+
+    elif gpa == None and fn == None and ln != None:
+        #SQL query to get professors with the given last name
+        query = """
+                SELECT t.ProfessorFirstName, t.ProfessorLastName
+                FROM (TeachingCourse t JOIN Section s USING(Crn)) JOIN Course c ON((s.CourseNumber = c.Number)AND (s.CourseDepartment = c.Department))
+                WHERE LOWER(t.ProfessorLastName) LIKE %s
+                """
+
+        cur = connection.cursor()
+        cur.execute(query, ("%{}%".format(ln.lower()),))
+        results = cur.fetchall()
+
+        return jsonify(results)
+
+    #two variables given
+    elif gpa == None and fn != None and ln != None:
+        #SQL query to get professors with the given first & last name
+        query = """
+                SELECT t.ProfessorFirstName, t.ProfessorLastName
+                FROM (TeachingCourse t JOIN Section s USING(Crn)) JOIN Course c ON((s.CourseNumber = c.Number)AND (s.CourseDepartment = c.Department))
+                WHERE LOWER(t.ProfessorFirstName) LIKE %s AND LOWER(t.ProfessorLastName) LIKE %s
+                """
         
-        DECLARE done BOOLEAN DEFAULT FALSE;
-        
-        DECLARE cur CURSOR FOR ( 
-            SELECT
-                pre.CourseNumber, 
-                pre.CourseDepartment, 
-                pre.RequiringCourseNumber, 
-                pre.RequiringCourseDepartment,
-                pre.RequirementGroupId,
-                req.ReqType
-            FROM
-                (PrereqCourses pre
-                JOIN RequirementGroup req ON (pre.RequirementGroupId=req.Id AND pre.RequiringCourseNumber=req.RequiringCourseNumber AND pre.RequiringCourseDepartment=req.RequiringCourseDepartment) -- Get entire requirement table
-                JOIN ToVisit tv
-                ON (req.RequiringCourseNumber=tv.courseNum AND req.RequiringCourseDepartment=tv.courseDept))
-                
-            -- ADD GROUP BY PRIMARY KEYS #NEEDS TO BE
+        cur = connection.cursor()
+        cur.execute(query, ("%{}%".format(fn.lower()),"%{}%".format(ln.lower())))
+        results = cur.fetchall()
 
-            );
-                
-                
-        DECLARE CONTINUE HANDLER FOR NOT Found SET done = TRUE;
+        return jsonify(results)
 
-        CREATE TEMPORARY TABLE RetEdgeList(
-            reqCourseNum INTEGER,
-            reqCourseDept VARCHAR(4),
-            reqId INTEGER,
-            preCourseNum INTEGER,
-            preCourseDept VARCHAR(4),
-            reqType ENUM('COREQ', 'PREREQ'),
-            PRIMARY KEY (
-                reqCourseNum, 
-                reqCourseDept,
-                preCourseNum,
-                preCourseDept
-            )
-        );
-        CREATE TEMPORARY TABLE Visited(
-            courseDept VARCHAR(4),
-            courseNum INTEGER,
-            PRIMARY KEY (
-                courseNum,
-                courseDept
-            )
-        );
-        CREATE TEMPORARY TABLE ToVisit(
-            courseDept VARCHAR(4),
-            courseNum INTEGER,
-            PRIMARY KEY (
-                courseNum,
-                courseDept
-            )
-        );
-        INSERT INTO ToVisit VALUES (targetDept, targetNum);
-        FindPrereqLoop: LOOP
-        IF (SELECT COUNT(*) FROM ToVisit)=0 THEN
-            LEAVE FindPrereqLoop;
-        END IF;
+    elif gpa != None and fn == None and ln != None:
+        #SQL query to get professors with the given last name and AT LEAST the given GPA
+        query = """
+                SELECT t.ProfessorFirstName, t.ProfessorLastName
+                FROM (TeachingCourse t JOIN Section s USING(Crn)) JOIN Course c ON((s.CourseNumber = c.Number)AND (s.CourseDepartment = c.Department))
+                WHERE c.averageGPA = %s AND LOWER(t.ProfessorLastName) LIKE %s
+                """
+        cur = connection.cursor()
+        cur.execute(query, (float(gpa),"%{}%".format(ln.lower())))
+        results = cur.fetchall()
 
-            OPEN cur;
-                loop1: LOOP
-                    FETCH cur INTO new_preCourseNum, new_preCourseDept, new_reqCourseNum, new_reqCourseDept, new_reqId, new_reqType;
-                    IF done THEN LEAVE loop1;
-                    END IF;
-                    INSERT IGNORE INTO RetEdgeList(
-                            preCourseNum,
-                            preCourseDept,
-                            reqCourseNum,
-                            reqCourseDept,
-                            reqId,
-                            reqType) VALUES (new_preCourseNum, new_preCourseDept, new_reqCourseNum, new_reqCourseDept, new_reqId, new_reqType);
-                        
-                END LOOP loop1;
-                
-            CLOSE cur;
-            
-        INSERT IGNORE INTO Visited
-            SELECT * FROM ToVisit;
-        DELETE FROM ToVisit;
-        INSERT INTO ToVisit
-            SELECT DISTINCT preCourseDept, preCourseNum
-            FROM RetEdgeList -- JOIN PONTLESS RELATION
-            WHERE (preCourseDept, preCourseNum) NOT IN (
-                SELECT * FROM Visited
-            );
-        IF (SELECT COUNT(*) FROM ToVisit)=0 THEN
-            LEAVE FindPrereqLoop;
-        END IF;
-        END LOOP FindPrereqLoop;
-        SELECT * FROM RetEdgeList;
-        
-        DROP TEMPORARY TABLE RetEdgeList;
-        DROP TEMPORARY TABLE Visited;
-        DROP TEMPORARY TABLE ToVisit;
-    END//
-    """
+        return jsonify(results)
 
-    return
+    elif gpa != None and fn != None and ln == None:
+        #SQL query to get professors with the given first name and AT LEAST the given GPA
+        query = """
+                SELECT t.ProfessorFirstName, t.ProfessorLastName
+                FROM (TeachingCourse t JOIN Section s USING(Crn)) JOIN Course c ON((s.CourseNumber = c.Number)AND (s.CourseDepartment = c.Department))
+                WHERE c.averageGPA >= %s AND LOWER(t.ProfessorFirstName) LIKE %s
+                """
+        cur = connection.cursor()
+        cur.execute(query, (float(gpa),"%{}%".format(fn.lower())))
+        results = cur.fetchall()
 
-def get_prereq_single_level():
-    #Already written to transfer
-    procedure = """
-    CREATE PROCEDURE find_prereqs_single(
-	IN targetDept VARCHAR(4),
-    IN targetNumber INTEGER
-    )
-    BEGIN
-	    SELECT
-			pre.CourseNumber, 
-            pre.CourseDepartment, 
-            pre.RequiringCourseNumber, 
-            pre.RequiringCourseDepartment, 
-            pre.RequirementGroupId, 
-            req.ReqType
-		FROM
-			PrereqCourses pre 
-			JOIN RequirementGroup req 
-            ON 
-				pre.RequirementGroupId=req.Id 
-                AND pre.RequiringCourseNumber=req.RequiringCourseNumber
-                AND pre.RequiringCourseDepartment=req.RequiringCourseDepartment
-		WHERE 
-			targetDept=pre.RequiringCourseDepartment 
-            AND targetNumber=pre.RequiringCourseNumber;
-    END//
-    """
+        return jsonify(results)
 
+    #all three given
+    else:
+        #sql query to get professors given first name, last name, AT LEAST the given gpa
+        query = """
+                SELECT t.ProfessorFirstName, t.ProfessorLastName
+                FROM (TeachingCourse t JOIN Section s USING(Crn)) JOIN Course c ON((s.CourseNumber = c.Number)AND (s.CourseDepartment = c.Department))
+                WHERE c.averageGPA >= %s AND LOWER(t.ProfessorLastName) LIKE %s AND LOWER(t.ProfessorFirstName) LIKE %s
+                """
+        cur = connection.cursor()
+        cur.execute(query, (float(gpa), "%{}%".format(ln.lower()),"%{}%".format(fn.lower())))
+        results = cur.fetchall()
 
-    return
+        return jsonify(results)
 
 #professor queries
 def get_professor_rating(lastname):
     query = """
     SELECT *
     FROM Professor p
-    WHERE p.LastName = %s
+    WHERE LOWER(p.LastName) LIKE %s
     ORDER BY p.LastName, p.FirstName
     """
     cur = connection.cursor()
@@ -186,10 +200,10 @@ def get_professor_classes(lastname):
     ON (s.Crn = tc.CRN)
     JOIN Course c 
     ON (c.Department = s.CourseDepartment AND c.Number = s.CourseNumber)
-    WHERE p.LastName = %s
+    WHERE LOWER(p.LastName) LIKE %s
     """
     cur = connection.cursor()
-    cur.execute(query, ("%{}%".format(lastname),))
+    cur.execute(query, ("%{}%".format(lastname.lower()),))
     results = cur.fetchall()
 
     return jsonify(results)
@@ -206,7 +220,7 @@ def get_highgpaprofs(gpa=3.5, count=3, limit=50):
         LIMIT %s
         """
     cur = connection.cursor()
-    cur.execute(query, (float(gpa), int(count), int(limit),))
+    cur.execute(query, (float(gpa), int(count), int(limit)))
     results = cur.fetchall()
     return jsonify(results)
 
@@ -217,9 +231,13 @@ def get_courses_of_interest(interest):
     query = """
          SELECT c.CourseDepartment, c.CourseNumber
          From CourseInterest c JOIN Interest i ON(i.Id = c.InterestId)
-         WHERE i.Name = %s
+         WHERE LOWER(i.Name) LIKE %s
         """
-    return
+    cur = connection.cursor()
+    cur.execute(query, ("%{}%".format(interest.lower()),))
+    results = cur.fetchall()
+
+    return jsonify(results)
 
 #"""Should it return the course title or Department + Number"""
 def course_search(dept, num, gpa):                    
@@ -231,16 +249,26 @@ def course_search(dept, num, gpa):
                 FROM Course
                 WHERE averageGPA = %s
                 """
-        return
+
+        cur = connection.cursor()
+        cur.execute(query, (float(gpa),))
+        results = cur.fetchall()
+
+        return jsonify(results)
 
     elif gpa == None and dept != None and num == None:
         #SQL query to get courses with the given dept
         query = """
                 SELECT Department, Number
                 FROM Course
-                WHERE Department = %s
+                WHERE LOWER(Department) LIKE %s
                 """
-        return
+        
+        cur = connection.cursor()
+        cur.execute(query, ("%{}%".format(dept.lower(),)))
+        results = cur.fetchall()
+
+        return jsonify(results)
 
     elif gpa == None and dept == None and num != None:
         #SQL query to get courses with the given num
@@ -250,7 +278,11 @@ def course_search(dept, num, gpa):
                 WHERE Number = %s
                 """
 
-        return
+        cur = connection.cursor()
+        cur.execute(query, (int(num),))
+        results = cur.fetchall()
+
+        return jsonify(results)
 
     #two variables given
     elif gpa == None and dept != None and num != None:
@@ -258,9 +290,13 @@ def course_search(dept, num, gpa):
         query = """
                 SELECT Department, Number
                 FROM Course
-                WHERE Number = %s AND Department = %s
+                WHERE Number = %s AND LOWER(Department) LIKE %s
                 """
-        return
+        cur = connection.cursor()
+        cur.execute(query, (int(num), "%{}%".format(dept.lower(),)))
+        results = cur.fetchall()
+
+        return jsonify(results)
 
     elif gpa != None and dept == None and num != None:
         #SQL query to get courses with the given gpa and num
@@ -269,16 +305,24 @@ def course_search(dept, num, gpa):
                 FROM Course
                 WHERE Number = %s AND averageGPA = %s
                 """
-        return
+        cur = connection.cursor()
+        cur.execute(query, (int(num), float(gpa)))
+        results = cur.fetchall()
+
+        return jsonify(results)
 
     elif gpa != None and dept != None and num == None:
         #SQL query to get courses with the given dept and gpa
         query = """
                 SELECT Department, Number
                 FROM Course
-                WHERE averageGPA = %s AND Department = %s
+                WHERE averageGPA = %s AND LOWER(Department) LIKE %s
                 """
-        return
+        cur = connection.cursor()
+        cur.execute(query, (float(gpa), "%{}%".format(dept.lower(),)))
+        results = cur.fetchall()
+
+        return jsonify(results)
 
     #all three given
     else:
@@ -286,103 +330,81 @@ def course_search(dept, num, gpa):
         query = """
                 SELECT Department, Number
                 FROM Course
-                WHERE Number = %s AND Department = %s AND averageGPA = %s
-                """
-        return
-
-#inputs
-#fn = professors First Name 
-#ln = Professors Last Name
-def get_professor(fn, ln, gpa):
-    #SQL queries to search professors :
-
-    #QUERIES WITH ONE VARIABLE GIVEN
-
-    if gpa != None and fn == None and ln == None:
-        #SQL query to get professors with AT LEAST gpa
-        query = """
-                SELECT t.ProfessorFirstName, t.ProfessorLastName
-                FROM (TeachingCourse t JOIN Section s USING(Crn)) JOIN Course c ON((s.CourseNumber = c.Number)AND (s.CourseDepartment = c.Department))
-                WHERE c.averageGPA = %s
-                """
-        return
-
-    elif gpa == None and fn != None and ln == None:
-        #SQL query to get professors with the given first name
-        query = """
-                SELECT t.ProfessorFirstName, t.ProfessorLastName
-                FROM (TeachingCourse t JOIN Section s USING(Crn)) JOIN Course c ON((s.CourseNumber = c.Number)AND (s.CourseDepartment = c.Department))
-                WHERE t.ProfessorFirstName = %s
-                """
-        return
-
-    elif gpa == None and fn == None and ln != None:
-        #SQL query to get professors with the given last name
-        query = """
-                SELECT t.ProfessorFirstName, t.ProfessorLastName
-                FROM (TeachingCourse t JOIN Section s USING(Crn)) JOIN Course c ON((s.CourseNumber = c.Number)AND (s.CourseDepartment = c.Department))
-                WHERE t.ProfessorLastName = %s
+                WHERE Number = %s AND LOWER(Department) LIKE %s AND averageGPA = %s
                 """
 
-        return
+        cur = connection.cursor()
+        cur.execute(query, (int(num), "%{}%".format(dept.lower(),), int(dept)))
+        results = cur.fetchall()
 
-    #two variables given
-    elif gpa == None and fn != None and ln != None:
-        #SQL query to get professors with the given first & last name
-        query = """
-                SELECT t.ProfessorFirstName, t.ProfessorLastName
-                FROM (TeachingCourse t JOIN Section s USING(Crn)) JOIN Course c ON((s.CourseNumber = c.Number)AND (s.CourseDepartment = c.Department))
-                WHERE t.ProfessorFirstName = %s AND t.ProfessorLastName = %s
-                """
-        return
+        return jsonify(results)
 
-    elif gpa != None and fn == None and ln != None:
-        #SQL query to get professors with the given last name and AT LEAST the given GPA
-        query = """
-                SELECT t.ProfessorFirstName, t.ProfessorLastName
-                FROM (TeachingCourse t JOIN Section s USING(Crn)) JOIN Course c ON((s.CourseNumber = c.Number)AND (s.CourseDepartment = c.Department))
-                WHERE c.averageGPA = %s AND t.ProfessorLastName = %s
-                """
-        return
-
-    elif gpa != None and fn != None and ln == None:
-        #SQL query to get professors with the given first name and AT LEAST the given GPA
-        query = """
-                SELECT t.ProfessorFirstName, t.ProfessorLastName
-                FROM (TeachingCourse t JOIN Section s USING(Crn)) JOIN Course c ON((s.CourseNumber = c.Number)AND (s.CourseDepartment = c.Department))
-                WHERE c.averageGPA >= %s AND t.ProfessorFirstName = %s
-                """
-        return
-
-    #all three given
-    else:
-        #sql query to get professors given first name, last name, AT LEAST the given gpa
-        query = """
-                SELECT t.ProfessorFirstName, t.ProfessorLastName
-                FROM (TeachingCourse t JOIN Section s USING(Crn)) JOIN Course c ON((s.CourseNumber = c.Number)AND (s.CourseDepartment = c.Department))
-                WHERE c.averageGPA >= %s AND t.ProfessorLastName = %s AND t.ProfessorFirstName = %s
-                """
-    return
     
-def get_restrictions(crn, number, dept, credit_hours, start_time, end_time, days):
+def get_section(crn, num, dept, hours, start, end, days):
     #these will be sql queries to display restrictions for a given course
     #need to figure out frontend logic first dont do yet
 
     params = []
+    # Where 1=1 is just to simplify the logic here
+    query = "SELECT FROM Section WHERE 1=1 "
+    # To allow for easier dynamic making
+    condition_base = "AND {} = %s \n"
+    conditions = []
+    if crn is not None:
+        params.append(crn)
+        conditions.append(condition_base.format("Crn"))
+    if num is not None:
+        params.append(num)
+        conditions.append(condition_base.format("CourseNumber"))
+    if dept is not None:
+        params.append(dept)
+        conditions.append(condition_base.format("CourseDepartment"))
+    if hours is not None:
+        params.append(hours)
+        conditions.append(condition_base.format("creditHours"))
+    if start is not None:
+        params.append(start)
+        conditions.append(condition_base.format("startTime"))
+    if end is not None:
+        params.append(end)
+        conditions.append(condition_base.format("endTime"))
+    if days is not None:
+        params.append(days)
+        conditions.append(condition_base.format("days"))
 
+    query += " ".join(conditions)
+
+    cur = connection.cursor()
+    cur.execute(query, tuple(params))
+    results = cur.fetchall()
+
+    return jsonify(results)
+
+
+def get_interest(keyword):
     query = """
-            SELECT * 
-            FROM Restrictions
-            WHERE 1=1
-            """
+    SELECT Name
+    FROM Interest
+    WHERE LOWER(Name) like %s
+    """
 
-    return
+    cur = connection.cursor()
+    cur.execute(query, ("%{}%".format(keyword.lower()),))
+    results = cur.fetchall()
+    return results
 
-
-def interest_searching():
-    #sahan said this is done 
-    return
-
+def courses(self, keyword, limit=10):
+        # you can hit this endpoint at /courses?keyword=whatever
+        query = """
+        SELECT * FROM Course c
+        WHERE LOWER(c.Title) LIKE %s
+        ORDER BY c.Title
+        LIMIT %s
+        """
+        cur = connection.cursor()
+        cur.execute(query, ("%{}%".format(keyword.lower()), int(limit)))
+        results = cur.fetchall()
+        return results
 
 
 #PUT/PATCH Functions (Update)
@@ -395,7 +417,12 @@ def update_course(dept, number, title, gpa):
                 SET averageGPA = %s
                 WHERE Department = %s AND Number = %s
                 """
-        return
+        
+        cur = connection.cursor()
+        cur.execute(query, (float(gpa), str(dept), int(number)))
+        impact_count = cur.rowcount
+        connection.commit()
+        return [{ 'updatedRows': impact_count }]
 
     elif title != None and gpa == None:
         #sql query just updating the title
@@ -404,7 +431,11 @@ def update_course(dept, number, title, gpa):
                 SET Title = %s
                 WHERE Department = %s AND Number = %s
                 """
-        return
+        cur = connection.cursor()
+        cur.execute(query, (str(title), str(dept), int(number)))
+        impact_count = cur.rowcount
+        connection.commit()
+        return [{ 'updatedRows': impact_count }]
 
     elif title != None and gpa != None:
         #sql query just updating the gpa, and title
@@ -416,7 +447,11 @@ def update_course(dept, number, title, gpa):
                 SET Title = %s
                 WHERE Department = %s AND Number = %s
                 """
-        return
+        cur = connection.cursor()
+        cur.execute(query, (float(gpa), str(dept), int(number), str(title), str(dept), int(number)))
+        impact_count = cur.rowcount
+        connection.commit()
+        return [{ 'updatedRows': impact_count }]
 
 
 
@@ -425,19 +460,86 @@ def delete_course(dept, num):
     #SQL query deleting course
     query = """
         DELETE FROM Course
-        WHERE Number = %s AND Department = %s
-        DELETE FROM CourseInterest
-        WHERE CourseNumber = %s AND CourseDepartment = %s
+        WHERE Number = %s AND LOWER(Department) LIKE %s;
         """
-    return
+        #ADD CONSTRAINT IN mySQL workbench
+    
+    cur = connection.cursor()
+    cur.execute(query, (int(num), "%{}%".format(dept.lower())))
+    delete_count = cur.rowcount
+    connection.commit()
+    return [{ 'deletedRows': delete_count }]
 
 def delete_restriction(crn, detail):
     query = """DELETE FROM Restriction rst
-        WHERE rst.Crn = %s AND rst.Detail = %s
+        WHERE rst.Crn = %s AND LOWER(rst.Detail) LIKE %s
         """
-    return
+
+    cur = connection.cursor()
+    cur.execute(query, (int(crn), "%{}%".format(detail.lower())))
+    delete_count = cur.rowcount
+    connection.commit()
+    return [{ 'deletedRows': delete_count }]
 
 
-#need to add trigger 
-def trigger():
-    return
+def coursecontext(self, dept, num, limit=50):
+    query = """
+    SELECT * FROM (SELECT
+            pre.CourseNumber,
+            pre.CourseDepartment,
+            pre.RequiringCourseNumber,
+            pre.RequiringCourseDepartment,
+            pre.RequirementGroupId,
+            req.ReqType
+        FROM
+            (PrereqCourses pre
+            JOIN RequirementGroup req
+            ON
+                pre.RequirementGroupId=req.Id
+                AND pre.RequiringCourseNumber=req.RequiringCourseNumber
+                AND pre.RequiringCourseDepartment=req.RequiringCourseDepartment) -- Get entire requirement table
+            WHERE pre.CourseNumber=%s
+            AND pre.CourseDepartment=%s) AS unlockables
+    UNION
+        (SELECT
+            pre.CourseNumber,
+            pre.CourseDepartment,
+            pre.RequiringCourseNumber,
+            pre.RequiringCourseDepartment,
+            pre.RequirementGroupId,
+            req.ReqType
+        FROM
+            (PrereqCourses pre
+            JOIN RequirementGroup req
+            ON
+                pre.RequirementGroupId=req.Id
+                AND pre.RequiringCourseNumber=req.RequiringCourseNumber
+                AND pre.RequiringCourseDepartment=req.RequiringCourseDepartment) -- Get entire requirement table
+            WHERE req.RequiringCourseNumber=%s
+            AND req.RequiringCourseDepartment=%s)
+    LIMIT %s;
+    """
+    cur = connection.cursor()
+    cur.execute(query, (num, dept, num, dept, int(limit)))
+    results = cur.fetchall()
+    return results
+
+def get_course_info(dept, num):
+    query = """
+     SELECT c.Title, c.Department, c.Number, c.averageGPA, p.FirstName, p.LastName, p.Rating, r.Detail
+    FROM ((((
+    Course c JOIN Section s 
+    ON (c.Number = s.CourseNumber AND c.Department = s.CourseDepartment))
+    JOIN TeachingCourse tc
+    ON (tc.Crn = s.Crn))
+    JOIN Professor p
+    ON (p.FirstName = tc.ProfessorFirstName AND p.LastName = tc.ProfessorLastName))
+    JOIN Restriction r
+    ON (r.Crn = s.Crn))
+    WHERE c.Number = %s AND c.Department LIKE %s     
+    """
+
+    cur = connection.cursor()
+    cur.execute(query, (int(num), "%{}%".format(dept.lower())))
+    results = cur.fetchall()
+    return results

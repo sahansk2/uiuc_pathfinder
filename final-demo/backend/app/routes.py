@@ -22,28 +22,87 @@ from app import database
 
 #POST URLs
 @app.route("/courses", methods=['POST'])
-def ()
+def x():
+    return
 
 @app.route("/professors", methods=['POST'])
-def ()
+def x():
+    return
 
-@app.route("/prereqs", methods=['POST'])
-def ()
+@app.route("/sections", methods=['POST'])
+def x():
+    return
 
-@app.route("/restrictions", methods=['POST'])
-def ()
+@app.route("/interests", methods=['POST'])
+def x():
+    return
 
 
 #GET URLs
-@app.route("/", methods=['GET'])
+@app.route("/courses", methods=['GET'])
+def x():
+    return
+
+@app.route("/professors", methods=['GET'])
+def x():
+    return
+
+@app.route("/sections", methods=['GET'])
+def x():
+    return
+
+@app.route("/interests", methods=['GET'])
+def x():
+    return
+
 
 #PUT URLs
-@app.route("/", methods=['PUT'])
+@app.route("/courses", methods=['PUT'])
+def x():
+    return
 
+@app.route("/professors", methods=['PUT'])
+def x():
+    return
 
-#POST URLs
-@app.route("/", methods=['POST'])
+@app.route("/sections", methods=['PUT'])
+def x():
+    return
+
+@app.route("/interests", methods=['PUT'])
+def x():
+    return
 
 
 #DELETE URLs
-@app.route("/", methods=['DELETE'])
+@app.route("/courses", methods=['DELETE'])
+def x():
+    return
+
+@app.route("/professors", methods=['DELETE'])
+def x():
+    return
+
+@app.route("/sections", methods=['DELETE'])
+def x():
+    return
+
+@app.route("/interests", methods=['DELETE'])
+def x():
+    return
+
+
+#for prereqs, rev, context only need course department and course data
+#courseinfo: course join sections join teaching course join professors join restrictions
+
+@app.route("/niceprofessors", methods=['GET'])
+
+@app.route("/prereqs", methods=['GET'])
+
+@app.route("/prereqs", methods=['GET'])
+
+@app.route("/rev", methods=['GET'])
+
+@app.route("/context", methods=['GET'])
+
+@app.route("/cinfo")
