@@ -81,7 +81,7 @@ const SearchInputPanel = ({ setSearchResults, setSelectedItem, crudMode, table }
                 <label key={idx}>{param.pretty}<br/>
                     {currInput}
                 </label>
-                { param.nullable && 
+                {/* { param.nullable && 
                     <React.Fragment>
                         <input 
                             key={idx} 
@@ -89,7 +89,7 @@ const SearchInputPanel = ({ setSearchResults, setSelectedItem, crudMode, table }
                             value={searchParams[getNullName(param.name)]} 
                             name={getNullName(param.name)} 
                             onChange={handleOnChange}/>Search for missing?
-                    </React.Fragment> }
+                    </React.Fragment> } */}
                 <br/>
                 </React.Fragment>
     })

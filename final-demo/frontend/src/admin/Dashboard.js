@@ -56,7 +56,7 @@ const Dashboard = () => {
                     currTable={currTable} 
                     setSelectedItem={setSelectedItem}
                     selectedItem={selectedItem}/>
-                <EditorPanel setCrudMode={setCrudMode}/>
+                <EditorPanel crudMode={crudMode} currTable={currTable} setCrudMode={setCrudMode}/>
             </div>
         </div>
     );

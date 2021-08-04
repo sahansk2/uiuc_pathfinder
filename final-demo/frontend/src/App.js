@@ -31,8 +31,8 @@ function App() {
   return (
     <React.Fragment>
       <Router>
-        <Link to='/admin'>Admin</Link>
-        <Link to='/main'>User</Link>
+        <Link to='/admin' className="navLink">Admin</Link>
+        <Link to='/main' className="navLink">User</Link>
         <Switch>
           <Route path="/admin">
             <AdminPage/>
