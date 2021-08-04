@@ -54,24 +54,109 @@ def add_interests(name, id):
     connection.commit()
 
     return [{ 'insertedRows': insert_count }]
-    
 
+###################################################################################
 #GET Functions (Read)
+###################################################################################
 
-#pre_req queries:
-def get_prereq_chain(targetdept, targetnum):
-    #Already written need to transfer ==> advanced query
-    #Notes
-    
-    cur = connection.cursor()
-    data = cur.callproc('find_prereqs_cascade',(targetdept, targetnum))[0]
-    
-    return data
+def course_search(dept, num, gpa):                    
+    #only one variable is given 
+    if gpa != None and dept == None and num == None:
+        #SQL query to get courses with the given gpa
+        query = """
+                SELECT Department, Number
+                FROM Course
+                WHERE averageGPA = %s
+                """
 
-def get_prereq_single_level(targetdept, targetnum):
-    #r
-    
-    return data
+        cur = connection.cursor()
+        cur.execute(query, (float(gpa),))
+        results = cur.fetchall()
+
+        return jsonify(results)
+
+    elif gpa == None and dept != None and num == None:
+        #SQL query to get courses with the given dept
+        query = """
+                SELECT Department, Number
+                FROM Course
+                WHERE LOWER(Department) LIKE %s
+                """
+        
+        cur = connection.cursor()
+        cur.execute(query, ("%{}%".format(dept.lower(),)))
+        results = cur.fetchall()
+
+        return jsonify(results)
+
+    elif gpa == None and dept == None and num != None:
+        #SQL query to get courses with the given num
+        query = """
+                SELECT Department, Number
+                FROM Course
+                WHERE Number = %s
+                """
+
+        cur = connection.cursor()
+        cur.execute(query, (int(num),))
+        results = cur.fetchall()
+
+        return jsonify(results)
+
+    #two variables given
+    elif gpa == None and dept != None and num != None:
+        #SQL query to get courses with the given dept and num
+        query = """
+                SELECT Department, Number
+                FROM Course
+                WHERE Number = %s AND LOWER(Department) LIKE %s
+                """
+        cur = connection.cursor()
+        cur.execute(query, (int(num), "%{}%".format(dept.lower(),)))
+        results = cur.fetchall()
+
+        return jsonify(results)
+
+    elif gpa != None and dept == None and num != None:
+        #SQL query to get courses with the given gpa and num
+        query = """
+                SELECT Department, Number
+                FROM Course
+                WHERE Number = %s AND averageGPA = %s
+                """
+        cur = connection.cursor()
+        cur.execute(query, (int(num), float(gpa)))
+        results = cur.fetchall()
+
+        return jsonify(results)
+
+    elif gpa != None and dept != None and num == None:
+        #SQL query to get courses with the given dept and gpa
+        query = """
+                SELECT Department, Number
+                FROM Course
+                WHERE averageGPA = %s AND LOWER(Department) LIKE %s
+                """
+        cur = connection.cursor()
+        cur.execute(query, (float(gpa), "%{}%".format(dept.lower(),)))
+        results = cur.fetchall()
+
+        return jsonify(results)
+
+    #all three given
+    else:
+        #sql query to get courses given gpa, dept, & num
+        query = """
+                SELECT Department, Number
+                FROM Course
+                WHERE Number = %s AND LOWER(Department) LIKE %s AND averageGPA = %s
+                """
+
+        cur = connection.cursor()
+        cur.execute(query, (int(num), "%{}%".format(dept.lower(),), int(dept)))
+        results = cur.fetchall()
+
+        return jsonify(results)
 
 #inputs
 #fn = professors First Name 
@@ -176,6 +261,61 @@ def get_professor(fn, ln, gpa = 0):
 
         return jsonify(results)
 
+
+
+def get_section(crn, num, dept, hours, start, end, days):
+    #these will be sql queries to display restrictions for a given course
+    #need to figure out frontend logic first dont do yet
+
+    params = []
+    # Where 1=1 is just to simplify the logic here
+    query = "SELECT FROM Section WHERE 1=1 "
+    # To allow for easier dynamic making
+    condition_base = "AND {} = %s \n"
+    conditions = []
+    if crn is not None:
+        params.append(crn)
+        conditions.append(condition_base.format("Crn"))
+    if num is not None:
+        params.append(num)
+        conditions.append(condition_base.format("CourseNumber"))
+    if dept is not None:
+        params.append(dept)
+        conditions.append(condition_base.format("CourseDepartment"))
+    if hours is not None:
+        params.append(hours)
+        conditions.append(condition_base.format("creditHours"))
+    if start is not None:
+        params.append(start)
+        conditions.append(condition_base.format("startTime"))
+    if end is not None:
+        params.append(end)
+        conditions.append(condition_base.format("endTime"))
+    if days is not None:
+        params.append(days)
+        conditions.append(condition_base.format("days"))
+
+    query += " ".join(conditions)
+
+    cur = connection.cursor()
+    cur.execute(query, tuple(params))
+    results = cur.fetchall()
+
+    return jsonify(results)
+
+
+def get_interest(keyword):
+    query = """
+    SELECT Name
+    FROM Interest
+    WHERE LOWER(Name) like %s
+    """
+
+    cur = connection.cursor()
+    cur.execute(query, ("%{}%".format(keyword.lower()),))
+    results = cur.fetchall()
+    return results
+
 #professor queries
 def get_professor_rating(lastname):
     query = """
@@ -239,160 +379,8 @@ def get_courses_of_interest(interest):
 
     return jsonify(results)
 
-#"""Should it return the course title or Department + Number"""
-def course_search(dept, num, gpa):                    
-    #only one variable is given 
-    if gpa != None and dept == None and num == None:
-        #SQL query to get courses with the given gpa
-        query = """
-                SELECT Department, Number
-                FROM Course
-                WHERE averageGPA = %s
-                """
 
-        cur = connection.cursor()
-        cur.execute(query, (float(gpa),))
-        results = cur.fetchall()
-
-        return jsonify(results)
-
-    elif gpa == None and dept != None and num == None:
-        #SQL query to get courses with the given dept
-        query = """
-                SELECT Department, Number
-                FROM Course
-                WHERE LOWER(Department) LIKE %s
-                """
-        
-        cur = connection.cursor()
-        cur.execute(query, ("%{}%".format(dept.lower(),)))
-        results = cur.fetchall()
-
-        return jsonify(results)
-
-    elif gpa == None and dept == None and num != None:
-        #SQL query to get courses with the given num
-        query = """
-                SELECT Department, Number
-                FROM Course
-                WHERE Number = %s
-                """
-
-        cur = connection.cursor()
-        cur.execute(query, (int(num),))
-        results = cur.fetchall()
-
-        return jsonify(results)
-
-    #two variables given
-    elif gpa == None and dept != None and num != None:
-        #SQL query to get courses with the given dept and num
-        query = """
-                SELECT Department, Number
-                FROM Course
-                WHERE Number = %s AND LOWER(Department) LIKE %s
-                """
-        cur = connection.cursor()
-        cur.execute(query, (int(num), "%{}%".format(dept.lower(),)))
-        results = cur.fetchall()
-
-        return jsonify(results)
-
-    elif gpa != None and dept == None and num != None:
-        #SQL query to get courses with the given gpa and num
-        query = """
-                SELECT Department, Number
-                FROM Course
-                WHERE Number = %s AND averageGPA = %s
-                """
-        cur = connection.cursor()
-        cur.execute(query, (int(num), float(gpa)))
-        results = cur.fetchall()
-
-        return jsonify(results)
-
-    elif gpa != None and dept != None and num == None:
-        #SQL query to get courses with the given dept and gpa
-        query = """
-                SELECT Department, Number
-                FROM Course
-                WHERE averageGPA = %s AND LOWER(Department) LIKE %s
-                """
-        cur = connection.cursor()
-        cur.execute(query, (float(gpa), "%{}%".format(dept.lower(),)))
-        results = cur.fetchall()
-
-        return jsonify(results)
-
-    #all three given
-    else:
-        #sql query to get courses given gpa, dept, & num
-        query = """
-                SELECT Department, Number
-                FROM Course
-                WHERE Number = %s AND LOWER(Department) LIKE %s AND averageGPA = %s
-                """
-
-        cur = connection.cursor()
-        cur.execute(query, (int(num), "%{}%".format(dept.lower(),), int(dept)))
-        results = cur.fetchall()
-
-        return jsonify(results)
-
-    
-def get_section(crn, num, dept, hours, start, end, days):
-    #these will be sql queries to display restrictions for a given course
-    #need to figure out frontend logic first dont do yet
-
-    params = []
-    # Where 1=1 is just to simplify the logic here
-    query = "SELECT FROM Section WHERE 1=1 "
-    # To allow for easier dynamic making
-    condition_base = "AND {} = %s \n"
-    conditions = []
-    if crn is not None:
-        params.append(crn)
-        conditions.append(condition_base.format("Crn"))
-    if num is not None:
-        params.append(num)
-        conditions.append(condition_base.format("CourseNumber"))
-    if dept is not None:
-        params.append(dept)
-        conditions.append(condition_base.format("CourseDepartment"))
-    if hours is not None:
-        params.append(hours)
-        conditions.append(condition_base.format("creditHours"))
-    if start is not None:
-        params.append(start)
-        conditions.append(condition_base.format("startTime"))
-    if end is not None:
-        params.append(end)
-        conditions.append(condition_base.format("endTime"))
-    if days is not None:
-        params.append(days)
-        conditions.append(condition_base.format("days"))
-
-    query += " ".join(conditions)
-
-    cur = connection.cursor()
-    cur.execute(query, tuple(params))
-    results = cur.fetchall()
-
-    return jsonify(results)
-
-
-def get_interest(keyword):
-    query = """
-    SELECT Name
-    FROM Interest
-    WHERE LOWER(Name) like %s
-    """
-
-    cur = connection.cursor()
-    cur.execute(query, ("%{}%".format(keyword.lower()),))
-    results = cur.fetchall()
-    return results
-
+#DO 
 def courses(self, keyword, limit=10):
         # you can hit this endpoint at /courses?keyword=whatever
         query = """
@@ -543,3 +531,12 @@ def get_course_info(dept, num):
     cur.execute(query, (int(num), "%{}%".format(dept.lower())))
     results = cur.fetchall()
     return results
+
+def get_prereq_chain(targetdept, targetnum):
+#Already written need to transfer ==> advanced query
+#Notes
+
+    cur = connection.cursor()
+    data = cur.callproc('find_prereqs_cascade',(targetdept, targetnum))[0]
+
+    return data

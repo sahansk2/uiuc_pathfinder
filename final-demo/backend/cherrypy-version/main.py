@@ -43,6 +43,7 @@ class Courses():
         """
         params = []
         conditions_base = " AND c.{} = %s "
+        conditions_end = " LIMIT 60"
         if dept is not None:
             params.append(dept)
             query += conditions_base.format("Department")
@@ -55,6 +56,8 @@ class Courses():
         if title is not None:
             params.append("%{}%".format(title.lower()))
             query += " AND LOWER(c.title) LIKE %s"
+
+        query += conditions_end
         return query_and_get_result(query, params)
     
     # Confirmed to work, ZZQ 100/101
@@ -118,6 +121,7 @@ class Professors():
         """
         params = []
         conditions_base = " AND {} = %s "
+        conditions_end = " LIMIT 60"
         if firstName is not None:
             params.append(firstName)
             query += conditions_base.format("FirstName")
@@ -127,6 +131,8 @@ class Professors():
         if rating is not None:
             params.append(rating)
             query += conditions_base.format("Rating")
+
+        query += conditions_end
         return query_and_get_result(query, params)
 
     @cherrypy.tools.json_out()
@@ -184,6 +190,7 @@ class Section():
         """
         params = []
         conditions_base = " AND {} = %s "
+        conditions_end = " LIMIT 60"
         if crn is not None:
             params.append(crn)
             query += conditions_base.format("Crn")
@@ -205,6 +212,8 @@ class Section():
         if days is not None:
             params.append(days)
             query += conditions_base.format("days")
+        
+        query += conditions_end
         print(query)
         return query_and_get_result(query, params)
 
@@ -281,22 +290,53 @@ class Section():
 @cherrypy.expose
 class Interest():
     @cherrypy.tools.json_out()
-    def GET(self):
-        pass
+    def GET(self, keyword):
+        query = """
+        SELECT Name
+        FROM Interest
+        WHERE LOWER(Name) like %s
+        LIMIT 60
+        """
+
+        cur = connection.cursor()
+        cur.execute(query, ("%{}%".format(keyword.lower()),))
+        results = cur.fetchall()
+        return results  
+        
     @cherrypy.tools.json_out()
-    def POST(self):
-        pass
+    def POST(self, name, id):
+        query = """
+            INSERT INTO Interest ('Name','Id')
+            VALUES (%s, %s)
+            """
+        cur = connection.cursor()
+        cur.execute(query, (str(name), int(id)))
+        insert_count = cur.rowcount 
+        connection.commit()
+
+        return [{ 'insertedRows': insert_count }]
+
     @cherrypy.tools.json_out()
-    def DELETE(self):
-        pass
+    def DELETE(self, name, id):
+        query = """
+        DELETE FROM Interest
+        Where LOWER(Name) LIKE %s AND Id = %s
+        """
+        cur = connection.cursor()
+        cur.execute(query, ("%{}%".format(name.lower()), int(id)))
+        delete_count = cur.rowcount
+        connection.commit()
+        return [{ 'deletedRows': delete_count }]
+
     @cherrypy.tools.json_out()
-    def PUT(self):
+    def PUT(self, name):
         pass
+        
 
 @cherrypy.expose
 class NiceProfessors():
     @cherrypy.tools.json_out()
-    def GET(self, gpa=3.5, count=3, limit=50):
+    def GET(self, gpa=3.5, count=3, limit=60):
         query = """
         SELECT p.FirstName, p.LastName
         FROM Professor p JOIN TeachingCourse tc ON tc.ProfessorLastName=p.LastName AND tc.ProfessorFirstName=p.FirstName
@@ -312,6 +352,76 @@ class NiceProfessors():
         results = cur.fetchall()
         return results
 
+@cherrypy.expose
+class CourseInfo():
+    @cherrypy.tools.json_out()
+    def GET(self, dept, num):
+        query = """
+        SELECT c.Title, c.Department, c.Number, c.averageGPA, p.FirstName, p.LastName, p.Rating, r.Detail
+        FROM ((((
+        Course c JOIN Section s 
+        ON (c.Number = s.CourseNumber AND c.Department = s.CourseDepartment))
+        JOIN TeachingCourse tc
+        ON (tc.Crn = s.Crn))
+        JOIN Professor p
+        ON (p.FirstName = tc.ProfessorFirstName AND p.LastName = tc.ProfessorLastName))
+        JOIN Restriction r
+        ON (r.Crn = s.Crn))
+        WHERE c.Number = %s AND c.Department LIKE %s 
+        LIMIT 60    
+        """
+
+        cur = connection.cursor()
+        cur.execute(query, (int(num), "%{}%".format(dept.lower(), int(limit))))
+        results = cur.fetchall()
+
+        #python processing heres
+        return results
+
+
+    @cherrypy.expose
+    class CourseContext():
+        @cherrypy.tools.json_out()
+        def GET(self, dept, num):
+            query = """
+            SELECT * FROM (SELECT
+                pre.CourseNumber,
+                pre.CourseDepartment,
+                pre.RequiringCourseNumber,
+                pre.RequiringCourseDepartment,
+                pre.RequirementGroupId,
+                req.ReqType
+            FROM
+                (PrereqCourses pre
+                JOIN RequirementGroup req
+                ON
+                    pre.RequirementGroupId=req.Id
+                    AND pre.RequiringCourseNumber=req.RequiringCourseNumber
+                    AND pre.RequiringCourseDepartment=req.RequiringCourseDepartment) -- Get entire requirement table
+                WHERE pre.CourseNumber=%s
+                AND pre.CourseDepartment=%s) AS unlockables
+            UNION
+                (SELECT
+                    pre.CourseNumber,
+                    pre.CourseDepartment,
+                    pre.RequiringCourseNumber,
+                    pre.RequiringCourseDepartment,
+                    pre.RequirementGroupId,
+                    req.ReqType
+                FROM
+                    (PrereqCourses pre
+                    JOIN RequirementGroup req
+                    ON
+                        pre.RequirementGroupId=req.Id
+                        AND pre.RequiringCourseNumber=req.RequiringCourseNumber
+                        AND pre.RequiringCourseDepartment=req.RequiringCourseDepartment) -- Get entire requirement table
+                    WHERE req.RequiringCourseNumber=%s
+                    AND req.RequiringCourseDepartment=%s)
+            """
+            cur = connection.cursor()
+            cur.execute(query, (num, dept, num, dept, int(limit)))
+            results = cur.fetchall()
+            return results
 
 conf = {
     '/': {

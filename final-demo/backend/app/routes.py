@@ -20,7 +20,7 @@ from app import database
     #     return jsonify(result)
 
 
-#POST URLs
+#POST URLs (CREATE)
 @app.route("/courses", methods=['POST'])
 def x():
     return
@@ -38,7 +38,7 @@ def x():
     return
 
 
-#GET URLs
+#GET URLs (READ/SEARCH)
 @app.route("/courses", methods=['GET'])
 def x():
     return
@@ -56,7 +56,7 @@ def x():
     return
 
 
-#PUT URLs
+#PUT URLs (UPDATE)
 @app.route("/courses", methods=['PUT'])
 def x():
     return
@@ -74,7 +74,7 @@ def x():
     return
 
 
-#DELETE URLs
+#DELETE URLs 
 @app.route("/courses", methods=['DELETE'])
 def x():
     return
@@ -96,6 +96,7 @@ def x():
 #courseinfo: course join sections join teaching course join professors join restrictions
 
 @app.route("/niceprofessors", methods=['GET'])
+def nice_profs():
 
 @app.route("/prereqs", methods=['GET'])
 
@@ -105,4 +106,4 @@ def x():
 
 @app.route("/context", methods=['GET'])
 
-@app.route("/cinfo")
+@app.route("/cinfo", methods=['GET'])
