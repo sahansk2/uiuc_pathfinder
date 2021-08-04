@@ -372,11 +372,36 @@ class CourseInfo():
         """
 
         cur = connection.cursor()
-        cur.execute(query, (int(num), "%{}%".format(dept.lower(), int(limit))))
+        cur.execute(query, (int(num), "%{}%".format(dept.lower())))
         results = cur.fetchall()
 
-        #python processing heres
-        return results
+        #python processing here
+        gpa = results[0]['c.averageGPA']
+        title = results[0]['c.Title']
+        if gpa is not None:
+            c = {'title': title, 'num': num, 'dept': dept, 'avgGpa': gpa}
+        else:
+            c = {'title': title, 'num': num, 'dept': dept}
+
+        ret_dict = {'restrictions': [], 'professors': [], 'course': c}
+        rests = []
+        profs = []
+
+        for tpl in results:
+            cur_rest = tpl['r.Detail']
+            rests.append(cur_rest)
+
+            if tpl['p.Rating'] is not None:
+                cur_prof = {'firstname': tpl['p.FirstName'], 'lastname': tpl['p.LastName'], 'avgrating': tpl['p.Rating']}        
+                profs.append(cur_prof)
+            else:
+                cur_prof = {'firstname': tpl['p.FirstName'], 'lastname': tpl['p.LastName']}        
+                profs.append(cur_prof)
+
+        ret_dict['restrictions'] = rests
+        ret_dict['professors'] = profs
+
+        return ret_dict
 
 
     @cherrypy.expose
@@ -419,9 +444,26 @@ class CourseInfo():
                     AND req.RequiringCourseDepartment=%s)
             """
             cur = connection.cursor()
-            cur.execute(query, (num, dept, num, dept, int(limit)))
+            cur.execute(query, (num, dept, num, dept))
             results = cur.fetchall()
             return results
+
+    @cherrypy.expose
+    class Prereqs():
+        @cherrypy.tools.json_out()
+        def GET(self, dept, num):
+            cur = connection.cursor()
+            data = cur.callproc('find_prereqs_cascade',(dept, num))[0]
+            return data
+
+    @cherrypy.expose
+    class Reverse():
+        @cherrypy.tools.json_out()
+        def GET(self, dept, num):
+            cur = connection.cursor()
+            data = cur.callproc('find_reverse_depends',(dept, num))[0]
+            return data
+    
 
 conf = {
     '/': {

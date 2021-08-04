@@ -45,7 +45,7 @@ def add_section(crn, number, dept, hours, stime, etime , days):
 
 def add_interests(name, id):
     query = """
-            INSERT INTO Section ('Name','Id')
+            INSERT INTO Interest ('Name','Id')
             VALUES (%s, %s)
             """
     cur = connection.cursor()
