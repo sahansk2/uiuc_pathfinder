@@ -1,6 +1,7 @@
 import * as React from 'react';
-import { CRUDMODE, crudModeToMap } from './configAdminDashboard'
+import { CRUDMODE, crudModeToMap, tableToEndpointMap } from './configAdminDashboard'
 import { getEmptyParams, getNullName } from './util';
+import { endpointBase } from '../config'
 
 const ModeSelector = ({ setCrudMode }) => {
     function handleOnChange(e) {
@@ -20,17 +21,29 @@ const ModeSelector = ({ setCrudMode }) => {
     </div>
 }
 
-const EditorScreen = ({ crudMode, currTable, setCrudMode }) => {
+const EditorScreen = ({ crudMode, currTable, setCrudMode, setEditResult }) => {
     const crudParams = crudModeToMap[crudMode][currTable];
     const [editValues, setEditValues] = React.useState(getEmptyParams(crudParams));
     console.log("Running the EditorScreen render")
     const handleSubmit = (e) => {
         e.preventDefault()
         console.log("The value of editValues now is", editValues, "at", new Date())
+        let fetchUrl = new URL(tableToEndpointMap[currTable])
+        for (let e of Object.keys(editValues)) {
+            if (editValues[e]) {
+                fetchUrl.searchParams.set(e, editValues[e])
+            }
+        }
+
+        console.log(fetchUrl)
+        fetch(fetchUrl, { method: crudMode })
+            .then((data) => data.json())
+            .then(jsonData => {
+                setEditResult({...jsonData, responseTime: new Date().toISOString()})
+            })
         console.log("This is what we will send")
         console.log("CRUDVALUE is: ", crudMode)
         console.log("endpoint is: ", currTable)
-        setEditValues(getEmptyParams(crudParams))
     }
 
     const handleOnChange = (e) => {
@@ -84,6 +97,7 @@ const EditorResult = ({ editResult }) => {
             </div>}
     </div>
 }
+
 const EditorPanel = ({ setCrudMode, crudMode, currTable }) => {
     const [editResult, setEditResult] = React.useState(null);
     return <div>

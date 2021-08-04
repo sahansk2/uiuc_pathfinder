@@ -1,6 +1,6 @@
 import { endpointBase } from '../config'
 
-const endpointBaseAdmin = endpointBase + '/admin'
+const endpointBaseAdmin = endpointBase
 
 const TABLES = {
     COURSES: "courses",
@@ -250,10 +250,10 @@ const crudModeToMap = {
     [CRUDMODE.delete]: tableToSearchParamsMap
 }
 const tableToEndpointMap = {
-    [TABLES.COURSES]: endpointBaseAdmin + "/courses",
-    [TABLES.PROFESSORS]: endpointBaseAdmin + "/professors",
-    [TABLES.SECTIONS]: endpointBaseAdmin + "/sections",
-    [TABLES.INTERESTS]: endpointBaseAdmin + "/interests"
+    [TABLES.COURSES]: endpointBaseAdmin + "/course",
+    [TABLES.PROFESSORS]: endpointBaseAdmin + "/professor",
+    [TABLES.SECTIONS]: endpointBaseAdmin + "/section",
+    [TABLES.INTERESTS]: endpointBaseAdmin + "/interest"
 }
 
 export {

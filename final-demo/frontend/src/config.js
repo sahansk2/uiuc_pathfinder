@@ -1,4 +1,4 @@
-const endpointBase = "http://localhost:4000"
+const endpointBase = "http://localhost:8080"
 
 export {
     endpointBase

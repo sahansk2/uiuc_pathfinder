@@ -19,13 +19,13 @@ const SearchInputPanel = ({ setSearchResults, setSelectedItem, crudMode, table }
     const [searchParams, setSearchParams] = React.useState(getEmptyParams(knownParams));
    
     React.useEffect(() => {
-        return () => {
-            console.log("Table has changed, clearing previous params...")
-            setSearchParams({});
-            setSearchResults(null);
-            setSelectedItem(null);
-        }
-    }, [table])
+        // return () => {
+        //     console.log("Table has changed, clearing previous params...")
+        //     setSearchParams({});
+        //     setSearchResults(null);
+        //     setSelectedItem(null);
+        // }
+    })
 
     function handleOnSubmit(e) {
         e.preventDefault();
@@ -37,9 +37,11 @@ const SearchInputPanel = ({ setSearchResults, setSelectedItem, crudMode, table }
         }
         console.log("The requestURL is", requestUrl);
         // Pretend there was a fetch
-        fakeFetch(requestUrl, mockCourses)
-            .then(data => {
-                setSearchResults(data);
+        fetch(requestUrl, {method: "GET"})
+            .then(data => data.json())
+            .then(jsondata => {
+                console.log(jsondata)
+                setSearchResults({data: jsondata});
                 console.log("Fetched results", new Date());
             })
     }
@@ -104,8 +106,10 @@ const SearchInputPanel = ({ setSearchResults, setSelectedItem, crudMode, table }
 
 function ResultItem({ currTable, data, setSelectedItem }) {
     const view = tableToViewMap[currTable]
+    console.log("View is", view)
     let presentableFields = new Array(data.length).fill({});
     for (let attr in data) {
+        console.log("attr is", attr)
         presentableFields[view[attr].pos] = {
             name: view[attr].pretty,
             value: view[attr].limit ? data[attr].substring(0, view[attr].limit) + "..." : data[attr]
@@ -125,6 +129,7 @@ function ResultItem({ currTable, data, setSelectedItem }) {
 
 
 const SearchResultsPanel = ({ currTable, setSelectedItem, searchResults }) => {
+    console.log("body is", searchResults?.data)
     return <div className="search-result-panel">
         {searchResults?.data.map((item, idx, _) => 
             <ResultItem currTable={TABLES.COURSES} data={item} id={idx} setSelectedItem={setSelectedItem}/>
