@@ -18,15 +18,6 @@ connection = MySQLdb.connect(
 ###################################################
 # Useful generic functions
 
-def json_to_generic_query(base_query, param_to_col_and_values):
-    params = []
-    conditions = []
-    condition_base = " AND {} = %s "
-    for key in param_to_col_and_values:
-        params.append(key)
-        conditions.append(condition_base.format(key))
-    return (base_query + "".join(condition_base), tuple(params))
-
 def query_and_get_result(query, params):
     cur = connection.cursor()
     cur.execute(query, tuple(params))
@@ -119,17 +110,68 @@ class Courses():
 @cherrypy.expose
 class Professors():
     @cherrypy.tools.json_out()
-    def GET(self):
-        pass
+    def GET(self, firstName=None, lastName=None, rating=None):
+        query = """
+        SELECT *
+        FROM Professor
+        WHERE 1=1
+        """
+        params = []
+        conditions_base = " AND {} = %s "
+        if firstName is not None:
+            params.append(firstName)
+            query += conditions_base.format("FirstName")
+        if lastName is not None:
+            params.append(lastName)
+            query += conditions_base.format("LastName")
+        if rating is not None:
+            params.append(rating)
+            query += conditions_base.format("Rating")
+        return query_and_get_result(query, params)
+
     @cherrypy.tools.json_out()
-    def POST(self):
-        pass
+    def POST(self, firstName=None, lastName=None, rating=None):
+        if not firstName or not lastName:
+            return { "affectedRows": 0 }
+        else:
+            query = """
+            INSERT IGNORE INTO Professor(FirstName, LastName, Rating)
+            VALUES (%s, %s, %s)
+            """
+            return mutate_and_get_count(query, [firstName, lastName, rating])
+
     @cherrypy.tools.json_out()
-    def DELETE(self):
-        pass
+    def DELETE(self, firstName=None, lastName=None, **kwargs):
+        if not firstName or not lastName:
+            print("Bad delete for professor, not doing anything")
+            return { "affectedRows": 0 }
+        else:
+            query = """
+            DELETE FROM Professor
+            WHERE FirstName = %s AND LastName = %s
+            """
+            return mutate_and_get_count(query, [firstName, lastName])
+
     @cherrypy.tools.json_out()
-    def PUT(self):
-        pass
+    def PUT(self, firstName=None, lastName=None, rating=None, **kwargs):
+        if not firstName or not lastName:
+            print("Bad update on professor, not doing anything")
+            return { "affectedRows": 0 }
+        else:
+            query = """
+            UPDATE Professor
+            SET {}
+            WHERE FirstName=%s AND LastName=%s"""
+            set_template = "{} = %s"
+            fieldNamesToUpdate = []
+            valuesToSet = []
+            if rating:
+                fieldNamesToUpdate.append(set_template.format('Rating'))
+                valuesToSet.append(rating)
+            query = query.format(",".join(fieldNamesToUpdate))
+            valuesToSet.extend([firstName, lastName])
+            print(query)
+            return mutate_and_get_count(query, tuple(valuesToSet))
 
 @cherrypy.expose
 class Section():
@@ -189,4 +231,6 @@ conf = {
     }
 }
 
-cherrypy.quickstart(Courses(), '/', conf)
+cherrypy.tree.mount(Courses(), '/course', conf)
+cherrypy.tree.mount(Professors(), '/professor', conf)
+cherrypy.quickstart()
