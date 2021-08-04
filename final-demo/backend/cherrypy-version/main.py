@@ -323,4 +323,5 @@ conf = {
 cherrypy.tree.mount(Courses(), '/course', conf)
 cherrypy.tree.mount(Professors(), '/professor', conf)
 cherrypy.tree.mount(Section(), '/section', conf)
+cherrypy.tree.mount(NiceProfessors(), '/nice', conf)
 cherrypy.quickstart()
