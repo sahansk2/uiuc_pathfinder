@@ -20,5 +20,30 @@ from app import database
     #     return jsonify(result)
 
 
+#POST URLs
+@app.route("/courses", methods=['POST'])
+def ()
 
-    
+@app.route("/professors", methods=['POST'])
+def ()
+
+@app.route("/prereqs", methods=['POST'])
+def ()
+
+@app.route("/restrictions", methods=['POST'])
+def ()
+
+
+#GET URLs
+@app.route("/", methods=['GET'])
+
+#PUT URLs
+@app.route("/", methods=['PUT'])
+
+
+#POST URLs
+@app.route("/", methods=['POST'])
+
+
+#DELETE URLs
+@app.route("/", methods=['DELETE'])
