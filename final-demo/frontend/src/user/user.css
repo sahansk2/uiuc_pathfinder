@@ -5,6 +5,7 @@
 .nice-professor-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .nice-professor-result {

@@ -18,25 +18,103 @@ makeMockRow('ECE', '110', 'ECE', '210',  '1', 'PREREQ'),
 makeMockRow('PHYS', '212','ECE', '210',   '0', 'PREREQ'),
 
 ]
+
 const mockReturnDataContextCS225 = [
-    makeMockRow('CS', '225', 'CS', '210', '0', 'PREREQ'),
-    makeMockRow('CS', '225', 'CS', '241', '1', 'PREREQ'),
-    makeMockRow('CS', '225', 'CS', '374', '1', 'PREREQ'),
-    makeMockRow('CS', '225', 'CS', '410', '0', 'PREREQ'),
-    makeMockRow('CS', '225', 'CS', '411', '0', 'PREREQ'),
-    makeMockRow('CS', '225', 'CS', '412', '0', 'PREREQ'),
-    makeMockRow('CS', '225', 'CS', '418', '0', 'PREREQ'),
-    makeMockRow('CS', '225', 'CS', '420', '0', 'PREREQ'),
-    makeMockRow('CS', '225', 'CS', '427', '0', 'PREREQ'),
-    makeMockRow('CS', '225', 'CS', '440', '0', 'PREREQ'),
-    makeMockRow('CS', '225', 'CS', '445', '1', 'PREREQ'),
-    makeMockRow('CS', '225', 'CS', '446', '0', 'PREREQ'),
-    makeMockRow('CS', '225', 'CS', '465', '0', 'PREREQ'),
-    makeMockRow('CS', '225', 'CS', '466', '0', 'PREREQ'),
-    makeMockRow('CS', '225', 'CS', '467', '0', 'PREREQ'),
+    makeMockRow('CS','225', 'CS','210',  '0', 'PREREQ'),
+    makeMockRow('CS','225', 'CS','241',  '1', 'PREREQ'),
+    makeMockRow('CS','225', 'CS','374',  '1', 'PREREQ'),
+    makeMockRow('CS','225', 'CS','410',  '0', 'PREREQ'),
+    makeMockRow('CS','225', 'CS','411',  '0', 'PREREQ'),
+    makeMockRow('CS','225', 'CS','412',  '0', 'PREREQ'),
+    makeMockRow('CS','225', 'CS','418',  '0', 'PREREQ'),
+    makeMockRow('CS','225', 'CS','420',  '0', 'PREREQ'),
+    makeMockRow('CS','225', 'CS','427',  '0', 'PREREQ'),
+    makeMockRow('CS','225', 'CS','440',  '0', 'PREREQ'),
+    makeMockRow('CS','225', 'CS','445',  '1', 'PREREQ'),
+    makeMockRow('CS','225', 'CS','446',  '0', 'PREREQ'),
+    makeMockRow('CS','225', 'CS','465',  '0', 'PREREQ'),
+    makeMockRow('CS','225', 'CS','466',  '0', 'PREREQ'),
+    makeMockRow('CS','225', 'CS','467',  '0', 'PREREQ'),
+    makeMockRow('CS','225', 'CS','477',  '0', 'PREREQ'),
+    makeMockRow('CS','225', 'IE','523',  '0', 'PREREQ'),
+    makeMockRow('CS','225', 'IE','531',  '1', 'PREREQ'),
+    makeMockRow('CS','225', 'ECE','549',  '0', 'PREREQ'),
+    makeMockRow('CS','125', 'CS','225',  '0', 'PREREQ'),
+    makeMockRow('ECE','220', 'CS','225',  '0', 'PREREQ'),
+    makeMockRow('CS','173', 'CS','225',  '1', 'PREREQ'),
+    makeMockRow('MATH','213', 'CS','225',  '1', 'PREREQ'),
+    makeMockRow('MATH','347', 'CS','225',  '1', 'PREREQ'),
+    makeMockRow('MATH','412', 'CS','225',  '1', 'PREREQ'),
+    makeMockRow('MATH','413', 'CS','225',  '1', 'PREREQ'),
 ]
 
-const mockReturnDataPrereqsCS225 = [
+const mockReturnDataReverseCS225 = [
+     makeMockRow('CS', '225', 'CS', '210','0', 'PREREQ'),
+     makeMockRow('CS', '225', 'CS', '241','1', 'PREREQ'),
+     makeMockRow('CS', '241', 'CS', '242','0', 'PREREQ'),
+     makeMockRow('CS', '225', 'CS', '374','1', 'PREREQ'),
+     makeMockRow('CS', '225', 'CS', '410','0', 'PREREQ'),
+     makeMockRow('CS', '225', 'CS', '411','0', 'PREREQ'),
+     makeMockRow('CS', '241', 'ECE', '411','0', 'PREREQ'),
+     makeMockRow('CS', '225', 'CS', '412','0', 'PREREQ'),
+     makeMockRow('CS', '241', 'CS', '414','0', 'PREREQ'),
+     makeMockRow('CS', '225', 'CS', '418','0', 'PREREQ'),
+     makeMockRow('CS', '418', 'CS', '419','0', 'PREREQ'),
+     makeMockRow('CS', '225', 'CS', '420','0', 'PREREQ'),
+     makeMockRow('CS', '374', 'CS', '421','1', 'PREREQ'),
+     makeMockRow('CS', '421', 'CS', '422','0', 'PREREQ'),
+     makeMockRow('CS', '241', 'CS', '423','0', 'PREREQ'),
+     makeMockRow('CS', '241', 'CS', '424','0', 'PREREQ'),
+     makeMockRow('CS', '241', 'CS', '425','0', 'PREREQ'),
+     makeMockRow('ECE', '411', 'ECE', '425','0', 'PREREQ'),
+     makeMockRow('CS', '421', 'CS', '426','0', 'PREREQ'),
+     makeMockRow('CS', '225', 'CS', '427','0', 'PREREQ'),
+     makeMockRow('CS', '427', 'CS', '428','0', 'PREREQ'),
+     makeMockRow('CS', '241', 'CS', '431','0', 'PREREQ'),
+     makeMockRow('CS', '241', 'ECE', '434','0', 'PREREQ'),
+     makeMockRow('CS', '241', 'CS', '438','0', 'PREREQ'),
+     makeMockRow('CS', '241', 'ECE', '439','0', 'PREREQ'),
+     makeMockRow('CS', '225', 'CS', '440','0', 'PREREQ'),
+     makeMockRow('CS', '225', 'CS', '445','1', 'PREREQ'),
+     makeMockRow('CS', '225', 'CS', '446','0', 'PREREQ'),
+     makeMockRow('CS', '374', 'CS', '447','0', 'PREREQ'),
+     makeMockRow('CS', '461', 'CS', '460','0', 'PREREQ'),
+     makeMockRow('CS', '241', 'CS', '461','0', 'PREREQ'),
+     makeMockRow('CS', '461', 'CS', '463','0', 'PREREQ'),
+     makeMockRow('CS', '225', 'CS', '465','0', 'PREREQ'),
+     makeMockRow('CS', '225', 'CS', '466','0', 'PREREQ'),
+     makeMockRow('CS', '225', 'CS', '467','0', 'PREREQ'),
+     makeMockRow('CS', '225', 'CS', '477','0', 'PREREQ'),
+     makeMockRow('CS', '374', 'CS', '477','1', 'PREREQ'),
+     makeMockRow('CS', '241', 'CS', '484','0', 'PREREQ'),
+     makeMockRow('CS', '420', 'ECE', '508','0', 'PREREQ'),
+     makeMockRow('CS', '410', 'CS', '510','0', 'PREREQ'),
+     makeMockRow('CS', '412', 'CS', '510','0', 'PREREQ'),
+     makeMockRow('CS', '446', 'CS', '510','0', 'PREREQ'),
+     makeMockRow('CS', '411', 'CS', '511','0', 'PREREQ'),
+     makeMockRow('ECE', '411', 'ECE', '511','0', 'PREREQ'),
+     makeMockRow('CS', '412', 'CS', '512','0', 'PREREQ'),
+     makeMockRow('CS', '418', 'CS', '519','0', 'PREREQ'),
+     makeMockRow('CS', '423', 'CS', '523','0', 'PREREQ'),
+     makeMockRow('CS', '425', 'CS', '523','2', 'PREREQ'),
+     makeMockRow('CS', '225', 'IE', '523','0', 'PREREQ'),
+     makeMockRow('CS', '423', 'CS', '525','0', 'PREREQ'),
+     makeMockRow('CS', '425', 'CS', '525','0', 'PREREQ'),
+     makeMockRow('CS', '438', 'CS', '525','0', 'PREREQ'),
+     makeMockRow('CS', '428', 'CS', '527','0', 'PREREQ'),
+     makeMockRow('ECE', '425', 'ECE', '527','0', 'PREREQ'),
+     makeMockRow('CS', '427', 'CS', '528','0', 'PREREQ'),
+     makeMockRow('CS', '225', 'IE', '531','1', 'PREREQ'),
+     makeMockRow('CS', '446', 'IE', '534','0', 'PREREQ'),
+     makeMockRow('CS', '438', 'CS', '538','0', 'PREREQ'),
+     makeMockRow('CS', '446', 'CS', '546','1', 'PREREQ'),
+     makeMockRow('CS', '440', 'CS', '548','0', 'PREREQ'),
+     makeMockRow('CS', '446', 'CS', '548','0', 'PREREQ'),
+     makeMockRow('CS', '225', 'ECE', '549','0', 'PREREQ'),
+     makeMockRow('CS', '461', 'CS', '563','0', 'PREREQ'),
+     makeMockRow('CS', '463', 'CS', '563','0', 'PREREQ'),
+]
+ const mockReturnDataPrereqsCS225 = [ 
     makeMockRow('CS', '125',  'CS', '173',  '0',  'PREREQ'),
     makeMockRow('ECE', '220',  'CS', '173',  '0',  'PREREQ'),
     makeMockRow('MATH', '220',  'CS', '173',  '1',  'PREREQ'),
@@ -174,21 +252,22 @@ function getGraph(data) {
 }
 
 
-console.log("Linear")
-console.log(getGraph(mockLinearPrereqsAES211))
-console.log("Context CS 225")
-console.log(getGraph(mockReturnDataContextCS225))
-console.log("Prereqs ECE 210")
-console.log(getGraph(mockReturnDataPrereqsECE210))
-console.log("Prereqs CS 225")
-console.log(getGraph(mockReturnDataPrereqsCS225))
-console.log("Mixed")
-console.log(getGraph(mockReturnDataPrereqsFake100))
+// console.log("Linear")
+// console.log(getGraph(mockLinearPrereqsAES211))
+// console.log("Context CS 225")
+// console.log(getGraph(mockReturnDataContextCS225))
+// console.log("Prereqs ECE 210")
+// console.log(getGraph(mockReturnDataPrereqsECE210))
+// console.log("Prereqs CS 225")
+// console.log(getGraph(mockReturnDataPrereqsCS225))
+// console.log("Mixed")
+// console.log(getGraph(mockReturnDataPrereqsFake100))
 export {
     getGraph,
     mockLinearPrereqsAES211,
     mockReturnDataPrereqsCS225,
     mockReturnDataContextCS225,
     mockReturnDataPrereqsFake100,
-    mockReturnDataContextECE210
+    mockReturnDataContextECE210,
+    mockReturnDataReverseCS225
 }

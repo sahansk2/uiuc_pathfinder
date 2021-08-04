@@ -82,6 +82,16 @@ function MyCytoscape({ data: elements, cyRef }) {
     const prenodes = elements.nodes;
     const preedges = elements.edges;
     // We need to wrap this like this for cytoscape.
+    
+    React.useEffect(() => {
+        if (cyRef.current !== null) {
+            cyRef.current.layout(graphLayout).run()
+        }
+    })
+
+    if (!prenodes || !preedges) {
+        return <div> :( </div>
+    }
     const cyNodes = prenodes.map(val => ({ 
         data: val 
     }) )
@@ -89,11 +99,7 @@ function MyCytoscape({ data: elements, cyRef }) {
 
     const allElements = cyNodes.concat(cyEdges);
 
-    React.useEffect(() => {
-        if (cyRef.current !== null) {
-            cyRef.current.layout(graphLayout).run()
-        }
-    })
+
 
     return <CytoscapeComponent 
                 id="cytoscapeGraph"
