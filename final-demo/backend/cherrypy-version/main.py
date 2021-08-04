@@ -176,17 +176,106 @@ class Professors():
 @cherrypy.expose
 class Section():
     @cherrypy.tools.json_out()
-    def GET(self):
-        pass
+    def GET(self, crn=None, number=None, dept=None, credits=None, timeStart=None, timeEnd=None, days=None):
+        query = """
+        SELECT *
+        FROM Section
+        WHERE 1=1
+        """
+        params = []
+        conditions_base = " AND {} = %s "
+        if crn is not None:
+            params.append(crn)
+            query += conditions_base.format("Crn")
+        if number is not None:
+            params.append(number)
+            query += conditions_base.format("CourseNumber")
+        if dept is not None:
+            params.append(dept)
+            query += conditions_base.format("CourseDepartment")
+        if credits is not None:
+            params.append(credits)
+            query += conditions_base.format("creditHours")
+        if timeStart is not None:
+            params.append(timeStart)
+            query += conditions_base.format("startTime")
+        if timeEnd is not None:
+            params.append(timeEnd)
+            query += conditions_base.format("endTime")
+        if days is not None:
+            params.append(days)
+            query += conditions_base.format("days")
+        print(query)
+        return query_and_get_result(query, params)
+
     @cherrypy.tools.json_out()
-    def POST(self):
-        pass
+    def POST(self, crn=None, number=None, dept=None, credits=None, timeStart=None, timeEnd=None, days=None):
+        if not crn:
+            return { "affectedRows": 0 }
+        else:
+            query = """
+            INSERT IGNORE INTO Section
+            (`Crn`,
+            `CourseNumber`,
+            `CourseDepartment`,
+            `creditHours`,
+            `startTime`,
+            `endTime`,
+            `days`)
+            VALUES
+            (%s, %s, %s, %s, %s, %s, %s);
+            """
+            return mutate_and_get_count(query, [
+                crn, number, dept, credits, timeStart, timeEnd, days
+            ])
+
     @cherrypy.tools.json_out()
-    def DELETE(self):
-        pass
+    def DELETE(self, crn=None, **kwargs):
+        if not crn:
+            print("No CRN found, will not delete")
+            return { 'affectedRows': 0 }
+        else:
+            query = """
+            DELETE FROM Section
+            WHERE Crn=%s
+            """
+            return mutate_and_get_count(query, [crn])
+
     @cherrypy.tools.json_out()
-    def PUT(self):
-        pass
+    def PUT(self, crn=None, number=None, dept=None, credits=None, timeStart=None, timeEnd=None, days=None):
+        if not crn:
+            print("Bad update on section, not doing anything")
+            return { "affectedRows": 0 }
+        else:
+            query = """
+            UPDATE Section
+            SET {}
+            WHERE Crn=%s"""
+            set_template = "{} = %s"
+            fieldNamesToUpdate = []
+            valuesToSet = []
+            if number:
+                fieldNamesToUpdate.append(set_template.format('CourseNumber'))
+                valuesToSet.append(number)
+            if dept:
+                fieldNamesToUpdate.append(set_template.format("CourseDepartment"))
+                valuesToSet.append(dept)
+            if credits:
+                fieldNamesToUpdate.append(set_template.format("creditHours"))
+                valuesToSet.append(credits)
+            if timeStart:
+                fieldNamesToUpdate.append(set_template.format('startTime'))
+                valuesToSet.append(timeStart)
+            if timeEnd:
+                fieldNamesToUpdate.append(set_template.format('endTime'))
+                valuesToSet.append(timeEnd)
+            if days:
+                fieldNamesToUpdate.append(set_template.format('days'))
+                valuesToSet.append(days)
+            query = query.format(",".join(fieldNamesToUpdate))
+            valuesToSet.extend([crn])
+            print(query)
+            return mutate_and_get_count(query, tuple(valuesToSet))
 
 
 @cherrypy.expose
@@ -233,4 +322,5 @@ conf = {
 
 cherrypy.tree.mount(Courses(), '/course', conf)
 cherrypy.tree.mount(Professors(), '/professor', conf)
+cherrypy.tree.mount(Section(), '/section', conf)
 cherrypy.quickstart()
