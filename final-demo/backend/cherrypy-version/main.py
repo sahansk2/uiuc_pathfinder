@@ -18,36 +18,103 @@ connection = MySQLdb.connect(
 ###################################################
 # Useful generic functions
 
-def json_to_generic_query(base_query, **kwargs):
-    base_query += " WHERE 1=1 "
+def json_to_generic_query(base_query, param_to_col_and_values):
     params = []
     conditions = []
     condition_base = " AND {} = %s "
-    for key in kwargs:
+    for key in param_to_col_and_values:
         params.append(key)
         conditions.append(condition_base.format(key))
     return (base_query + "".join(condition_base), tuple(params))
 
+def query_and_get_result(query, params):
+    cur = connection.cursor()
+    cur.execute(query, tuple(params))
+    results = cur.fetchall()
+    return results
+
+def mutate_and_get_count(query, params):
+    cur = connection.cursor()
+    cur.execute(query, tuple(params))
+    insert_count = cur.rowcount
+    connection.commit()
+    return { 'affectedRows': insert_count }
 
 ############################### COURSES
 @cherrypy.expose
 class Courses():
     @cherrypy.tools.json_out()
-    def GET(self, dept, num):
-        return {'this': 'isacourse'}
+    def GET(self, dept=None, number=None, title=None, gpa=None):
+        query = """
+        SELECT *
+        FROM Course c
+        WHERE 1=1
+        """
+        params = []
+        conditions_base = " AND c.{} = %s "
+        if dept is not None:
+            params.append(dept)
+            query += conditions_base.format("Department")
+        if number is not None:
+            params.append(number)
+            query += conditions_base.format("Number")
+        if gpa is not None:
+            params.append(gpa)
+            query += conditions_base.format("averageGPA")
+        if title is not None:
+            params.append("%{}%".format(title.lower()))
+            query += " AND LOWER(c.title) LIKE %s"
+        return query_and_get_result(query, params)
     
+    # Confirmed to work, ZZQ 100/101
     @cherrypy.tools.json_out()
-    def POST(self):
-        pass
+    def POST(self, dept=None, number=None, title=None, gpa=None, **kwargs):
+        if not dept or not number:
+            return { "affectedRows": 0 }
+        else:
+            query = """
+            INSERT IGNORE INTO Course(Department, Number, Title, averageGPA)
+            VALUES (%s, %s, %s, %s)
+            """
+            return mutate_and_get_count(query, [dept, number, title, gpa])
 
     @cherrypy.tools.json_out()
-    def DELETE(self):
-        pass
+    def DELETE(self, dept=None, number=None, **kwargs):
+        if not dept or not number:
+            print("Bad delete on Courses, not doing anything.")
+            return { "affectedRows": 0 }
+        else:
+            print("Attempting to delete course", dept, number)
+            query = """
+            DELETE FROM Course c
+            WHERE c.Department=%s AND c.Number=%s
+            """
+            return mutate_and_get_count(query, [dept, number])
     
     @cherrypy.tools.json_out()
-    def PUT(self):
-        pass
+    def PUT(self, dept=None, number=None, gpa=None, title=None):
+        if not dept or not number:
+            print("Bad update on courses, not doing anything.")
+            return { "affectedRows": 0 }
+        else:
+            query = """
+            UPDATE Course
+            SET {}
+            WHERE Department=%s AND Number=%s"""
+            set_template = "{} = %s"
+            fieldNamesToUpdate = []
+            valuesToSet = []
+            if gpa:
+                fieldNamesToUpdate.append(set_template.format('averageGPA'))
+                valuesToSet.append(gpa)
+            if title:
+                fieldNamesToUpdate.append(set_template.format('Title'))
+                valuesToSet.append(title)
+            query = query.format(",".join(fieldNamesToUpdate))
 
+            valuesToSet.extend([dept, number])
+            print(query)
+            return mutate_and_get_count(query, tuple(valuesToSet))
 
 @cherrypy.expose
 class Professors():
@@ -122,4 +189,4 @@ conf = {
     }
 }
 
-cherrypy.quickstart(Test(), '/', conf)
+cherrypy.quickstart(Courses(), '/', conf)
