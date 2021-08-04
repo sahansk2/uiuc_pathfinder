@@ -1,3 +1,4 @@
+
 const mockReturnDataContextECE210 = [
 
 makeMockRow('ECE', '210', 'ECE', '307',  '0', 'PREREQ'),
@@ -101,7 +102,7 @@ function getGraph(data) {
     let keyMap = {}
     let prereq_map = {}
     for (let item of data) {
-        console.log(item)
+        // console.log("A row is", item)
         const preCourseKey = getCourseKey(item.courseDepartment, item.courseNumber)
         const reqCourseKey = getCourseKey(item.requiringCourseDepartment, item.requiringCourseNumber)
         if (!prereq_map.hasOwnProperty(preCourseKey)) {
@@ -128,7 +129,7 @@ function getGraph(data) {
     let nodes = []
     let edges = []
     // Creates course nodes
-    console.log(prereq_map)
+    // console.log("The prereq map is", prereq_map)
     for (const courseId of Object.keys(prereq_map)) {
         nodes.push({
             id: courseId,
@@ -159,7 +160,7 @@ function getGraph(data) {
             }
             for (const prereq of prereq_map[courseId][groupId]) {
                 edges.push({
-                    id: `e${edges.length}`,
+                    id: `e${prereq}${targetOfPrereqs}`,
                     source: prereq,
                     target: targetOfPrereqs
                 })

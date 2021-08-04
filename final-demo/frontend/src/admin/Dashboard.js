@@ -41,7 +41,7 @@ const TableSelector = ({ currTable, setTable }) => {
 
 const Dashboard = () => {
     const [currTable, setTable] = React.useState(TABLES.COURSES);
-    const [selectedItem, setSelectedItem] = React.useState({});
+    const [selectedItem, setSelectedItem] = React.useState(null);
     const [crudMode, setCrudMode] = React.useState(CRUDMODE.update);
     const setTableAPI = (state) => {
         console.log("New table state!", state)
